@@ -145,7 +145,6 @@ input::placeholder {
 
 .login_option .check:checked + .check_visual {
     background-image: url("img/Checkbox_Active.svg");
-    filter: brightness(0) saturate(100%) invert(45%) sepia(97%) saturate(3178%) hue-rotate(358deg) brightness(103%) contrast(101%);
 }
 
 .login_option .check:focus-visible + .check_visual {
