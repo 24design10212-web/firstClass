@@ -131,35 +131,26 @@ input::placeholder {
     font-weight: 600;
 }
 
-.login_option .check + span::before {
-    content: "";
+.login_option label {
+    position: relative;
+}
+
+.login_option .check_visual {
     display: inline-block;
     width: 30px;
     height: 30px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    background-color: #ffffff;
+    margin-right: 6px;
+    background: url("img/Checkbox_disabled.svg") no-repeat center / 30px;
 }
 
-.login_option .check:checked + span::before {
-    border-color: var(--point);
-    background-color: var(--point);
+.login_option .check:checked + .check_visual {
+    background-image: url("img/Checkbox_Active.svg");
+    filter: brightness(0) saturate(100%) invert(45%) sepia(97%) saturate(3178%) hue-rotate(358deg) brightness(103%) contrast(101%);
 }
 
-.login_option .check:checked + span::after {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: 7px;
-    width: 7px;
-    height: 13px;
-    border-right: 3px solid #ffffff;
-    border-bottom: 3px solid #ffffff;
-    transform: rotate(45deg);
-}
-
-.login_option label {
-    position: relative;
+.login_option .check:focus-visible + .check_visual {
+    outline: 2px solid var(--point);
+    outline-offset: 2px;
 }
 
 .login_btn {
