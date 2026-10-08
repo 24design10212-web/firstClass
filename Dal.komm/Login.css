@@ -149,10 +149,10 @@ input::placeholder {
 .login_option .check:checked + span::after {
     content: "";
     position: absolute;
+    left: 10px;
+    top: 7px;
     width: 7px;
     height: 13px;
-    margin-left: 11px;
-    margin-top: -2px;
     border-right: 3px solid #ffffff;
     border-bottom: 3px solid #ffffff;
     transform: rotate(45deg);
