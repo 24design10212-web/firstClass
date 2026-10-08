@@ -140,11 +140,11 @@ input::placeholder {
     width: 30px;
     height: 30px;
     margin-right: 6px;
-    background: url("img/Checkbox_disabled.svg") no-repeat center / 30px;
+    background: url("img/Checkbox_disabled.svg?v=2") no-repeat center / 30px;
 }
 
 .login_option .check:checked + .check_visual {
-    background-image: url("img/Checkbox_Active.svg");
+    background-image: url("img/Checkbox_Active.svg?v=2");
 }
 
 .login_option .check:focus-visible + .check_visual {
