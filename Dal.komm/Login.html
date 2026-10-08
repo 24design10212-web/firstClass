@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../font/css/pretendardvariable.css">
+    <link rel="stylesheet" href="../CSS/default.css">
+    <link rel="stylesheet" href="Login.css">
+    <title>달콤 로그인</title>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>로그인</h1>
+            <button type="button" class="prev_btn">
+                <span class="sr-only">이전 페이지</span>
+            </button>
+        </header>
+
+        <main>
+            <h2 class="title">
+                <img src="img/dalkomm.png" alt="Dal.Komm">
+            </h2>
+
+            <form action="">
+                <fieldset>
+                    <legend class="email">이메일 로그인</legend>
+
+                    <div class="input_box">
+                        <label for="email" class="sr-only">아이디(이메일)</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="아이디(이메일)을 입력해 주세요."
+                        >
+                    </div>
+
+                    <div class="input_box rela">
+                        <label for="password" class="sr-only">비밀번호</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="비밀번호를 입력해 주세요"
+                        >
+                        <button type="button" class="pw_btn">
+                            <span class="sr-only">비밀번호 보기</span>
+                        </button>
+                    </div>
+
+                    <div class="login_option">
+                        <label>
+                            <input type="checkbox" class="check sr-only" checked>
+                            <span>자동로그인</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="check sr-only">
+                            <span>아이디 저장</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="login_btn">로그인</button>
+                </fieldset>
+            </form>
+
+            <div class="login_link">
+                <a href="#">아이디 찾기</a>
+                <a href="#">비밀번호 재설정</a>
+                <a href="#">회원가입</a>
+            </div>
+
+            <section class="sns_login" aria-labelledby="sns-title">
+                <h2 id="sns-title" class="sr-only">SNS 간편 로그인</h2>
+                <p>SNS로 간편하게 로그인</p>
+
+                <div class="sns_list">
+                    <a href="#" aria-label="카카오로 로그인">
+                        <img src="img/kakao_logo_icon.svg" alt="">
+                    </a>
+                    <a href="#" aria-label="네이버로 로그인">
+                        <img src="img/naver_logo_icon.svg" alt="">
+                    </a>
+                    <a href="#" aria-label="애플로 로그인">
+                        <img src="img/apple_logo_icon.svg" alt="">
+                    </a>
+                    <a href="#" aria-label="삼성카드로 로그인">
+                        <img src="img/samsung_icon.svg" alt="">
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
