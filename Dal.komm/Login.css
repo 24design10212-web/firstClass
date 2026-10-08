@@ -59,7 +59,7 @@ main {
 }
 
 .title img {
-    width: 145px;
+    width: 120px;
     height: auto;
 }
 
@@ -179,7 +179,7 @@ input::placeholder {
 .login_link a {
     display: inline-flex;
     align-items: center;
-    column-gap: 12px;
+    column-gap: 4px;
 }
 
 .login_link a:not(:last-child)::after {
@@ -199,7 +199,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 16px;
+    column-gap: 12px;
     margin-bottom: 35px;
     font-size: 1.3rem;
     font-weight: 400;
