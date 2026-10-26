@@ -116,8 +116,19 @@ body {
         background-color: orange;
     }
 
+    /* 모바일 배너는 이미지 원본 비율을 유지해 확대·잘림을 방지 */
     .hero-sec .swiper {
-        height: 96dvb;
+        height: auto;
+    }
+
+    .hero-sec .swiper-slide {
+        height: auto;
+    }
+
+    .hero-sec .swiper-slide img.mo {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .hero-controls {
