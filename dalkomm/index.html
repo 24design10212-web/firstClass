@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="hero-controls">
-                    <div class="hero-progress" aria-label="슬라이드 진행 상태">
+                    <div class="hero-progress" role="progressbar" aria-label="슬라이드 진행 상태" aria-valuemin="1" aria-valuemax="2" aria-valuenow="1">
                         <span class="hero-progress-fill"></span>
                     </div>
                     <div class="hero-arrows">
@@ -42,6 +42,8 @@
     </div>
     <script>
         const progressFill = document.querySelector('.hero-progress-fill');
+        const progressBar = document.querySelector('.hero-progress');
+
         const swiper1 = new Swiper('.hero-sec .swiper', {
             direction: 'horizontal',
             loop: true,
@@ -60,9 +62,14 @@
         });
 
         function updateHeroProgress(swiper) {
-            const totalSlides = swiper.slides.length - (swiper.loopedSlides * 2);
+            const duplicateSlides = swiper.el.querySelectorAll('.swiper-slide-duplicate').length;
+            const totalSlides = swiper.slides.length - duplicateSlides;
             const currentSlide = swiper.realIndex + 1;
-            progressFill.style.width = (currentSlide / totalSlides * 100) + '%';
+            const progress = totalSlides > 0 ? currentSlide / totalSlides * 100 : 0;
+
+            progressFill.style.width = progress + '%';
+            progressBar.setAttribute('aria-valuemax', totalSlides);
+            progressBar.setAttribute('aria-valuenow', currentSlide);
         }
     </script>
 </body>
