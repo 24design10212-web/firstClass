@@ -116,19 +116,25 @@ body {
         background-color: orange;
     }
 
-    /* 모바일 배너는 이미지 원본 비율을 유지해 확대·잘림을 방지 */
+    /* 모바일 이미지는 너비에 맞추고 높이를 자동 계산해 원본 비율 유지 */
     .hero-sec .swiper {
-        height: auto;
+        height: auto !important;
+    }
+
+    .hero-sec .swiper-wrapper {
+        align-items: flex-start;
     }
 
     .hero-sec .swiper-slide {
-        height: auto;
+        height: auto !important;
     }
 
     .hero-sec .swiper-slide img.mo {
+        display: block;
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: auto !important;
+        max-height: none;
+        object-fit: unset;
     }
 
     .hero-controls {
