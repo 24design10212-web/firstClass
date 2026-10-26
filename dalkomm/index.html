@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +8,62 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="../npm/swiper/swiper-bundle.min.js   "></script>
+    <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div id="wrap">
         <header>제목공간</header>
         <main>
             <div class="hero-sec">
-                <!-- Slider main container -->
                 <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="img/visual01.png" alt="라떼배너" class="pc">
-                        <img src="img/m_visual01.png" alt="라떼배너모바일" class="mo">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/visual02.png" alt="여름메뉴배너" class="pc">
-                        <img src="img/m_visual02.jpg" alt="여름메뉴배너모바일" class="mo">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/visual01.png" alt="라떼배너" class="pc">
+                            <img src="img/m_visual01.png" alt="라떼배너모바일" class="mo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/visual02.png" alt="여름메뉴배너" class="pc">
+                            <img src="img/m_visual02.jpg" alt="여름메뉴배너모바일" class="mo">
+                        </div>
                     </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                <div class="hero-controls">
+                    <div class="hero-progress" aria-label="슬라이드 진행 상태">
+                        <span class="hero-progress-fill"></span>
+                    </div>
+                    <div class="hero-arrows">
+                        <button type="button" class="hero-prev" aria-label="이전 슬라이드"></button>
+                        <button type="button" class="hero-next" aria-label="다음 슬라이드"></button>
+                    </div>
                 </div>
             </div>
         </main>
         <footer>&copy;</footer>
     </div>
     <script>
-        const swiper1 = new Swiper('.hero-sec > .swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.hero-sec .swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.hero-sec .swiper-button-next',
-            prevEl: '.hero-sec .swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.hero-sec .swiper-scrollbar',
-        },
+        const progressFill = document.querySelector('.hero-progress-fill');
+        const swiper1 = new Swiper('.hero-sec .swiper', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.hero-next',
+                prevEl: '.hero-prev',
+            },
+            on: {
+                init: function () {
+                    updateHeroProgress(this);
+                },
+                slideChange: function () {
+                    updateHeroProgress(this);
+                },
+            },
         });
+
+        function updateHeroProgress(swiper) {
+            const totalSlides = swiper.slides.length - (swiper.loopedSlides * 2);
+            const currentSlide = swiper.realIndex + 1;
+            progressFill.style.width = (currentSlide / totalSlides * 100) + '%';
+        }
     </script>
 </body>
 </html>
