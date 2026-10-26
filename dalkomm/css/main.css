@@ -1,29 +1,94 @@
 body {
     background-color: yellow;
-    font-family: "Pretendard Variable", sans-seif;
+    font-family: "Pretendard Variable", sans-serif;
 }
-.mo{
+
+.mo {
     display: none;
 }
+
 .hero-sec .swiper {
     width: 100%;
-    height: 700px;
+    height: 720px;
 }
-/*높이를 고정하고 싶은 경우는 px값 적용
-반응형에 따라 높이값이 점점 줄어들길 바라면 높이값 주지 않기!
-max.height정도는 가능*/
+
+/* 높이는 고정하고, 배너 이미지는 영역에 맞춰 표시 */
 .hero-sec .swiper img {
     height: 100%;
     object-fit: cover;
 }
 
-@media ( max-width: 1024px) {
+/* Figma 디자인: 하단의 얇은 진행 바와 오른쪽 화살표 */
+.hero-sec .swiper-pagination {
+    display: none;
+}
+
+.hero-sec .swiper-scrollbar {
+    position: absolute;
+    z-index: 10;
+    left: 5.2%;
+    right: calc(5.2% + 111px);
+    bottom: 54px;
+    width: auto;
+    height: 3px;
+    border-radius: 0;
+    background: #ffffff;
+    opacity: 1;
+}
+
+.hero-sec .swiper-scrollbar-drag {
+    height: 3px;
+    border-radius: 0;
+    background: #222222;
+}
+
+.hero-sec .swiper-button-prev,
+.hero-sec .swiper-button-next {
+    top: auto;
+    bottom: 47px;
+    width: 10px;
+    height: 17px;
+    margin-top: 0;
+    color: #222222;
+}
+
+.hero-sec .swiper-button-prev {
+    left: auto;
+    right: calc(5.2% + 60px);
+}
+
+.hero-sec .swiper-button-next {
+    right: 5.2%;
+}
+
+/* 기본 Swiper 화살표 대신 Figma처럼 가는 꺾쇠 형태 */
+.hero-sec .swiper-button-prev::after,
+.hero-sec .swiper-button-next::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #222222;
+    border-right: 1px solid #222222;
+    font-size: 0;
+}
+
+.hero-sec .swiper-button-prev::after {
+    transform: rotate(-135deg);
+}
+
+.hero-sec .swiper-button-next::after {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 1024px) {
     .pc {
         display: none;
     }
+
     .mo {
         display: block;
     }
+
     header {
         position: fixed;
         width: 100%;
@@ -31,7 +96,27 @@ max.height정도는 가능*/
         background-color: orange;
         z-index: 10;
     }
+
     .hero-sec .swiper {
         height: 96dvb;
+    }
+
+    .hero-sec .swiper-scrollbar {
+        left: 5%;
+        right: calc(5% + 70px);
+        bottom: 28px;
+    }
+
+    .hero-sec .swiper-button-prev,
+    .hero-sec .swiper-button-next {
+        bottom: 21px;
+    }
+
+    .hero-sec .swiper-button-prev {
+        right: calc(5% + 38px);
+    }
+
+    .hero-sec .swiper-button-next {
+        right: 5%;
     }
 }
