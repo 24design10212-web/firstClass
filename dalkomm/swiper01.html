@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달콤리뉴얼포트폴리오</title>
+    <link rel="stylesheet" href="../CSS/default.css">
+    <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../font/css/pretendardvariable.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="../npm/swiper/swiper-bundle.min.js   "></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>제목공간</header>
+        <main>
+            <div class="t-box">
+                <div class="scale01">scale01</div>
+                <div class="scale02">scale02</div>
+            </div>
+            <div class="swiper b-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul01.png"
+                            alt="풀무원제품1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul02.png"
+                            alt="풀무원제품2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul03.png"
+                            alt="풀무원제품3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul04.png"
+                            alt="풀무원제품4">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul05.png"
+                            alt="풀무원제품5">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul03.png"
+                            alt="풀무원제품3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul02.png"
+                            alt="풀무원제품2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul03.png"
+                            alt="풀무원제품3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="swiper-img/pul04.png"
+                            alt="풀무원제품4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>&copy;</footer>
+    </div>
+    <script>
+        const bestSlider = new Swiper(".b-slider", {
+            slidesPerView: 2.5,
+            spaceBetween: 8,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3.5,
+                },
+                1024: {
+                    slidesPerView: 5
+                }
+            }
+        });
+        // 1024px까지 5개를 유지한다
+        //768~1023px까지 3.5개를 유지하겠다
+        //767px 부터 2.5개를 유지하겠다
+    </script>
+</body>
+</html>
