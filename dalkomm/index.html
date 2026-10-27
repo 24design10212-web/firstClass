@@ -65,9 +65,11 @@
             const duplicateSlides = swiper.el.querySelectorAll('.swiper-slide-duplicate').length;
             const totalSlides = swiper.slides.length - duplicateSlides;
             const currentSlide = swiper.realIndex + 1;
-            const progress = totalSlides > 0 ? currentSlide / totalSlides * 100 : 0;
+            // 검은 진행 표시의 길이는 고정하고, 현재 슬라이드 위치로 이동
+            const position = totalSlides > 1 ? (currentSlide - 1) / (totalSlides - 1) * 100 : 0;
 
-            progressFill.style.width = progress + '%';
+            progressFill.style.width = '50%';
+            progressFill.style.transform = 'translateX(' + position + '%)';
             progressBar.setAttribute('aria-valuemax', totalSlides);
             progressBar.setAttribute('aria-valuenow', currentSlide);
         }
