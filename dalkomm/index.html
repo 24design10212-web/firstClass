@@ -67,6 +67,10 @@
         const swiper1 = new Swiper('.hero-sec .swiper', {
             direction: 'horizontal',
             loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             navigation: {
                 nextEl: '.hero-next',
                 prevEl: '.hero-prev',
