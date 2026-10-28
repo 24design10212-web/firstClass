@@ -59,12 +59,17 @@ body {
 }
 
 .header-logo {
+    display: block;
     flex: 0 0 117px;
-    color: var(--color-text-primary);
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: -1.5px;
+    width: 117px;
+    height: 30px;
     text-decoration: none;
+}
+
+.header-logo img {
+    display: block;
+    width: 117px;
+    height: 30px;
 }
 
 .main-nav {
@@ -96,8 +101,7 @@ body {
     }
 
     .header-logo {
-        flex-basis: auto;
-        font-size: 22px;
+        flex-basis: 117px;
     }
 
     .main-nav {
@@ -242,14 +246,6 @@ body {
 
     .hero-sec .swiper-slide img.mo {
         display: block;
-    }
-
-    header {
-        position: fixed;
-        z-index: 10;
-        width: 100%;
-        height: 60px;
-        background-color: var(--color-action-primary);
     }
 
     /* 모바일 이미지는 너비에 맞추고 높이를 자동 계산해 원본 비율 유지 */
