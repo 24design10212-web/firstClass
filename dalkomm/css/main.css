@@ -37,11 +37,10 @@ body {
     font-family: "Pretendard Variable", sans-serif;
 }
 
-/* Figma 헤더: 콘텐츠 위에 고정 배치 */
+/* 헤더: 스크롤 시 상단에 붙도록 sticky 적용 */
 .site-header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
     z-index: 100;
     width: 100%;
     height: 90px;
