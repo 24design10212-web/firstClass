@@ -81,10 +81,11 @@
             const duplicateSlides = swiper.el.querySelectorAll('.swiper-slide-duplicate').length;
             const totalSlides = swiper.slides.length - duplicateSlides;
             const currentSlide = swiper.realIndex + 1;
-            // 검은 진행 표시의 길이는 고정하고, 현재 슬라이드 위치로 이동
-            const position = totalSlides > 1 ? (currentSlide - 1) / (totalSlides - 1) * 100 : 0;
+            // 전체 진행 바를 슬라이드 개수만큼 나누고, 검은 표시를 현재 구간으로 이동
+            const sectionWidth = 100 / totalSlides;
+            const position = (currentSlide - 1) * 100;
 
-            progressFill.style.width = '50%';
+            progressFill.style.width = sectionWidth + '%';
             progressFill.style.transform = 'translateX(' + position + '%)';
             progressBar.setAttribute('aria-valuemax', totalSlides);
             progressBar.setAttribute('aria-valuenow', currentSlide);
