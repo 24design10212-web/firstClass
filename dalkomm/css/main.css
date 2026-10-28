@@ -37,6 +37,101 @@ body {
     font-family: "Pretendard Variable", sans-serif;
 }
 
+/* Figma 헤더: 콘텐츠 위에 고정 배치 */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 90px;
+    background-color: var(--color-background-default);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 200px);
+    max-width: 1720px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header-logo {
+    flex: 0 0 117px;
+    color: var(--color-text-primary);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(28px, 4.2vw, 80px);
+}
+
+.main-nav a,
+.franchise-link {
+    color: var(--color-text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.franchise-link {
+    margin-left: 32px;
+}
+
+@media (max-width: 1024px) {
+    .site-header {
+        height: 60px;
+    }
+
+    .header-inner {
+        width: calc(100% - 32px);
+    }
+
+    .header-logo {
+        flex-basis: auto;
+        font-size: 22px;
+    }
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .main-nav a,
+    .franchise-link {
+        font-size: 11px;
+    }
+
+    .franchise-link {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-inner {
+        width: calc(100% - 24px);
+    }
+
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 9px;
+    }
+
+    .franchise-link {
+        display: none;
+    }
+}
+
 .mo {
     display: none;
 }
