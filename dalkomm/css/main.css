@@ -1,5 +1,39 @@
+/* ========================================
+   Color Variables
+   Source: Figma - Primitives / Semantic
+======================================== */
+:root {
+    /* Primitives: 원본 컬러 */
+    --color-orange-500: #FF671F;
+    --color-orange-50: #FFF0E8;
+
+    --color-neutral-900: #222222;
+    --color-neutral-200: #E5E1DC;
+    --color-neutral-100: #F7F5F2;
+    --color-neutral-0: #FFFFFF;
+
+    /* Semantic: UI 목적에 따라 사용하는 컬러 */
+    --color-background-default: var(--color-neutral-0);
+    --color-background-subtle: var(--color-neutral-100);
+
+    --color-surface-default: var(--color-neutral-0);
+    --color-surface-subtle: var(--color-neutral-100);
+
+    --color-text-primary: var(--color-neutral-900);
+    --color-text-inverse: var(--color-neutral-0);
+
+    --color-border-default: var(--color-neutral-200);
+
+    --color-action-primary: var(--color-orange-500);
+    --color-action-primary-text: var(--color-neutral-900);
+    --color-action-secondary: var(--color-neutral-900);
+
+    --color-accent-subtle: var(--color-orange-50);
+    --color-accent-strong: var(--color-orange-500);
+}
+
 body {
-    background-color: yellow;
+    background-color: var(--color-background-default);
     font-family: "Pretendard Variable", sans-serif;
 }
 
@@ -49,14 +83,14 @@ body {
     min-width: 0;
     height: 3px;
     overflow: hidden;
-    background: #fff;
+    background: var(--color-text-inverse);
 }
 
 .hero-progress-fill {
     display: block;
     width: 50%;
     height: 100%;
-    background: #222;
+    background: var(--color-text-primary);
     transform: translateX(0);
     transition: transform 300ms ease;
 }
@@ -77,7 +111,7 @@ body {
     width: 10px;
     height: 17px;
     padding: 0;
-    color: #fff;
+    color: var(--color-text-inverse);
     cursor: pointer;
 }
 
@@ -120,7 +154,7 @@ body {
         z-index: 10;
         width: 100%;
         height: 60px;
-        background-color: orange;
+        background-color: var(--color-action-primary);
     }
 
     /* 모바일 이미지는 너비에 맞추고 높이를 자동 계산해 원본 비율 유지 */
