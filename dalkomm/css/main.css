@@ -345,17 +345,14 @@ body {
 }
 .signature-slider-wrap {
     position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 600px;
+    min-height: 520px;
 }
-.signature-swiper { width: 100%; overflow: visible; }
+.signature-swiper { width: 100%; height: 520px; overflow: visible; }
 .signature-card {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    min-height: 600px;
+    justify-content: center;
+    height: 520px;
     text-align: center;
 }
 .signature-card img {
@@ -368,7 +365,17 @@ body {
     transition: transform .3s ease;
 }
 .signature-card.swiper-slide-active img { transform: scale(1); }
-.signature-card-title { margin: 28px 0 0; color: #222; font-size: 24px; font-weight: 500; }
+.signature-card-title {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding-top: 14px;
+    color: #222;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+}
 .signature-prev, .signature-next {
     position: absolute;
     top: 50%;
