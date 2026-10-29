@@ -402,8 +402,9 @@ body {
     .signature-inner { width: calc(100% - 64px); }
     .signature-tabs { margin: 42px 0 60px; gap: 20px; }
     .signature-tab { min-width: 170px; height: 44px; }
-    .signature-slider-wrap, .signature-card { min-height: 460px; }
+    .signature-card { height: 400px; }
     .signature-card img { height: 340px; }
+    .signature-card-title { margin-top: -12px; font-size: 20px; }
     .signature-prev, .signature-next { width: 56px; height: 56px; }
 }
 @media (max-width: 600px) {
@@ -413,10 +414,11 @@ body {
     .signature-description { margin-top: 8px; font-size: 13px; }
     .signature-tabs { gap: 12px; margin: 28px 0 36px; }
     .signature-tab { min-width: 0; height: 34px; padding: 0 20px; font-size: 12px; }
-    .signature-slider-wrap, .signature-card { min-height: 340px; }
+    .signature-slider-wrap { padding-bottom: 36px; }
+    .signature-card { height: 300px; }
     .signature-card img { height: 260px; transform: scale(.72); }
     .signature-card.swiper-slide-active img { transform: scale(1); }
-    .signature-card-title { margin-top: 12px; font-size: 16px; }
+    .signature-card-title { margin-top: -8px; font-size: 16px; }
     .signature-prev, .signature-next { width: 36px; height: 36px; }
     .signature-prev::before, .signature-next::before { width: 10px; height: 10px; border-width: 2px; }
 }
