@@ -72,20 +72,41 @@
                         <div class="swiper signature-swiper">
                             <div class="swiper-wrapper">
                                 <article class="swiper-slide signature-card" data-brand="dalkomm">
-                                    <div class="signature-card-visual"><span>DAL.KOMM</span></div>
-                                    <div class="signature-card-info"><p class="signature-card-category">SIGNATURE DRINK</p><h3>큐브</h3><p>에스프레소 큐브가 우유에 천천히 녹아드는 달콤의 시그니처 음료</p></div>
+                                    <div class="signature-card-visual">
+                                        <img src="img/Cube.png" alt="달콤 큐브 음료">
+                                    </div>
+                                    <div class="signature-card-info">
+                                        <p class="signature-card-category">SIGNATURE DRINK</p>
+                                        <h3>큐브</h3>
+                                        <p>에스프레소 큐브와 우유가 어우러지는 달콤의 시그니처 음료</p>
+                                    </div>
                                 </article>
                                 <article class="swiper-slide signature-card" data-brand="dalkomm">
-                                    <div class="signature-card-visual"><span>DAL.KOMM</span></div>
-                                    <div class="signature-card-info"><p class="signature-card-category">SIGNATURE DRINK</p><h3>허니몽</h3><p>자몽의 상큼함과 꿀의 달콤함을 함께 즐기는 시그니처 음료</p></div>
+                                    <div class="signature-card-visual">
+                                        <img src="img/Honey Grapefruit_ice.png" alt="달콤 허니 자몽 아이스 음료">
+                                    </div>
+                                    <div class="signature-card-info">
+                                        <p class="signature-card-category">SIGNATURE DRINK</p>
+                                        <h3>허니 자몽 아이스</h3>
+                                        <p>자몽의 상큼함과 꿀의 달콤함을 함께 즐기는 음료</p>
+                                    </div>
                                 </article>
                                 <article class="swiper-slide signature-card" data-brand="dalkomm">
-                                    <div class="signature-card-visual"><span>DAL.KOMM</span></div>
-                                    <div class="signature-card-info"><p class="signature-card-category">SIGNATURE COFFEE</p><h3>달콤 시그니처 아메리카노</h3><p>풍부한 바디감과 깊은 여운을 담은 시그니처 블렌드</p></div>
+                                    <div class="signature-card-visual">
+                                        <img src="img/StrawberryCube.png" alt="달콤 딸기 큐브 음료">
+                                    </div>
+                                    <div class="signature-card-info">
+                                        <p class="signature-card-category">SIGNATURE DRINK</p>
+                                        <h3>스트로베리 큐브</h3>
+                                        <p>딸기의 산뜻한 풍미를 담은 큐브 타입의 시그니처 음료</p>
+                                    </div>
                                 </article>
-                                <article class="swiper-slide signature-card" data-brand="dalkomm-n">
-                                    <div class="signature-card-visual"><span>DAL.KOMM N</span></div>
-                                    <div class="signature-card-info"><p class="signature-card-category">DAL.KOMM N</p><h3>Dal.komm N 메뉴</h3><p>달콤.N 브랜드 메뉴를 소개합니다.</p></div>
+                                <article class="swiper-slide signature-card signature-empty" data-brand="dalkomm-n">
+                                    <div class="signature-card-empty-content">
+                                        <p class="signature-card-category">DAL.KOMM N</p>
+                                        <h3>Dal.komm N</h3>
+                                        <p>이 브랜드의 음료 이미지가 등록되면 이 영역에서 확인할 수 있어요.</p>
+                                    </div>
                                 </article>
                             </div>
                         </div>
@@ -161,7 +182,8 @@
                 });
 
                 signatureSwiper.update();
-                signatureSwiper.slideTo(0);
+                signatureSwiper.slideTo(0, 0);
+                signatureSwiper.navigation.update();
             });
         });
 
