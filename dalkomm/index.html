@@ -134,6 +134,13 @@
 
         function renderSignatureMenus(brand) {
             const menus = signatureMenus[brand];
+            if (signatureSwiper) {
+                signatureSwiper.destroy(true, true);
+                signatureSwiper = undefined;
+                document.querySelector('.signature-swiper').classList.add('swiper');
+                signatureWrapper.classList.add('swiper-wrapper');
+            }
+
             signatureWrapper.innerHTML = menus.map(function (menu) {
                 // encodeURIComponent는 파일명의 공백과 & 문자를 URL에 맞게 처리합니다.
                 const imagePath = 'img/' + encodeURIComponent(menu.file);
@@ -141,10 +148,6 @@
                     '<img src="' + imagePath + '" alt="' + menu.alt + '">' +
                     '</div>';
             }).join('');
-
-            if (signatureSwiper) {
-                signatureSwiper.destroy(true, true);
-            }
 
             signatureSwiper = new Swiper('.signature-swiper', {
                 slidesPerView: 3,
