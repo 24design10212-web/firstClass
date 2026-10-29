@@ -57,6 +57,46 @@
                     </div>
                 </div>
             </div>
+            <section class="signature-sec" id="menu" aria-labelledby="signature-title">
+                <div class="signature-inner">
+                    <div class="signature-heading">
+                        <p class="signature-eyebrow">DAL.KOMM MENU</p>
+                        <h2 id="signature-title">Signature</h2>
+                        <p class="signature-description">달콤만의 특별함을 담은 시그니처 메뉴를 만나보세요.</p>
+                    </div>
+                    <div class="signature-tabs" role="group" aria-label="브랜드 메뉴 선택">
+                        <button type="button" class="signature-tab is-active" data-brand="dalkomm" aria-pressed="true">Dal.komm</button>
+                        <button type="button" class="signature-tab" data-brand="dalkomm-n" aria-pressed="false">Dal.komm N</button>
+                    </div>
+                    <div class="signature-slider-wrap">
+                        <div class="swiper signature-swiper">
+                            <div class="swiper-wrapper">
+                                <article class="swiper-slide signature-card" data-brand="dalkomm">
+                                    <div class="signature-card-visual"><span>DAL.KOMM</span></div>
+                                    <div class="signature-card-info"><p class="signature-card-category">SIGNATURE DRINK</p><h3>큐브</h3><p>에스프레소 큐브가 우유에 천천히 녹아드는 달콤의 시그니처 음료</p></div>
+                                </article>
+                                <article class="swiper-slide signature-card" data-brand="dalkomm">
+                                    <div class="signature-card-visual"><span>DAL.KOMM</span></div>
+                                    <div class="signature-card-info"><p class="signature-card-category">SIGNATURE DRINK</p><h3>허니몽</h3><p>자몽의 상큼함과 꿀의 달콤함을 함께 즐기는 시그니처 음료</p></div>
+                                </article>
+                                <article class="swiper-slide signature-card" data-brand="dalkomm">
+                                    <div class="signature-card-visual"><span>DAL.KOMM</span></div>
+                                    <div class="signature-card-info"><p class="signature-card-category">SIGNATURE COFFEE</p><h3>달콤 시그니처 아메리카노</h3><p>풍부한 바디감과 깊은 여운을 담은 시그니처 블렌드</p></div>
+                                </article>
+                                <article class="swiper-slide signature-card" data-brand="dalkomm-n">
+                                    <div class="signature-card-visual"><span>DAL.KOMM N</span></div>
+                                    <div class="signature-card-info"><p class="signature-card-category">DAL.KOMM N</p><h3>Dal.komm N 메뉴</h3><p>달콤.N 브랜드 메뉴를 소개합니다.</p></div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="signature-controls">
+                            <button type="button" class="signature-prev" aria-label="이전 시그니처 메뉴"></button>
+                            <div class="signature-pagination" aria-label="슬라이드 페이지"></div>
+                            <button type="button" class="signature-next" aria-label="다음 시그니처 메뉴"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>&copy;</footer>
     </div>
@@ -83,6 +123,46 @@
                     updateHeroProgress(this);
                 },
             },
+        });
+
+        const signatureSwiper = new Swiper('.signature-swiper', {
+            slidesPerView: 1.15,
+            spaceBetween: 16,
+            loop: false,
+            navigation: {
+                nextEl: '.signature-next',
+                prevEl: '.signature-prev',
+            },
+            pagination: {
+                el: '.signature-pagination',
+                type: 'fraction',
+            },
+            breakpoints: {
+                600: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 28 },
+            },
+        });
+
+        const signatureTabs = document.querySelectorAll('.signature-tab');
+        const signatureCards = document.querySelectorAll('.signature-card');
+
+        signatureTabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                const selectedBrand = tab.dataset.brand;
+
+                signatureTabs.forEach(function (item) {
+                    const isActive = item === tab;
+                    item.classList.toggle('is-active', isActive);
+                    item.setAttribute('aria-pressed', String(isActive));
+                });
+
+                signatureCards.forEach(function (card) {
+                    card.classList.toggle('is-hidden', card.dataset.brand !== selectedBrand);
+                });
+
+                signatureSwiper.update();
+                signatureSwiper.slideTo(0);
+            });
         });
 
         function updateHeroProgress(swiper) {
