@@ -76,13 +76,13 @@
                                 </div>
                                 <div class="swiper-slide signature-card" data-brand="dalkomm">
                                     <img src="img/Cube.png" alt="큐브라떼">
-                                    <p class="signature-card-title">큐브라떼</p>
                                 </div>
                                 <div class="swiper-slide signature-card" data-brand="dalkomm">
                                     <img src="img/Honey%20Grapefruit_ice.png" alt="허니 자몽 음료">
                                 </div>
                             </div>
                         </div>
+                        <p class="signature-card-title" aria-live="polite">큐브라떼</p>
                         <button type="button" class="signature-next" aria-label="다음 시그니처 메뉴"></button>
                     </div>
                 </div>
@@ -115,6 +115,9 @@
             },
         });
 
+        const signatureNames = ['스트로베리 큐브', '큐브라떼', '허니 자몽 아이스'];
+        const signatureTitle = document.querySelector('.signature-card-title');
+
         const signatureSwiper = new Swiper('.signature-swiper', {
             slidesPerView: 3,
             centeredSlides: true,
@@ -129,7 +132,19 @@
                 0: { slidesPerView: 1.8 },
                 600: { slidesPerView: 3 },
             },
+            on: {
+                init: function () {
+                    updateSignatureTitle(this);
+                },
+                slideChange: function () {
+                    updateSignatureTitle(this);
+                },
+            },
         });
+
+        function updateSignatureTitle(swiper) {
+            signatureTitle.textContent = signatureNames[swiper.realIndex % signatureNames.length];
+        }
 
         const signatureTabs = document.querySelectorAll('.signature-tab');
         signatureTabs.forEach(function (tab) {
