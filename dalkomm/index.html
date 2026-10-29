@@ -70,17 +70,7 @@
                     <div class="signature-slider-wrap">
                         <button type="button" class="signature-prev" aria-label="이전 시그니처 메뉴"></button>
                         <div class="swiper signature-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide signature-card" data-brand="dalkomm">
-                                    <img src="img/StrawberryCube.png" alt="딸기 큐브 음료">
-                                </div>
-                                <div class="swiper-slide signature-card" data-brand="dalkomm">
-                                    <img src="img/Cube.png" alt="큐브라떼">
-                                </div>
-                                <div class="swiper-slide signature-card" data-brand="dalkomm">
-                                    <img src="HoneyGrapefruit_ice.png" alt="허니 자몽 음료">
-                                </div>
-                            </div>
+                            <div class="swiper-wrapper"></div>
                         </div>
                         <p class="signature-card-title" aria-live="polite">큐브라떼</p>
                         <button type="button" class="signature-next" aria-label="다음 시그니처 메뉴"></button>
@@ -115,48 +105,91 @@
             },
         });
 
-        const signatureNames = ['스트로베리 큐브', '큐브라떼', '허니 자몽 아이스'];
+        // 저장소에 실제로 등록된 이미지 파일명을 사용합니다.
+        const signatureMenus = {
+            dalkomm: [
+                { file: 'StrawberryCube.png', name: '스트로베리 큐브', alt: '스트로베리 큐브 음료' },
+                { file: 'Cube.png', name: '큐브라떼', alt: '큐브라떼' },
+                { file: 'HoneyGrapefruit_ice.png', name: '허니 자몽 아이스', alt: '허니 자몽 아이스 음료' },
+                { file: 'HoneyCube.png', name: '허니 큐브', alt: '허니 큐브 음료' },
+                { file: 'MangoCube.png', name: '망고 큐브', alt: '망고 큐브 음료' },
+                { file: 'HoneyGrapefruit .png', name: '허니 자몽', alt: '허니 자몽 음료' },
+                { file: 'Grapefruit&Earl greyicedtea.png', name: '자몽 얼그레이 아이스티', alt: '자몽 얼그레이 아이스티' },
+                { file: 'Grapefruit&Earlgreytea.png', name: '자몽 얼그레이 티', alt: '자몽 얼그레이 티' },
+            ],
+            'dalkomm-n': [
+                { file: 'a.png', name: 'Dal.komm N 메뉴', alt: '달콤N 시그니처 음료' },
+                { file: 'b.png', name: 'Dal.komm N 메뉴', alt: '달콤N 시그니처 음료' },
+                { file: 'c.png', name: 'Dal.komm N 메뉴', alt: '달콤N 시그니처 음료' },
+                { file: 'd.png', name: 'Dal.komm N 메뉴', alt: '달콤N 시그니처 음료' },
+                { file: 'e.png', name: 'Dal.komm N 메뉴', alt: '달콤N 시그니처 음료' },
+                { file: 'f.png', name: 'Dal.komm N 메뉴', alt: '달콤N 시그니처 음료' },
+            ],
+        };
+
+        const signatureWrapper = document.querySelector('.signature-swiper .swiper-wrapper');
         const signatureTitle = document.querySelector('.signature-card-title');
+        const signatureTabs = document.querySelectorAll('.signature-tab');
+        let signatureSwiper;
 
-        const signatureSwiper = new Swiper('.signature-swiper', {
-            slidesPerView: 3,
-            centeredSlides: true,
-            initialSlide: 1,
-            spaceBetween: 0,
-            loop: true,
-            navigation: {
-                nextEl: '.signature-next',
-                prevEl: '.signature-prev',
-            },
-            breakpoints: {
-                0: { slidesPerView: 1.8 },
-                600: { slidesPerView: 3 },
-            },
-            on: {
-                init: function () {
-                    updateSignatureTitle(this);
-                },
-                slideChange: function () {
-                    updateSignatureTitle(this);
-                },
-            },
-        });
+        function renderSignatureMenus(brand) {
+            const menus = signatureMenus[brand];
+            signatureWrapper.innerHTML = menus.map(function (menu) {
+                // encodeURIComponent는 파일명의 공백과 & 문자를 URL에 맞게 처리합니다.
+                const imagePath = 'img/' + encodeURIComponent(menu.file);
+                return '<div class="swiper-slide signature-card">' +
+                    '<img src="' + imagePath + '" alt="' + menu.alt + '">' +
+                    '</div>';
+            }).join('');
 
-        function updateSignatureTitle(swiper) {
-            signatureTitle.textContent = signatureNames[swiper.realIndex % signatureNames.length];
+            if (signatureSwiper) {
+                signatureSwiper.destroy(true, true);
+            }
+
+            signatureSwiper = new Swiper('.signature-swiper', {
+                slidesPerView: 3,
+                centeredSlides: true,
+                initialSlide: brand === 'dalkomm' ? 1 : 0,
+                spaceBetween: 0,
+                loop: true,
+                navigation: {
+                    nextEl: '.signature-next',
+                    prevEl: '.signature-prev',
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1.8 },
+                    600: { slidesPerView: 3 },
+                },
+                on: {
+                    init: function () {
+                        updateSignatureTitle(this, brand);
+                    },
+                    slideChange: function () {
+                        updateSignatureTitle(this, brand);
+                    },
+                },
+            });
         }
 
-        const signatureTabs = document.querySelectorAll('.signature-tab');
+        function updateSignatureTitle(swiper, brand) {
+            const menus = signatureMenus[brand];
+            const activeMenu = menus[swiper.realIndex % menus.length];
+            signatureTitle.textContent = activeMenu.name;
+        }
+
         signatureTabs.forEach(function (tab) {
             tab.addEventListener('click', function () {
-                // Dal.komm N 메뉴 이미지는 저장소에 아직 없어, 탭 선택 상태만 표시합니다.
+                const brand = tab.dataset.brand;
                 signatureTabs.forEach(function (item) {
                     const isActive = item === tab;
                     item.classList.toggle('is-active', isActive);
                     item.setAttribute('aria-pressed', String(isActive));
                 });
+                renderSignatureMenus(brand);
             });
         });
+
+        renderSignatureMenus('dalkomm');
 
         function updateHeroProgress(swiper) {
             const duplicateSlides = swiper.el.querySelectorAll('.swiper-slide-duplicate').length;
