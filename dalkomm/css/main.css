@@ -573,3 +573,171 @@ body {
     .brand-image { flex: none; width: 100%; max-width: none; border-radius: 14px; }
     .brand-n { border-width: 2px; }
 }
+
+
+/* Brand logos use the supplied transparent image assets */
+.brand-copy h2.brand-logo {
+    display: flex;
+    align-items: center;
+    min-height: 58px;
+}
+.brand-logo img {
+    display: block;
+    width: auto;
+    max-width: min(100%, 360px);
+    max-height: 64px;
+    object-fit: contain;
+    object-position: left center;
+}
+@media (max-width: 600px) {
+    .brand-copy h2.brand-logo { min-height: 44px; }
+    .brand-logo img { max-width: min(100%, 270px); max-height: 46px; }
+}
+
+/* ========================================
+   Event section: Figma reference
+======================================== */
+.event-sec {
+    padding: 90px 0 100px;
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-900);
+}
+.event-inner {
+    width: calc(100% - 120px);
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.event-heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-bottom: 42px;
+}
+.event-heading h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -.03em;
+}
+.event-more {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 140px;
+    min-height: 42px;
+    padding: 0 20px;
+    border: 1px solid #888;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    transform: translateY(-50%);
+    transition: background .2s ease, color .2s ease;
+}
+.event-more span {
+    font-size: 22px;
+    line-height: 1;
+}
+.event-more:hover {
+    background: var(--color-neutral-900);
+    color: var(--color-neutral-0);
+}
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+.event-card {
+    min-width: 0;
+}
+.event-card > a {
+    display: block;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #e8e4df;
+}
+.event-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.58 / 1;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+.event-card > a:hover img {
+    transform: scale(1.035);
+}
+.event-card > a:focus-visible,
+.event-more:focus-visible {
+    outline: 2px solid var(--color-orange-500);
+    outline-offset: 4px;
+}
+.event-category {
+    margin: 24px 0 10px;
+    color: var(--color-orange-500);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.event-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -.035em;
+}
+.event-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 58px;
+}
+.event-pagination span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-orange-500);
+    opacity: .8;
+}
+.event-pagination span.is-active {
+    width: 92px;
+    height: 7px;
+    border-radius: 999px;
+    opacity: 1;
+}
+@media (max-width: 1024px) {
+    .event-sec { padding: 72px 0 80px; }
+    .event-inner { width: calc(100% - 64px); }
+    .event-heading { margin-bottom: 30px; }
+    .event-heading h2 { font-size: 34px; }
+    .event-more { min-width: 112px; min-height: 36px; padding: 0 15px; font-size: 12px; }
+    .event-list { gap: 18px; }
+    .event-card > a { border-radius: 14px; }
+    .event-category { margin-top: 18px; font-size: 12px; }
+    .event-card h3 { font-size: 16px; }
+    .event-pagination { margin-top: 42px; }
+}
+@media (max-width: 600px) {
+    .event-sec { padding: 56px 0 60px; }
+    .event-inner { width: calc(100% - 32px); }
+    .event-heading { margin-bottom: 24px; }
+    .event-heading h2 { font-size: 28px; }
+    .event-more { min-width: 86px; min-height: 30px; gap: 12px; padding: 0 12px; font-size: 11px; }
+    .event-more span { font-size: 18px; }
+    .event-list { grid-template-columns: 1fr; gap: 28px; }
+    .event-card > a { border-radius: 12px; }
+    .event-card img { aspect-ratio: 1.58 / 1; }
+    .event-category { margin: 14px 0 7px; font-size: 11px; }
+    .event-card h3 { font-size: 15px; }
+    .event-pagination { margin-top: 32px; gap: 9px; }
+    .event-pagination span.is-active { width: 52px; }
+}
