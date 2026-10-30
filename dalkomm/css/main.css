@@ -1089,6 +1089,13 @@ body {
     object-fit: contain;
     flex: 0 0 auto;
 }
+
+/* The arrow-right1 asset has more internal whitespace, so enlarge its box
+   to match the visible size of the Dal.Komm brand arrow. */
+.brand-panel--dalkomm-n .brand-link .arrow-icon {
+    width: 18px;
+    height: 18px;
+}
 .footer-family .family-arrow {
     display: block;
     width: 12px;
@@ -1106,4 +1113,5 @@ body {
     .brand-link .arrow-icon,
     .event-more .arrow-icon,
     .news-more .arrow-icon { width: 10px; height: 10px; }
+    .brand-panel--dalkomm-n .brand-link .arrow-icon { width: 15px; height: 15px; }
 }
