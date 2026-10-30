@@ -1101,7 +1101,6 @@ body {
     width: 12px;
     height: 12px;
     object-fit: contain;
-    transform: rotate(90deg);
     filter: invert(1);
     flex: 0 0 auto;
 }
