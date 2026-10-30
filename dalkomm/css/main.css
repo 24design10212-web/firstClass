@@ -1051,3 +1051,59 @@ body {
         flex-basis: 32px;
     }
 }
+
+
+/* Use supplied arrow image assets instead of CSS-drawn/text arrows */
+.hero-prev,
+.hero-next {
+    width: 18px;
+    height: 22px;
+}
+.hero-prev::before,
+.hero-next::before,
+.signature-prev::before,
+.signature-next::before {
+    display: none;
+    content: none;
+}
+.hero-prev img,
+.hero-next img {
+    display: block;
+    width: 13px;
+    height: 18px;
+    object-fit: contain;
+}
+.signature-prev img,
+.signature-next img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.brand-link .arrow-icon,
+.event-more .arrow-icon,
+.news-more .arrow-icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+.footer-family .family-arrow {
+    display: block;
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    transform: rotate(90deg);
+    filter: invert(1);
+    flex: 0 0 auto;
+}
+@media (max-width: 600px) {
+    .hero-prev img,
+    .hero-next img { width: 11px; height: 16px; }
+    .signature-prev img,
+    .signature-next img { width: 15px; height: 15px; }
+    .brand-link .arrow-icon,
+    .event-more .arrow-icon,
+    .news-more .arrow-icon { width: 10px; height: 10px; }
+}
