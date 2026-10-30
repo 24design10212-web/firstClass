@@ -1076,8 +1076,8 @@ body {
 .signature-prev img,
 .signature-next img {
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
 }
 .brand-link .arrow-icon,
@@ -1109,7 +1109,7 @@ body {
     .hero-prev img,
     .hero-next img { width: 11px; height: 16px; }
     .signature-prev img,
-    .signature-next img { width: 16px; height: 16px; }
+    .signature-next img { width: 22px; height: 22px; }
     .brand-link .arrow-icon,
     .event-more .arrow-icon,
     .news-more .arrow-icon { width: 10px; height: 10px; }
