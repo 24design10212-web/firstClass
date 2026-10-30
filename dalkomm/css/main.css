@@ -743,9 +743,43 @@ body {
 }
 
 
-/* Align the visible Dal.Komm.N logo with the brand copy text */
+/* Align both visible brand logos to the same text edge and baseline */
+.brand-copy h2.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 58px;
+    margin: 0;
+}
+
+.brand-logo img {
+    display: block;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: min(100%, 360px);
+    height: 58px;
+    max-height: 58px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* The two logo assets have different transparent margins; normalize their visible left edge. */
+.brand-panel--dalkomm .brand-logo img,
 .brand-panel--dalkomm-n .brand-logo img {
     margin-left: -7px;
+}
+
+@media (max-width: 600px) {
+    .brand-copy h2.brand-logo {
+        min-height: 44px;
+    }
+
+    .brand-logo img {
+        height: 44px;
+        max-width: min(100%, 270px);
+        max-height: 44px;
+    }
 }
 
 /* ========================================
