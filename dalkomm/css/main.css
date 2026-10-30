@@ -1024,3 +1024,30 @@ body {
     .footer-legal { flex-wrap: wrap; gap: 12px 22px; }
     .footer-legal a { font-size: 10px; }
 }
+
+
+/* Footer icon assets from dalkomm/img */
+.footer-icon-link {
+    flex: 0 0 38px;
+    padding: 0;
+}
+.footer-icon-link img {
+    display: block;
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+@media (max-width: 1024px) {
+    .footer-icon-link {
+        flex-basis: 34px;
+    }
+    .footer-icon-link img {
+        width: 16px;
+        height: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .footer-icon-link {
+        flex-basis: 32px;
+    }
+}
