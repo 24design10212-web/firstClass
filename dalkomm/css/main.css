@@ -88,6 +88,114 @@ body {
 
 .main-nav a  { font-size: 18px; }
 
+/* GNB dropdown interaction */
+.main-nav {
+    align-self: stretch;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .nav-link {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    transition: color .2s ease;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link:focus-visible,
+.nav-item:hover > .nav-link,
+.nav-item:focus-within > .nav-link {
+    color: var(--color-orange-500);
+}
+
+.nav-submenu {
+    position: absolute;
+    top: calc(100% - 8px);
+    left: 50%;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    min-width: 104px;
+    padding: 8px 0;
+    border: 1px solid rgba(34, 34, 34, .06);
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.nav-item:hover .nav-submenu,
+.nav-item:focus-within .nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.main-nav .nav-submenu a {
+    display: block;
+    padding: 8px 14px;
+    color: var(--color-text-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+    transition: color .18s ease, background-color .18s ease;
+}
+
+.main-nav .nav-submenu a:hover,
+.main-nav .nav-submenu a:focus-visible {
+    background: var(--color-neutral-100);
+    color: var(--color-orange-500);
+}
+
+.main-nav .nav-link:focus-visible,
+.main-nav .nav-submenu a:focus-visible {
+    outline: 2px solid var(--color-orange-500);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+    .nav-submenu {
+        min-width: 86px;
+    }
+
+    .main-nav .nav-submenu a {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav .nav-link {
+        font-size: 9px;
+    }
+
+    .nav-submenu {
+        top: calc(100% - 4px);
+        min-width: 72px;
+        padding: 5px 0;
+    }
+
+    .main-nav .nav-submenu a {
+        padding: 7px 8px;
+        font-size: 9px;
+    }
+}
+
 .franchise-link {
     margin-left: 32px;
 }
