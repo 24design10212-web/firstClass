@@ -37,87 +37,82 @@ body {
     font-family: "Pretendard Variable", sans-serif;
 }
 
-/* 헤더: 제공된 참고 이미지의 비율과 배치 */
+/* 헤더: 스크롤 시 상단에 붙도록 sticky 적용 */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
-    height: 46px;
-    background-color: #fff;
+    height: 90px;
+    background-color: var(--color-background-default);
 }
 
 .header-inner {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 108px);
+    width: calc(100% - 200px);
     max-width: 1720px;
     height: 100%;
     margin: 0 auto;
 }
 
 .header-logo {
-    display: flex;
-    flex: 0 0 50px;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 100%;
+    display: block;
+    flex: 0 0 117px;
+    width: 117px;
+    height: 30px;
     text-decoration: none;
 }
 
 .header-logo img {
     display: block;
-    width: 50px;
-    height: auto;
+    width: 117px;
+    height: 30px;
 }
 
 .main-nav {
-    position: absolute;
-    top: 0;
-    left: 50%;
     display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 42px;
-    height: 100%;
-    transform: translateX(-50%);
+    align-items: center;
+    gap: clamp(28px, 4.2vw, 80px);
+}
+
+.main-nav a,
+.franchise-link {
+    color: var(--color-text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.main-nav a  { font-size: 18px; }
+
+/* GNB dropdown interaction */
+.main-nav {
+    align-self: stretch;
 }
 
 .nav-item {
     position: relative;
     display: flex;
     align-items: center;
-    height: 100%;
-}
-
-.main-nav a,
-.franchise-link {
-    color: #111;
-    font-size: 9px;
-    font-weight: 400;
-    line-height: 1;
-    text-decoration: none;
-    white-space: nowrap;
 }
 
 .main-nav .nav-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     height: 100%;
-    transition: color .18s ease;
+    transition: color .2s ease;
 }
 
 .main-nav .nav-link:hover,
 .main-nav .nav-link:focus-visible,
 .nav-item:hover > .nav-link,
 .nav-item:focus-within > .nav-link {
-    color: #ff671f;
+    color: var(--color-orange-500);
 }
 
-/* 드롭다운: 참고 이미지의 작고 왼쪽 정렬된 흰색 패널 */
 .nav-submenu {
     position: absolute;
     top: 100%;
@@ -125,20 +120,20 @@ body {
     z-index: 110;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 13px;
+    align-items: stretch;
+    gap: 20px;
     box-sizing: border-box;
-    width: 80px;
-    height: 92px;
-    padding: 17px 10px 10px 25px;
-    overflow: hidden;
-    border-radius: 9px;
+    width: 150px;
+    height: 170px;
+    padding: 10px 10px;
+    border-radius: 16px;
     background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .04);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translate(-50%, 3px);
-    transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+    transform: translate(-50%, 6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
 }
 
 .nav-item:hover .nav-submenu,
@@ -153,66 +148,110 @@ body {
     display: block;
     flex: 0 0 auto;
     padding: 0;
-    color: #111;
-    font-size: 8px;
+    color: var(--color-text-primary);
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.15;
+    line-height: 1.35;
     text-align: left;
     text-decoration: none;
-    transition: color .16s ease;
+    transition: color .18s ease, background-color .18s ease;
 }
 
-.main-nav .nav-submenu a:first-child,
+.main-nav .nav-submenu a:first-child {
+    color: var(--color-orange-500);
+}
+
 .main-nav .nav-submenu a:hover,
 .main-nav .nav-submenu a:focus-visible {
-    color: #ff671f;
+    background: var(--color-neutral-100);
+    color: var(--color-orange-500);
 }
 
 .main-nav .nav-link:focus-visible,
 .main-nav .nav-submenu a:focus-visible {
-    outline: 1px solid #ff671f;
+    outline: 2px solid var(--color-orange-500);
     outline-offset: 2px;
 }
 
-.franchise-link {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-left: 0;
-}
-
-@media (max-width: 700px) {
-    .header-inner {
-        width: calc(100% - 28px);
+@media (max-width: 1024px) {
+    .nav-submenu {
+        gap: 14px;
+        width: 120px;
+        height: 136px;
+        padding: 10px;
+        border-radius: 12px;
     }
 
-    .header-logo,
-    .header-logo img {
-        width: 42px;
+    .main-nav .nav-submenu a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav .nav-link {
+        font-size: 9px;
+    }
+
+    .nav-submenu {
+        top: 100%;
+        gap: 10px;
+        width: 90px;
+        height: 110px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .main-nav .nav-submenu a {
+        font-size: 9px;
+    }
+}
+
+.franchise-link {
+    margin-left: 32px;
+}
+
+@media (max-width: 1024px) {
+    .site-header {
+        height: 60px;
+    }
+
+    .header-inner {
+        width: calc(100% - 32px);
     }
 
     .header-logo {
-        flex-basis: 42px;
+        flex-basis: 117px;
     }
 
     .main-nav {
-        gap: clamp(10px, 3.8vw, 24px);
+        gap: 14px;
     }
 
     .main-nav a,
     .franchise-link {
-        font-size: 8px;
+        font-size: 11px;
     }
 
-    .nav-submenu {
-        width: 76px;
-        height: 88px;
-        gap: 12px;
-        padding: 15px 8px 8px 20px;
+    .franchise-link {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-inner {
+        width: calc(100% - 24px);
     }
 
-    .main-nav .nav-submenu a {
-        font-size: 8px;
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 9px;
     }
 
     .franchise-link {
