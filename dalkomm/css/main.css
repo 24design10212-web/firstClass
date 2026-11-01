@@ -77,7 +77,6 @@ body {
     gap: clamp(28px, 4.2vw, 80px);
 }
 
-.nav-item--brand,
 .nav-item--menu {
     position: relative;
     display: flex;
@@ -95,7 +94,6 @@ body {
 }
 
 .main-nav > a,
-.nav-item--brand > a,
 .nav-item--menu > a {
     display: flex;
     align-items: center;
@@ -103,14 +101,11 @@ body {
     font-size: 18px;
 }
 
-.nav-item--brand:hover > a,
-.nav-item--brand:focus-within > a,
 .nav-item--menu:hover > a,
 .nav-item--menu:focus-within > a {
     color: var(--color-orange-500);
 }
 
-.brand-dropdown,
 .menu-dropdown {
     position: absolute;
     top: 100%;
@@ -130,7 +125,6 @@ body {
     transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
 }
 
-.brand-dropdown a,
 .menu-dropdown a {
     display: flex;
     align-items: center;
@@ -142,17 +136,12 @@ body {
     text-decoration: none;
 }
 
-.brand-dropdown a:hover,
-.brand-dropdown a:focus-visible,
-.brand-dropdown a:first-child,
 .menu-dropdown a:hover,
 .menu-dropdown a:focus-visible,
 .menu-dropdown a:first-child {
     color: var(--color-orange-500);
 }
 
-.nav-item--brand:hover .brand-dropdown,
-.nav-item--brand:focus-within .brand-dropdown,
 .nav-item--menu:hover .menu-dropdown,
 .nav-item--menu:focus-within .menu-dropdown {
     opacity: 1;
