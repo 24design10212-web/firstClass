@@ -16,7 +16,14 @@
             <div class="header-inner">
                 <a href="#" class="header-logo" aria-label="달콤 홈"><img src="img/BI.svg" alt=""></a>
                 <nav class="main-nav" aria-label="주요 메뉴">
-                    <a href="#brand">BRAND</a>
+                    <div class="nav-item nav-item--brand">
+                    <a href="#brand" aria-haspopup="true">BRAND</a>
+                    <div class="brand-dropdown" aria-label="브랜드 메뉴">
+                        <a href="#brand-dalkomm">달콤</a>
+                        <a href="#brand-dalkomm-n">달콤 N</a>
+                        <a href="#brand">회사소개</a>
+                    </div>
+                </div>
                     <div class="nav-item nav-item--menu">
                         <a href="#menu" aria-haspopup="true">MENU</a>
                         <div class="menu-dropdown" aria-label="메뉴 브랜드 선택">
@@ -65,7 +72,7 @@
             </div>
             <!-- Brand section: 메뉴 섹션 위에 배치 -->
             <section class="brand-sec" id="brand" aria-label="달콤 브랜드 소개">
-                <article class="brand-panel brand-panel--dalkomm">
+                <article class="brand-panel brand-panel--dalkomm" id="brand-dalkomm">
                     <div class="brand-panel-inner">
                         <div class="brand-copy">
                             <h2 class="brand-logo"><img src="img/logo%201.png" alt="Dal.Komm"></h2>
@@ -78,7 +85,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="brand-panel brand-panel--dalkomm-n">
+                <article class="brand-panel brand-panel--dalkomm-n" id="brand-dalkomm-n">
                     <div class="brand-panel-inner">
                         <div class="brand-image">
                             <img src="img/dalkommN1.png" alt="달콤N 매장 외관과 베이커리 메뉴">
