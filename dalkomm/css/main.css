@@ -1278,3 +1278,44 @@ body {
     .brand-dropdown { width: 90px; padding: 7px 0; }
     .brand-dropdown a { min-height: 28px; font-size: 9px; }
 }
+
+
+/* BRAND dropdown: open only by clicking BRAND in the header */
+.nav-item--brand > .brand-trigger {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-primary);
+    font: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.nav-item--brand:hover > .brand-trigger {
+    color: var(--color-text-primary);
+}
+.brand-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 0);
+}
+.nav-item--brand.is-open > .brand-trigger {
+    color: var(--color-orange-500);
+}
+.nav-item--brand.is-open .brand-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+@media (max-width: 1024px) {
+    .nav-item--brand > .brand-trigger { font-size: 11px; }
+}
+@media (max-width: 600px) {
+    .nav-item--brand > .brand-trigger { font-size: 9px; }
+}
