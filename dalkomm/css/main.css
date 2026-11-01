@@ -77,7 +77,8 @@ body {
     gap: clamp(28px, 4.2vw, 80px);
 }
 
-.nav-item--brand {
+.nav-item--brand,
+.nav-item--menu {
     position: relative;
     display: flex;
     align-items: center;
@@ -94,7 +95,8 @@ body {
 }
 
 .main-nav > a,
-.nav-item--brand > a {
+.nav-item--brand > a,
+.nav-item--menu > a {
     display: flex;
     align-items: center;
     height: 100%;
@@ -102,11 +104,14 @@ body {
 }
 
 .nav-item--brand:hover > a,
-.nav-item--brand:focus-within > a {
+.nav-item--brand:focus-within > a,
+.nav-item--menu:hover > a,
+.nav-item--menu:focus-within > a {
     color: var(--color-orange-500);
 }
 
-.brand-dropdown {
+.brand-dropdown,
+.menu-dropdown {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -114,7 +119,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    width: 145px;
+    box-sizing: border-box;
+    width: 125px;
     padding: 17px 0;
     border-radius: 0 0 14px 14px;
     background: var(--color-neutral-0);
@@ -124,11 +130,13 @@ body {
     transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
 }
 
-.brand-dropdown a {
+.brand-dropdown a,
+.menu-dropdown a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 41px;
+    padding: 0 35px;
     color: var(--color-text-primary);
     font-size: 14px;
     font-weight: 400;
@@ -137,12 +145,17 @@ body {
 
 .brand-dropdown a:hover,
 .brand-dropdown a:focus-visible,
-.brand-dropdown a:first-child {
+.brand-dropdown a:first-child,
+.menu-dropdown a:hover,
+.menu-dropdown a:focus-visible,
+.menu-dropdown a:first-child {
     color: var(--color-orange-500);
 }
 
 .nav-item--brand:hover .brand-dropdown,
-.nav-item--brand:focus-within .brand-dropdown {
+.nav-item--brand:focus-within .brand-dropdown,
+.nav-item--menu:hover .menu-dropdown,
+.nav-item--menu:focus-within .menu-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, 0);
