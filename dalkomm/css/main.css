@@ -77,6 +77,13 @@ body {
     gap: clamp(28px, 4.2vw, 80px);
 }
 
+.nav-item--brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+
 .main-nav a,
 .franchise-link {
     color: var(--color-text-primary);
@@ -86,7 +93,60 @@ body {
     white-space: nowrap;
 }
 
-.main-nav a  { font-size: 18px; }
+.main-nav > a,
+.nav-item--brand > a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+}
+
+.nav-item--brand:hover > a,
+.nav-item--brand:focus-within > a {
+    color: var(--color-orange-500);
+}
+
+.brand-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 145px;
+    padding: 17px 0;
+    border-radius: 0 0 14px 14px;
+    background: var(--color-neutral-0);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.brand-dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 41px;
+    color: var(--color-text-primary);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.brand-dropdown a:hover,
+.brand-dropdown a:focus-visible,
+.brand-dropdown a:first-child {
+    color: var(--color-orange-500);
+}
+
+.nav-item--brand:hover .brand-dropdown,
+.nav-item--brand:focus-within .brand-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
 
 .franchise-link {
     margin-left: 32px;
