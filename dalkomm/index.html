@@ -17,7 +17,7 @@
                 <a href="#" class="header-logo" aria-label="달콤 홈"><img src="img/BI.svg" alt=""></a>
                 <nav class="main-nav" aria-label="주요 메뉴">
                     <div class="nav-item nav-item--brand">
-                    <a href="#brand" aria-haspopup="true">BRAND</a>
+                    <button type="button" class="brand-trigger" aria-haspopup="true" aria-expanded="false">BRAND</button>
                     <div class="brand-dropdown" aria-label="브랜드 메뉴">
                         <a href="#brand-dalkomm">달콤</a>
                         <a href="#brand-dalkomm-n">달콤 N</a>
@@ -352,6 +352,40 @@
             progressBar.setAttribute('aria-valuemax', totalSlides);
             progressBar.setAttribute('aria-valuenow', currentSlide);
         }
+        
+        // BRAND 드롭다운은 마우스 오버가 아니라 클릭으로 열고 닫습니다.
+        const brandNavItem = document.querySelector('.nav-item--brand');
+        const brandTrigger = document.querySelector('.brand-trigger');
+        if (brandNavItem && brandTrigger) {
+            brandTrigger.addEventListener('click', function (event) {
+                event.stopPropagation();
+                const isOpen = brandNavItem.classList.toggle('is-open');
+                brandTrigger.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!brandNavItem.contains(event.target)) {
+                    brandNavItem.classList.remove('is-open');
+                    brandTrigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    brandNavItem.classList.remove('is-open');
+                    brandTrigger.setAttribute('aria-expanded', 'false');
+                    brandTrigger.focus();
+                }
+            });
+
+            brandNavItem.querySelectorAll('.brand-dropdown a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    brandNavItem.classList.remove('is-open');
+                    brandTrigger.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
     </script>
 </body>
 </html>
