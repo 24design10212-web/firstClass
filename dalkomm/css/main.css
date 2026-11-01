@@ -1401,3 +1401,22 @@ body {
     .brand-dropdown a { font-size: 9px; }
     .franchise-link { font-size: 10px; }
 }
+
+
+/* Header navigation hover color: orange, matching the Figma reference */
+.main-nav > a,
+.main-nav .nav-item > a,
+.main-nav .nav-item > .brand-trigger,
+.franchise-link {
+    transition: color .18s ease;
+}
+.main-nav > a:hover,
+.main-nav > a:focus-visible,
+.main-nav .nav-item--menu > a:hover,
+.main-nav .nav-item--menu > a:focus-visible,
+.main-nav .nav-item--brand > .brand-trigger:hover,
+.main-nav .nav-item--brand > .brand-trigger:focus-visible,
+.franchise-link:hover,
+.franchise-link:focus-visible {
+    color: #ff671f;
+}
