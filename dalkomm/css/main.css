@@ -140,8 +140,7 @@ body {
 }
 
 .menu-dropdown a:hover,
-.menu-dropdown a:focus-visible,
-.menu-dropdown a:first-child {
+.menu-dropdown a:focus-visible {
     color: var(--color-orange-500);
 }
 
@@ -1261,8 +1260,7 @@ body {
 .nav-item--brand:hover > a,
 .nav-item--brand:focus-within > a,
 .brand-dropdown a:hover,
-.brand-dropdown a:focus-visible,
-.brand-dropdown a:first-child {
+.brand-dropdown a:focus-visible {
     color: var(--color-orange-500);
 }
 .nav-item--brand:hover .brand-dropdown,
@@ -1478,7 +1476,6 @@ body {
     text-decoration: none;
     transition: color .18s ease;
 }
-.news-dropdown a:first-child,
 .news-dropdown a:hover,
 .news-dropdown a:focus-visible {
     color: #ff671f;
@@ -1554,7 +1551,6 @@ body {
     font-size: 14px;
     text-decoration: none;
 }
-.main-nav .nav-item--news > .news-dropdown a:first-child,
 .main-nav .nav-item--news > .news-dropdown a:hover,
 .main-nav .nav-item--news > .news-dropdown a:focus-visible {
     color: #ff671f;
