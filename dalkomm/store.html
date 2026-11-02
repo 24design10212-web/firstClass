@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="달콤과 달콤N 매장을 검색하고 지도에서 위치를 확인해 보세요.">
+    <title>매장찾기 | Dal.Komm</title>
+    <link rel="stylesheet" href="../CSS/default.css">
+    <link rel="stylesheet" href="../font/css/pretendardvariable.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="site-header">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo" aria-label="달콤 메인으로 이동">
+                    <img src="img/BI.svg" alt="달콤">
+                </a>
+                <nav class="main-nav" aria-label="주요 메뉴">
+                    <div class="nav-item nav-item--brand">
+                        <button type="button" class="brand-trigger" aria-haspopup="true" aria-expanded="false">BRAND</button>
+                        <div class="brand-dropdown" aria-label="브랜드 메뉴">
+                            <a href="index.html#brand-dalkomm">달콤</a>
+                            <a href="index.html#brand-dalkomm-n">달콤 N</a>
+                            <a href="index.html#brand">회사소개</a>
+                        </div>
+                    </div>
+                    <div class="nav-item nav-item--menu">
+                        <a href="index.html#menu" aria-haspopup="true">MENU</a>
+                        <div class="menu-dropdown" aria-label="메뉴 브랜드 선택">
+                            <a href="index.html#menu">달콤</a>
+                            <a href="index.html#menu">달콤 N</a>
+                        </div>
+                    </div>
+                    <a href="store.html" aria-current="page">STORE</a>
+                    <div class="nav-item nav-item--news">
+                        <a href="index.html#news" aria-haspopup="true">NEWS</a>
+                        <div class="news-dropdown" aria-label="새소식 메뉴">
+                            <a href="index.html#news">뉴스</a>
+                            <a href="index.html#event">이벤트</a>
+                            <a href="index.html#news">공지사항</a>
+                        </div>
+                    </div>
+                    <a href="index.html#app">APP</a>
+                </nav>
+                <a href="index.html#franchise" class="franchise-link">창업안내</a>
+            </div>
+        </header>
+
+        <main class="store-page">
+            <section class="store-hero" aria-labelledby="store-page-title">
+                <div class="store-container">
+                    <p class="store-eyebrow">DAL.KOMM STORE</p>
+                    <h1 id="store-page-title">STORE</h1>
+                    <p class="store-hero-copy">가까운 달콤을 찾아보세요.</p>
+                    <p class="store-hero-subcopy">달콤과 달콤N 매장 위치를 지도에서 검색할 수 있습니다.</p>
+                </div>
+            </section>
+
+            <section class="store-search-section" aria-labelledby="store-search-title">
+                <div class="store-container">
+                    <div class="store-section-heading">
+                        <div>
+                            <p class="store-kicker">FIND YOUR DAL.KOMM</p>
+                            <h2 id="store-search-title">매장찾기</h2>
+                            <p>지역과 브랜드를 선택하거나 매장명·주소를 입력해 검색해 주세요.</p>
+                        </div>
+                    </div>
+
+                    <form class="store-search-form" id="store-search-form">
+                        <fieldset class="store-brand-field">
+                            <legend>브랜드 선택</legend>
+                            <div class="store-brand-options">
+                                <label class="store-brand-option is-selected">
+                                    <input type="radio" name="brand" value="all" checked>
+                                    <span>전체</span>
+                                </label>
+                                <label class="store-brand-option">
+                                    <input type="radio" name="brand" value="달콤">
+                                    <span>달콤</span>
+                                </label>
+                                <label class="store-brand-option">
+                                    <input type="radio" name="brand" value="달콤N">
+                                    <span>달콤N</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="store-search-controls">
+                            <label class="store-select-label" for="store-region">지역</label>
+                            <select id="store-region" name="region">
+                                <option value="">전국</option>
+                                <option value="서울">서울</option>
+                                <option value="경기">경기</option>
+                                <option value="인천">인천</option>
+                                <option value="강원">강원</option>
+                                <option value="대전">대전</option>
+                                <option value="세종">세종</option>
+                                <option value="충북">충북</option>
+                                <option value="충남">충남</option>
+                                <option value="광주">광주</option>
+                                <option value="전북">전북</option>
+                                <option value="전남">전남</option>
+                                <option value="대구">대구</option>
+                                <option value="경북">경북</option>
+                                <option value="부산">부산</option>
+                                <option value="울산">울산</option>
+                                <option value="경남">경남</option>
+                                <option value="제주">제주</option>
+                            </select>
+
+                            <label class="store-select-label store-keyword-label" for="store-keyword">검색어</label>
+                            <div class="store-keyword-wrap">
+                                <input id="store-keyword" name="keyword" type="search" placeholder="매장명 또는 주소를 입력하세요" autocomplete="off">
+                                <button class="store-search-button" type="submit">
+                                    <span>검색</span>
+                                    <span class="store-search-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="store-search-hint">검색 결과는 지도 서비스에서 제공하며, 실제 운영 여부와 매장 정보는 방문 전 확인해 주세요.</p>
+                    </form>
+
+                    <div class="store-results-layout">
+                        <aside class="store-results-panel" aria-labelledby="store-results-title">
+                            <div class="store-results-heading">
+                                <h3 id="store-results-title">검색 안내</h3>
+                                <span class="store-results-count" id="store-results-count">지도 검색</span>
+                            </div>
+                            <div class="store-empty-state" id="store-empty-state" aria-live="polite">
+                                <span class="store-location-symbol" aria-hidden="true">
+                                    <svg viewBox="0 0 48 48" fill="none">
+                                        <path d="M38 20C38 30 24 42 24 42S10 30 10 20a14 14 0 1 1 28 0Z" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="24" cy="20" r="5" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </span>
+                                <strong>원하는 지역의 매장을 검색해 보세요.</strong>
+                                <p>지역과 브랜드를 선택한 뒤 검색하면 지도에서 매장 위치를 확인할 수 있습니다.</p>
+                            </div>
+                            <div class="store-search-summary" id="store-search-summary" hidden></div>
+                            <a class="store-open-map" id="store-open-map" href="https://www.google.com/maps/search/?api=1&query=달콤%20카페%20대한민국" target="_blank" rel="noopener noreferrer">
+                                지도 크게 보기 <span aria-hidden="true">↗</span>
+                            </a>
+                        </aside>
+
+                        <div class="store-map-panel">
+                            <div class="store-map-topline">
+                                <div>
+                                    <span class="store-map-dot" aria-hidden="true"></span>
+                                    <span>STORE MAP</span>
+                                </div>
+                                <span class="store-map-caption">검색한 위치 기준</span>
+                            </div>
+                            <div class="store-map-frame">
+                                <iframe
+                                    id="store-map"
+                                    title="달콤 매장 지도"
+                                    src="https://maps.google.com/maps?q=달콤%20카페%20대한민국&output=embed"
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="store-guide-section" aria-labelledby="store-guide-title">
+                <div class="store-container store-guide-inner">
+                    <div>
+                        <p class="store-kicker">HOW TO FIND</p>
+                        <h2 id="store-guide-title">매장을 더 쉽게 찾는 방법</h2>
+                    </div>
+                    <div class="store-guide-list">
+                        <article class="store-guide-item">
+                            <span class="store-guide-number">01</span>
+                            <div>
+                                <h3>브랜드 선택</h3>
+                                <p>달콤 또는 달콤N을 선택해 원하는 브랜드 중심으로 검색하세요.</p>
+                            </div>
+                        </article>
+                        <article class="store-guide-item">
+                            <span class="store-guide-number">02</span>
+                            <div>
+                                <h3>지역·검색어 입력</h3>
+                                <p>시·도 또는 매장명, 동네 이름을 입력하면 지도 검색어에 반영됩니다.</p>
+                            </div>
+                        </article>
+                        <article class="store-guide-item">
+                            <span class="store-guide-number">03</span>
+                            <div>
+                                <h3>지도에서 위치 확인</h3>
+                                <p>지도에서 경로와 주변 정보를 확인하고 방문 전 운영 정보를 다시 확인하세요.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <a class="footer-logo" href="index.html" aria-label="Dal.Komm 메인으로 이동">
+                        <img src="img/BI.svg" alt="Dal.Komm">
+                    </a>
+                    <div class="footer-company">
+                        <p>(주)다날에프엔비 | 주소: 경기도 성남시 분당구 황새울로 312번길 5, 5층(서현동, 세원빌딩)</p>
+                        <p>대표이사: 전기홍 | 사업자등록번호: 144-81-09353 | 통신판매업신고: 제 2016-성남분당-0680호</p>
+                    </div>
+                    <div class="footer-actions">
+                        <a class="footer-icon-link" href="index.html" aria-label="메인페이지로 이동"><img src="img/Shopping%20bag.png" alt=""></a>
+                        <a class="footer-icon-link" href="tel:1661-1399" aria-label="고객 상담 전화 1661-1399"><img src="img/Call.png" alt=""></a>
+                        <button class="footer-family" type="button" aria-label="패밀리 사이트 메뉴">FAMILY SITE <img class="family-arrow" src="img/Keyboard%20arrow%20down.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-legal">
+                        <a href="index.html">메인으로</a>
+                        <a href="tel:1661-1399">고객 상담센터 1661-1399</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/store.js"></script>
+</body>
+</html>
