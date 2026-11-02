@@ -1,0 +1,234 @@
+/* King/Login.html - Y2K Chrome 스타일 추가 */
+:root {
+    --y2k-ink: #26364A;
+    --y2k-silver: #E8F2FA;
+    --y2k-blue: #77D9F5;
+    --y2k-pink: #F6A9D7;
+    --y2k-white: #FFFFFF;
+    --y2k-deep-blue: #527CA8;
+}
+
+html,
+body {
+    background:
+        radial-gradient(ellipse at 15% 10%, rgba(255,255,255,.95), transparent 32%),
+        linear-gradient(135deg, #B8DDF0 0%, #E9DDF0 48%, #A8D5E9 100%);
+    color: var(--y2k-ink);
+}
+
+#wrap.y2k-chrome {
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #FFFFFF;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #FDFEFF 0%, #E4F1F9 42%, #C5D9E8 100%);
+    box-shadow:
+        inset 0 2px 1px rgba(255,255,255,.98),
+        inset 0 -3px 8px rgba(85,125,160,.18),
+        0 18px 38px rgba(52,91,125,.25);
+}
+
+.y2k-chrome header {
+    border-bottom: 1px solid rgba(82,124,168,.3);
+    background: linear-gradient(180deg, rgba(255,255,255,.9), rgba(220,237,248,.7));
+}
+
+.y2k-chrome h1 {
+    color: #385C7F;
+    font-weight: 800;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.y2k-chrome .prev_btn {
+    top: 5px;
+    left: 6px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+    background-color: #D6E8F5;
+    background-image: url(images/back_icon.svg);
+    box-shadow:
+        inset 0 1px 2px #FFFFFF,
+        0 2px 5px rgba(54,91,125,.22);
+}
+
+.y2k-chrome .title {
+    color: #315779;
+}
+
+.y2k-chrome .title > span:first-child {
+    font-weight: 700;
+    letter-spacing: -.03em;
+}
+
+.y2k-chrome .title > span:last-child {
+    width: fit-content;
+    padding: 7px 12px;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #D8EAF7 48%, #B9D5E8 100%);
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,.95),
+        0 4px 10px rgba(70,112,148,.18);
+    color: #315779;
+    font-weight: 800;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.y2k-chrome input[type="email"],
+.y2k-chrome input[type="password"] {
+    box-sizing: border-box;
+    border: 1px solid #B6CDE0;
+    border-radius: 13px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F1F8FC 100%);
+    box-shadow:
+        inset 0 2px 4px rgba(75,111,143,.1),
+        0 2px 0 rgba(255,255,255,.9);
+    color: #263F59;
+}
+
+.y2k-chrome input::placeholder {
+    color: #8A9FB2;
+    opacity: 1;
+}
+
+.y2k-chrome .pw_btn {
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+    background-color: #BDEBFA;
+    box-shadow: inset 0 1px 2px #FFFFFF, 0 2px 4px rgba(52,91,125,.18);
+}
+
+.y2k-chrome .login_option span {
+    color: #426582;
+    font-weight: 600;
+}
+
+.y2k-chrome .login_option .check + span::before {
+    box-sizing: border-box;
+    border: 1px solid #9FBBD2;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    background-image: none;
+    box-shadow: inset 0 1px 2px rgba(52,91,125,.12);
+}
+
+.y2k-chrome .login_option .check:checked + span::before {
+    border-color: #76BBD8;
+    background: linear-gradient(145deg, #D9F7FF, #83D7F2);
+    background-image: none;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,.95), 0 1px 3px rgba(52,91,125,.16);
+}
+
+.y2k-chrome .login_btn {
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #B8F0FF 0%, #76D4F1 48%, #66B6DD 100%);
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,.95),
+        inset 0 -2px 2px rgba(48,117,159,.18),
+        0 4px 9px rgba(64,124,160,.24);
+    color: #204E70;
+    font-weight: 800;
+    text-shadow: 0 1px 0 rgba(255,255,255,.9);
+    opacity: 1;
+}
+
+.y2k-chrome .login_link {
+    color: #4D7190;
+}
+
+.y2k-chrome .login_link a {
+    padding: 5px 8px;
+    border: 1px solid rgba(255,255,255,.95);
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(218,235,247,.9));
+    box-shadow: 0 2px 5px rgba(64,104,140,.14);
+    font-weight: 600;
+}
+
+.y2k-chrome .login_link a::after {
+    display: none;
+}
+
+.y2k-chrome .sns_login > p {
+    color: #5A7B98;
+    font-weight: 700;
+}
+
+.y2k-chrome .sns_login > p::before,
+.y2k-chrome .sns_login > p::after {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #91B6D1, transparent);
+    opacity: 1;
+}
+
+.y2k-chrome .sns_list > a {
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    background-color: rgba(255,255,255,.82);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,.95),
+        0 3px 8px rgba(64,104,140,.2);
+}
+
+.y2k-chrome button,
+.y2k-chrome a,
+.y2k-chrome input {
+    transition: box-shadow .18s ease, transform .18s ease, filter .18s ease;
+}
+
+.y2k-chrome button:focus-visible,
+.y2k-chrome a:focus-visible,
+.y2k-chrome input:focus-visible {
+    outline: 3px solid #5ABDE5;
+    outline-offset: 3px;
+}
+
+.y2k-chrome .login_btn:hover,
+.y2k-chrome .prev_btn:hover,
+.y2k-chrome .login_link a:hover,
+.y2k-chrome .sns_list > a:hover {
+    filter: brightness(1.04);
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,.98),
+        0 5px 12px rgba(64,124,160,.28);
+}
+
+.y2k-chrome .login_btn:active,
+.y2k-chrome .prev_btn:active,
+.y2k-chrome .login_link a:active,
+.y2k-chrome .sns_list > a:active {
+    transform: translateY(1px);
+    filter: brightness(.98);
+}
+
+@media (max-width: 420px) {
+    #wrap.y2k-chrome {
+        width: 100%;
+        min-width: 0;
+        border-radius: 0;
+    }
+
+    .y2k-chrome main {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .y2k-chrome .login_link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .y2k-chrome button,
+    .y2k-chrome a,
+    .y2k-chrome input {
+        transition: none;
+    }
+}
