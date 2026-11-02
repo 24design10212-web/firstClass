@@ -1,0 +1,192 @@
+/* Glassmorphism 테마: 반투명 카드, 배경 블러, 부드러운 빛 번짐 */
+:root {
+    --glass-ink: #263044;
+    --glass-muted: #68758b;
+    --glass-accent: #6b5ce7;
+}
+
+body {
+    color: var(--glass-ink);
+    background:
+        radial-gradient(circle at 15% 12%, rgba(255, 177, 153, 0.75), transparent 30%),
+        radial-gradient(circle at 85% 25%, rgba(148, 183, 255, 0.8), transparent 32%),
+        linear-gradient(135deg, #edf1ff, #f8eefa 55%, #e5f7f4);
+    background-attachment: fixed;
+}
+
+#wrap.glassmorphism {
+    width: min(92%, 560px);
+    min-width: 0;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding: 0 24px;
+    background: transparent;
+}
+
+.glassmorphism header {
+    height: 64px;
+    justify-content: center;
+}
+
+.glassmorphism header h1 {
+    color: var(--glass-ink);
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+}
+
+.glassmorphism .prev_btn {
+    left: 0;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.glassmorphism main {
+    margin: 30px auto 50px;
+    padding: 44px 34px 42px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: 0 24px 70px rgba(72, 82, 135, 0.16);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.glassmorphism .title {
+    margin-bottom: 38px;
+}
+
+.glassmorphism .title img {
+    width: 132px;
+}
+
+.glassmorphism .email {
+    color: var(--glass-ink);
+    font-size: 1.5rem;
+}
+
+.glassmorphism input[type="email"],
+.glassmorphism input[type="password"] {
+    height: 52px;
+    border: 1px solid rgba(128, 139, 170, 0.22);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--glass-ink);
+    box-shadow: 0 5px 16px rgba(74, 85, 130, 0.04);
+}
+
+.glassmorphism input::placeholder {
+    color: #9aa3b6;
+}
+
+.glassmorphism input[type="email"]:focus,
+.glassmorphism input[type="password"]:focus {
+    border-color: var(--glass-accent);
+    outline: 2px solid rgba(107, 92, 231, 0.16);
+}
+
+.glassmorphism .pw_btn {
+    right: 14px;
+    bottom: 13px;
+}
+
+.glassmorphism .login_option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+.glassmorphism .login_option label:first-child {
+    margin-right: 0;
+}
+
+.glassmorphism .login_option span {
+    color: var(--glass-muted);
+    font-size: 1.3rem;
+}
+
+.glassmorphism .login_option .check_visual {
+    width: 22px;
+    height: 22px;
+    background-size: 22px;
+}
+
+.glassmorphism .login_btn {
+    height: 50px;
+    border-radius: 15px;
+    background: linear-gradient(115deg, #7163e9, #8c79ed);
+    box-shadow: 0 10px 22px rgba(107, 92, 231, 0.25);
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.glassmorphism .login_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(107, 92, 231, 0.32);
+}
+
+.glassmorphism .login_link {
+    flex-wrap: wrap;
+    gap: 8px 0;
+    color: var(--glass-muted);
+    font-size: 1.2rem;
+}
+
+.glassmorphism .sns_login {
+    margin-top: 46px;
+}
+
+.glassmorphism .sns_login > p {
+    color: var(--glass-muted);
+    font-size: 1.2rem;
+}
+
+.glassmorphism .sns_list {
+    gap: 14px;
+}
+
+.glassmorphism .sns_list a {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 6px 16px rgba(72, 82, 135, 0.08);
+    transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.glassmorphism .sns_list a:hover {
+    transform: translateY(-3px);
+    background: #fff;
+}
+
+.glassmorphism a:focus-visible,
+.glassmorphism button:focus-visible,
+.glassmorphism input:focus-visible,
+.theme-picker select:focus-visible {
+    outline: 2px solid var(--glass-accent);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    #wrap.glassmorphism {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .glassmorphism main {
+        margin-top: 24px;
+        padding: 36px 20px 32px;
+        border-radius: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .glassmorphism .login_btn,
+    .glassmorphism .sns_list a {
+        transition: none;
+    }
+}
