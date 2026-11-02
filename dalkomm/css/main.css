@@ -1598,3 +1598,20 @@ body {
         padding-left: 28px;
     }
 }
+
+/* BRAND dropdown: orange only for the item currently hovered or focused */
+.main-nav .nav-item--brand > .brand-trigger,
+.main-nav .nav-item--brand.is-open > .brand-trigger {
+    color: var(--color-text-primary);
+}
+.main-nav .nav-item--brand > .brand-trigger:hover,
+.main-nav .nav-item--brand > .brand-trigger:focus-visible {
+    color: #ff671f;
+}
+.main-nav .nav-item--brand .brand-dropdown > a {
+    color: #222;
+}
+.main-nav .nav-item--brand .brand-dropdown > a:hover,
+.main-nav .nav-item--brand .brand-dropdown > a:focus-visible {
+    color: #ff671f;
+}
