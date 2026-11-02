@@ -1,6 +1,6 @@
 /* STORE page search
- * 실제 매장 데이터/API가 저장소에 없으므로 임의의 매장명·주소·개수를 생성하지 않습니다.
- * 검색 조건을 지도 서비스의 검색어로 전달해 실제 지도 결과를 확인하도록 구성합니다.
+ * 검색어가 비슷한 일반 매장이 섞이지 않도록 브랜드의 공식 영문 표기를 우선 검색합니다.
+ * 지도 서비스의 검색 결과는 외부 서비스가 결정하므로 완전한 브랜드 검증에는 공식 매장 데이터/API가 필요합니다.
  */
 (function () {
     const form = document.getElementById('store-search-form');
@@ -27,9 +27,9 @@
         const parts = [];
 
         if (brand === 'all') {
-            parts.push('달콤 카페');
+            parts.push('"Dal.Komm"');
         } else {
-            parts.push(brand + ' 카페');
+            parts.push(brand === '달콤N' ? '"Dal.KommN"' : '"Dal.Komm"');
         }
 
         if (region) parts.push(region);
