@@ -1573,3 +1573,29 @@ body {
     }
     .main-nav .nav-item--news > .news-dropdown a { font-size: 9px; }
 }
+
+/* NEWS dropdown: match the selected Figma header state */
+.main-nav .nav-item--news > .news-dropdown {
+    box-sizing: border-box;
+    box-shadow: none;
+}
+.main-nav .nav-item--news > .news-dropdown a {
+    justify-content: flex-start;
+    padding-left: 46px;
+    text-align: left;
+    line-height: 1;
+}
+.main-nav .nav-item--news:hover > a,
+.main-nav .nav-item--news:focus-within > a {
+    color: #ff671f;
+}
+@media (max-width: 1024px) {
+    .main-nav .nav-item--news > .news-dropdown a {
+        padding-left: 35px;
+    }
+}
+@media (max-width: 600px) {
+    .main-nav .nav-item--news > .news-dropdown a {
+        padding-left: 28px;
+    }
+}
