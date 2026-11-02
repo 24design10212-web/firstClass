@@ -6,13 +6,21 @@
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="../CSS/default.css">
     <link rel="stylesheet" href="Login.css">
-    <link rel="stylesheet" href="Editorial.css">
+    <link rel="stylesheet" href="Editorial.css" id="theme-stylesheet" disabled>
     <title>달콤 로그인</title>
 </head>
 <body>
     <div id="wrap" class="editorial">
-        <header>
+        <header class="login-header">
             <h1>로그인</h1>
+            <div class="theme-picker">
+                <label for="theme-select">디자인 테마</label>
+                <select id="theme-select" aria-label="로그인 화면 디자인 테마">
+                    <option value="default">기본</option>
+                    <option value="editorial" selected>Editorial</option>
+                    <option value="glassmorphism">Glassmorphism</option>
+                </select>
+            </div>
             <a href="../index.html" class="prev_btn" aria-label="이전 페이지">
                 <img src="img/back_icon.svg?v=3" alt="">
             </a>
@@ -95,5 +103,6 @@
             </section>
         </main>
     </div>
+    <script src="ThemeSwitcher.js"></script>
 </body>
 </html>
