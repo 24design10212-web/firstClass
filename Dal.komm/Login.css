@@ -237,3 +237,50 @@ input::placeholder {
         width: 100%;
     }
 }
+
+/* 디자인 테마 선택기: 어떤 테마를 골라도 항상 같은 위치에 표시 */
+.login-header {
+    height: 88px;
+    align-items: flex-start;
+    padding-top: 12px;
+}
+
+.login-header h1 {
+    margin-top: 0;
+}
+
+.theme-picker {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.theme-picker label {
+    font-size: 1.2rem;
+    color: #777777;
+}
+
+.theme-picker select {
+    max-width: 150px;
+    padding: 7px 26px 7px 10px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222222;
+    font: inherit;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 420px) {
+    .theme-picker label {
+        display: none;
+    }
+
+    .theme-picker select {
+        max-width: 125px;
+    }
+}
