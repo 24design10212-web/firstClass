@@ -1,0 +1,287 @@
+/* Collage 스타일: 종이 조각, 오려 붙인 레이어, 스티커 느낌 */
+:root {
+    --collage-ink: #24201f;
+    --collage-paper: #fff8e9;
+    --collage-pink: #ff8fb1;
+    --collage-yellow: #ffe36e;
+    --collage-blue: #a8dfff;
+    --collage-green: #bde8b2;
+}
+
+body {
+    color: var(--collage-ink);
+    background-color: #f5eee3;
+    background-image:
+        radial-gradient(circle at 12% 16%, rgba(255, 143, 177, 0.28) 0 7%, transparent 7.5%),
+        radial-gradient(circle at 88% 76%, rgba(168, 223, 255, 0.45) 0 10%, transparent 10.5%),
+        linear-gradient(135deg, #f8f0df 0%, #f1e8d9 100%);
+}
+
+#wrap.collage {
+    position: relative;
+    width: min(92%, 620px);
+    min-width: 0;
+    margin: 32px auto;
+    padding-bottom: 12px;
+    overflow: hidden;
+    background: var(--collage-paper);
+    border: 2px solid var(--collage-ink);
+    box-shadow: 8px 8px 0 var(--collage-ink);
+}
+
+.collage header {
+    border-bottom: 2px dashed rgba(36, 32, 31, 0.3);
+}
+
+.collage header h1 {
+    font-size: 2rem;
+    letter-spacing: -0.04em;
+    transform: rotate(-2deg);
+}
+
+.collage .prev_btn {
+    z-index: 1;
+    top: 2px;
+    left: 10px;
+    width: 42px;
+    height: 42px;
+    background: var(--collage-yellow);
+    border: 2px solid var(--collage-ink);
+    box-shadow: 3px 3px 0 var(--collage-ink);
+    transform: rotate(-5deg);
+}
+
+.collage .prev_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.collage main {
+    padding: 42px 28px 58px;
+}
+
+.collage .title {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 42px;
+    padding: 18px 26px;
+    background: var(--collage-pink);
+    border: 2px solid var(--collage-ink);
+    box-shadow: 5px 5px 0 var(--collage-ink);
+    transform: rotate(2deg);
+}
+
+.collage .title::before {
+    content: "HELLO!";
+    position: absolute;
+    top: -15px;
+    right: -22px;
+    padding: 5px 9px;
+    color: var(--collage-ink);
+    background: var(--collage-yellow);
+    border: 2px solid var(--collage-ink);
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    transform: rotate(9deg);
+}
+
+.collage .title img {
+    display: block;
+    width: 112px;
+    filter: saturate(1.1);
+}
+
+.collage .email {
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 6px 9px;
+    background: var(--collage-blue);
+    border: 2px solid var(--collage-ink);
+    font-size: 1.5rem;
+    transform: rotate(-1deg);
+}
+
+.collage input[type="email"],
+.collage input[type="password"] {
+    border: 2px solid var(--collage-ink);
+    border-radius: 2px;
+    background: #fffdf7;
+    box-shadow: 3px 3px 0 rgba(36, 32, 31, 0.18);
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.collage input[type="email"]:focus,
+.collage input[type="password"]:focus {
+    outline: 2px solid var(--collage-blue);
+    outline-offset: 2px;
+    box-shadow: 5px 5px 0 var(--collage-ink);
+    transform: translate(-1px, -1px);
+}
+
+.collage input::placeholder {
+    color: #8e8780;
+}
+
+.collage .pw_btn {
+    filter: contrast(1.2);
+}
+
+.collage .login_option {
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.collage .login_option label {
+    padding: 5px 8px 5px 4px;
+    background: #fff;
+    border: 1.5px solid var(--collage-ink);
+    box-shadow: 2px 2px 0 rgba(36, 32, 31, 0.18);
+}
+
+.collage .login_option label:first-child {
+    margin-right: 0;
+}
+
+.collage .login_option span {
+    font-size: 1.4rem;
+}
+
+.collage .login_option .check_visual {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    background-size: 24px;
+}
+
+.collage .login_btn {
+    height: 50px;
+    border: 2px solid var(--collage-ink);
+    border-radius: 2px;
+    background: var(--collage-green);
+    box-shadow: 4px 4px 0 var(--collage-ink);
+    color: var(--collage-ink);
+    font-weight: 800;
+    opacity: 1;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.collage .login_btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--collage-ink);
+}
+
+.collage .login_btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--collage-ink);
+}
+
+.collage .login_link {
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+}
+
+.collage .login_link a {
+    padding: 6px 8px;
+    background: #fff;
+    border: 1.5px solid var(--collage-ink);
+    box-shadow: 2px 2px 0 rgba(36, 32, 31, 0.2);
+}
+
+.collage .login_link a:not(:last-child)::after {
+    display: none;
+}
+
+.collage .sns_login {
+    margin-top: 64px;
+    padding: 22px 14px 18px;
+    background: #fff;
+    border: 2px dashed var(--collage-ink);
+    transform: rotate(-1deg);
+}
+
+.collage .sns_login > p {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.collage .sns_login > p::before,
+.collage .sns_login > p::after {
+    height: 2px;
+    background: var(--collage-ink);
+    opacity: 0.6;
+}
+
+.collage .sns_list {
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.collage .sns_list a {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    background: var(--collage-yellow);
+    border: 2px solid var(--collage-ink);
+    box-shadow: 3px 3px 0 var(--collage-ink);
+    transition: transform 160ms ease;
+}
+
+.collage .sns_list a:nth-child(2) {
+    background: var(--collage-green);
+    transform: rotate(3deg);
+}
+
+.collage .sns_list a:nth-child(3) {
+    background: var(--collage-blue);
+    transform: rotate(-4deg);
+}
+
+.collage .sns_list a:nth-child(4) {
+    background: var(--collage-pink);
+    transform: rotate(2deg);
+}
+
+.collage .sns_list a:hover {
+    transform: translateY(-3px) rotate(0);
+}
+
+.collage a:focus-visible,
+.collage button:focus-visible {
+    outline: 3px solid #1261a0;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    #wrap.collage {
+        width: calc(100% - 28px);
+        margin: 18px auto;
+        box-shadow: 5px 5px 0 var(--collage-ink);
+    }
+
+    .collage main {
+        padding: 34px 18px 44px;
+    }
+
+    .collage .title {
+        margin-bottom: 36px;
+    }
+
+    .collage .login_option {
+        row-gap: 8px;
+    }
+
+    .collage .sns_login {
+        margin-top: 48px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .collage input,
+    .collage .login_btn,
+    .collage .sns_list a {
+        transition: none;
+    }
+}
