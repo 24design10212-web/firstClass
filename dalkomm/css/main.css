@@ -1651,3 +1651,22 @@ body {
 .nav-item--brand.is-open > .brand-trigger:focus-visible {
     color: #ff671f !important;
 }
+
+/* BRAND dropdown stability: open only via click, never disappear while moving to a submenu */
+.main-nav .nav-item--brand:not(.is-open) > .brand-dropdown {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(-50%) !important;
+}
+.main-nav .nav-item--brand.is-open > .brand-dropdown {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(-50%) !important;
+}
+.main-nav .nav-item--brand > .brand-trigger {
+    position: relative;
+    z-index: 111;
+}
