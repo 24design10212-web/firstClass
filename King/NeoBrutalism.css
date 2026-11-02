@@ -1,0 +1,166 @@
+/* King/Login.html - Neo Brutalism 스타일 추가 */
+:root {
+    --neo-ink: #171717;
+    --neo-yellow: #FFE65C;
+    --neo-pink: #FF6B9D;
+    --neo-blue: #76DFFF;
+    --neo-paper: #FFFDF5;
+    --neo-green: #B8EF69;
+}
+
+html,
+body {
+    background: var(--neo-green);
+    color: var(--neo-ink);
+}
+
+#wrap.neo-brutal {
+    box-sizing: border-box;
+    border: 3px solid var(--neo-ink);
+    background: var(--neo-yellow);
+    color: var(--neo-ink);
+}
+
+.neo-brutal header {
+    border-bottom: 3px solid var(--neo-ink);
+}
+
+.neo-brutal h1 {
+    font-weight: 900;
+}
+
+.neo-brutal .prev_btn {
+    top: 0;
+    left: 0;
+    border: 3px solid var(--neo-ink);
+    background-color: var(--neo-pink);
+    box-shadow: 4px 4px 0 var(--neo-ink);
+}
+
+.neo-brutal .title > span:first-child {
+    font-weight: 800;
+}
+
+.neo-brutal .title > span:last-child {
+    width: fit-content;
+    padding: 4px 7px;
+    border: 3px solid var(--neo-ink);
+    background: var(--neo-paper);
+    box-shadow: 5px 5px 0 var(--neo-ink);
+    color: var(--neo-ink);
+    font-weight: 900;
+}
+
+.neo-brutal input[type="email"],
+.neo-brutal input[type="password"] {
+    box-sizing: border-box;
+    border: 3px solid var(--neo-ink);
+    border-radius: 0;
+    background: var(--neo-paper);
+    box-shadow: 4px 4px 0 var(--neo-ink);
+    color: var(--neo-ink);
+}
+
+.neo-brutal input::placeholder {
+    color: #77736A;
+    opacity: 1;
+}
+
+.neo-brutal .pw_btn {
+    border: 2px solid var(--neo-ink);
+    background-color: var(--neo-blue);
+    box-shadow: 2px 2px 0 var(--neo-ink);
+}
+
+.neo-brutal .login_option span {
+    font-weight: 700;
+}
+
+.neo-brutal .login_option .check + span::before {
+    box-sizing: border-box;
+    border: 2px solid var(--neo-ink);
+    border-radius: 0;
+    background-color: var(--neo-paper);
+    background-image: none;
+}
+
+.neo-brutal .login_option .check:checked + span::before {
+    background-color: var(--neo-pink);
+    background-image: none;
+    box-shadow: 2px 2px 0 var(--neo-ink);
+}
+
+.neo-brutal .login_btn {
+    border: 3px solid var(--neo-ink);
+    border-radius: 0;
+    background-color: var(--neo-pink);
+    box-shadow: 5px 5px 0 var(--neo-ink);
+    color: var(--neo-ink);
+    font-weight: 900;
+    opacity: 1;
+}
+
+.neo-brutal .login_link a {
+    padding: 5px 7px;
+    border: 2px solid var(--neo-ink);
+    background-color: var(--neo-paper);
+    box-shadow: 3px 3px 0 var(--neo-ink);
+    font-weight: 700;
+}
+
+.neo-brutal .login_link a::after {
+    display: none;
+}
+
+.neo-brutal .sns_login > p {
+    color: var(--neo-ink);
+    font-weight: 800;
+}
+
+.neo-brutal .sns_login > p::before,
+.neo-brutal .sns_login > p::after {
+    height: 3px;
+    background-color: var(--neo-ink);
+    opacity: 1;
+}
+
+.neo-brutal .sns_list > a {
+    box-sizing: border-box;
+    border: 3px solid var(--neo-ink);
+    background-color: var(--neo-paper);
+    box-shadow: 4px 4px 0 var(--neo-ink);
+}
+
+.neo-brutal button:focus-visible,
+.neo-brutal a:focus-visible,
+.neo-brutal input:focus-visible {
+    outline: 3px dashed var(--neo-ink);
+    outline-offset: 4px;
+}
+
+.neo-brutal .login_btn:active,
+.neo-brutal .prev_btn:active,
+.neo-brutal .login_link a:active,
+.neo-brutal .sns_list > a:active {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px 0 var(--neo-ink);
+}
+
+@media (max-width: 420px) {
+    #wrap.neo-brutal {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .neo-brutal main {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .neo-brutal .login_link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
