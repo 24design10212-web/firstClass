@@ -1627,3 +1627,20 @@ body {
 .main-nav .nav-item--brand .brand-dropdown > a:focus-visible {
     color: #ff671f;
 }
+
+/* FINAL BRAND dropdown hover fix: orange only on the hovered submenu item */
+.nav-item--brand.is-open .brand-dropdown > a {
+    color: #222 !important;
+}
+.nav-item--brand.is-open .brand-dropdown > a:hover,
+.nav-item--brand.is-open .brand-dropdown > a:focus,
+.nav-item--brand.is-open .brand-dropdown > a:focus-visible {
+    color: #ff671f !important;
+}
+.nav-item--brand.is-open > .brand-trigger {
+    color: var(--color-text-primary) !important;
+}
+.nav-item--brand.is-open > .brand-trigger:hover,
+.nav-item--brand.is-open > .brand-trigger:focus-visible {
+    color: #ff671f !important;
+}
