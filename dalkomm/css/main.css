@@ -1615,3 +1615,15 @@ body {
 .main-nav .nav-item--brand .brand-dropdown > a:focus-visible {
     color: #ff671f;
 }
+
+/* BRAND only: keep every non-hovered item in its default color */
+.main-nav .nav-item--brand.is-open > .brand-trigger:not(:hover):not(:focus-visible) {
+    color: var(--color-text-primary);
+}
+.main-nav .nav-item--brand .brand-dropdown > a:not(:hover):not(:focus-visible) {
+    color: #222;
+}
+.main-nav .nav-item--brand .brand-dropdown > a:hover,
+.main-nav .nav-item--brand .brand-dropdown > a:focus-visible {
+    color: #ff671f;
+}
