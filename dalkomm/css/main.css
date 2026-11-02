@@ -130,12 +130,12 @@ body {
 .menu-dropdown a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     box-sizing: border-box;
     width: 100%;
     min-height: 41px;
-    padding: 0;
-    text-align: center;
+    padding: 0 0 0 46px;
+    text-align: left;
     color: var(--color-text-primary);
     font-size: 14px;
     font-weight: 400;
@@ -1399,6 +1399,8 @@ body {
     .nav-item--brand > .brand-trigger { font-size: 14px; }
     .brand-dropdown { width: 110px; height: 126px; padding: 10px 0; border-radius: 0 0 10px 10px; }
     .brand-dropdown a { font-size: 11px; }
+    .menu-dropdown { width: 110px; height: 126px; border-radius: 0 0 10px 10px; }
+    .menu-dropdown a { min-height: 36px; padding-left: 35px; font-size: 11px; }
     .franchise-link { font-size: 13px; }
 }
 @media (max-width: 600px) {
@@ -1412,6 +1414,8 @@ body {
     .nav-item--brand > .brand-trigger { font-size: 10px; }
     .brand-dropdown { width: 90px; height: 100px; padding: 7px 0; }
     .brand-dropdown a { font-size: 9px; }
+    .menu-dropdown { width: 90px; height: 100px; border-radius: 0 0 10px 10px; }
+    .menu-dropdown a { min-height: 30px; padding-left: 28px; font-size: 9px; }
     .franchise-link { font-size: 10px; }
 }
 
