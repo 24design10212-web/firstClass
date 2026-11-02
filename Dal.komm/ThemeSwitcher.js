@@ -5,7 +5,8 @@ const loginWrap = document.querySelector("#wrap");
 const themeFiles = {
     default: "",
     editorial: "Editorial.css",
-    glassmorphism: "Glassmorphism.css"
+    glassmorphism: "Glassmorphism.css",
+    cyberpunk: "Cyberpunk.css"
 };
 
 function applyTheme(themeName) {
@@ -19,7 +20,7 @@ function applyTheme(themeName) {
         themeStylesheet.disabled = true;
     }
 
-    loginWrap.classList.remove("editorial", "glassmorphism");
+    loginWrap.classList.remove("editorial", "glassmorphism", "cyberpunk");
     if (themeName !== "default") {
         loginWrap.classList.add(themeName);
     }
