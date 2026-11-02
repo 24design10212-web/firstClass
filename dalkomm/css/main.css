@@ -1645,3 +1645,15 @@ body {
 .nav-item--brand.is-open > .brand-trigger:focus-visible {
     color: #ff671f !important;
 }
+
+/* MENU 드롭다운: 하위 항목 글자를 드롭다운 배경의 가로 중앙에 고정 */
+.main-nav .nav-item--menu > .menu-dropdown > a {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    padding-left: 0 !important;
+    padding-right: 0;
+    text-align: center !important;
+    width: 100%;
+    box-sizing: border-box;
+}
