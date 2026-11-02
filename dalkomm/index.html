@@ -360,25 +360,55 @@
             progressBar.setAttribute('aria-valuenow', currentSlide);
         }
         
-        // BRAND 드롭다운은 마우스 오버가 아니라 클릭으로 열고 닫습니다.
+        // BRAND 드롭다운: 상위 메뉴에서 하위 메뉴로 이동해도 열린 상태를 유지합니다.
         const brandNavItem = document.querySelector('.nav-item--brand');
         const brandTrigger = document.querySelector('.brand-trigger');
+        let brandCloseTimer;
+
+        function openBrandDropdown() {
+            window.clearTimeout(brandCloseTimer);
+            brandNavItem.classList.add('is-open');
+            brandTrigger.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeBrandDropdown() {
+            window.clearTimeout(brandCloseTimer);
+            brandCloseTimer = window.setTimeout(function () {
+                brandNavItem.classList.remove('is-open');
+                brandTrigger.setAttribute('aria-expanded', 'false');
+            }, 220);
+        }
+
         if (brandNavItem && brandTrigger) {
+            // 부모 영역에는 버튼과 드롭다운이 모두 포함되므로, 메뉴 사이 이동 중 닫히지 않습니다.
+            brandNavItem.addEventListener('pointerenter', openBrandDropdown);
+            brandNavItem.addEventListener('pointerleave', closeBrandDropdown);
+            brandNavItem.addEventListener('focusin', openBrandDropdown);
+            brandNavItem.addEventListener('focusout', function (event) {
+                if (!brandNavItem.contains(event.relatedTarget)) {
+                    closeBrandDropdown();
+                }
+            });
+
             brandTrigger.addEventListener('click', function (event) {
                 event.stopPropagation();
-                const isOpen = brandNavItem.classList.toggle('is-open');
-                brandTrigger.setAttribute('aria-expanded', String(isOpen));
+                if (brandNavItem.classList.contains('is-open')) {
+                    // 포인터가 메뉴 위에 있을 때 클릭 한 번으로 닫히지 않게 합니다.
+                    openBrandDropdown();
+                } else {
+                    openBrandDropdown();
+                }
             });
 
             document.addEventListener('click', function (event) {
                 if (!brandNavItem.contains(event.target)) {
-                    brandNavItem.classList.remove('is-open');
-                    brandTrigger.setAttribute('aria-expanded', 'false');
+                    closeBrandDropdown();
                 }
             });
 
             document.addEventListener('keydown', function (event) {
                 if (event.key === 'Escape') {
+                    window.clearTimeout(brandCloseTimer);
                     brandNavItem.classList.remove('is-open');
                     brandTrigger.setAttribute('aria-expanded', 'false');
                     brandTrigger.focus();
@@ -387,6 +417,7 @@
 
             brandNavItem.querySelectorAll('.brand-dropdown a').forEach(function (link) {
                 link.addEventListener('click', function () {
+                    window.clearTimeout(brandCloseTimer);
                     brandNavItem.classList.remove('is-open');
                     brandTrigger.setAttribute('aria-expanded', 'false');
                 });
