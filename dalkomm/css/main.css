@@ -1652,13 +1652,17 @@ body {
     color: #ff671f !important;
 }
 
-/* BRAND dropdown stability: open only via click, never disappear while moving to a submenu */
-.main-nav .nav-item--brand:not(.is-open) > .brand-dropdown {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    transform: translateX(-50%) !important;
+/* BRAND dropdown recovery: keep submenu visible on hover, keyboard focus, or click */
+.main-nav .nav-item--brand > .brand-dropdown {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%);
+    z-index: 9999;
 }
+.main-nav .nav-item--brand:hover > .brand-dropdown,
+.main-nav .nav-item--brand:focus-within > .brand-dropdown,
 .main-nav .nav-item--brand.is-open > .brand-dropdown {
     display: flex !important;
     opacity: 1 !important;
@@ -1669,4 +1673,12 @@ body {
 .main-nav .nav-item--brand > .brand-trigger {
     position: relative;
     z-index: 111;
+}
+.main-nav .nav-item--brand > .brand-dropdown a {
+    display: flex !important;
+    flex: 1 1 0;
+    align-items: center;
+    min-height: 0;
+    visibility: visible;
+    pointer-events: auto;
 }
