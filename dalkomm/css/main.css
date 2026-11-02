@@ -1368,10 +1368,16 @@ body {
     transform: translateX(-50%);
 }
 .brand-dropdown a {
+    display: flex;
     flex: 1 1 0;
+    align-items: center;
+    justify-content: flex-start;
     min-height: 0;
+    padding-left: 46px;
+    color: #222;
     line-height: 1;
     font-size: 14px;
+    text-decoration: none;
 }
 .nav-item--brand.is-open .brand-dropdown {
     transform: translateX(-50%);
