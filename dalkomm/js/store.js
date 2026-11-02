@@ -1,43 +1,56 @@
 /* STORE page search
- * 일반 지도 검색은 유사한 이름의 타 브랜드 매장을 함께 보여줄 수 있습니다.
- * 브랜드가 확인된 매장만 제공하는 달콤 공식 매장찾기를 검색 결과의 기준으로 사용합니다.
+ * 실제 매장 데이터/API가 저장소에 없으므로 임의의 매장명·주소·개수를 생성하지 않습니다.
+ * 검색 조건을 지도 서비스의 검색어로 전달해 실제 지도 결과를 확인하도록 구성합니다.
  */
 (function () {
     const form = document.getElementById('store-search-form');
+    const regionSelect = document.getElementById('store-region');
+    const keywordInput = document.getElementById('store-keyword');
+    const mapFrame = document.getElementById('store-map');
     const openMapLink = document.getElementById('store-open-map');
     const emptyState = document.getElementById('store-empty-state');
     const summary = document.getElementById('store-search-summary');
     const resultsCount = document.getElementById('store-results-count');
     const brandOptions = document.querySelectorAll('.store-brand-option');
-    const officialStoreUrl = 'https://www.dalkomm.com/findStore';
 
-    if (!form || !openMapLink || !emptyState || !summary) return;
+    if (!form || !mapFrame || !openMapLink) return;
+
+    function getSelectedBrand() {
+        const selected = form.querySelector('input[name="brand"]:checked');
+        return selected ? selected.value : 'all';
+    }
+
+    function buildSearchQuery() {
+        const brand = getSelectedBrand();
+        const region = regionSelect.value.trim();
+        const keyword = keywordInput.value.trim();
+        const parts = [];
+
+        if (brand === 'all') {
+            parts.push('달콤 카페');
+        } else {
+            parts.push(brand + ' 카페');
+        }
+
+        if (region) parts.push(region);
+        if (keyword) parts.push(keyword);
+        parts.push('대한민국');
+
+        return parts.join(' ');
+    }
 
     function applySearch() {
-        const selected = form.querySelector('input[name="brand"]:checked');
-        const brand = selected ? selected.value : 'all';
-        const region = document.getElementById('store-region').value.trim();
-        const keyword = document.getElementById('store-keyword').value.trim();
+        const query = buildSearchQuery();
+        const encodedQuery = encodeURIComponent(query);
+        mapFrame.src = 'https://maps.google.com/maps?q=' + encodedQuery + '&output=embed';
+        openMapLink.href = 'https://www.google.com/maps/search/?api=1&query=' + encodedQuery;
 
-        // 공식 매장 데이터에 연결할 수 없는 외부 지도 검색은 사용하지 않습니다.
-        // 공식 매장찾기에서 브랜드/지역/검색어를 다시 선택해 검증된 매장만 확인합니다.
-        openMapLink.href = officialStoreUrl;
-        openMapLink.textContent = '달콤 공식 매장찾기에서 검색 ↗';
         emptyState.hidden = true;
         summary.hidden = false;
-
-        const brandLabel = brand === 'all' ? '전체(달콤·달콤.N)' : brand;
-        const conditions = [
-            '선택한 브랜드: ' + brandLabel,
-            region ? '지역: ' + region : '지역: 전국',
-            keyword ? '검색어: ' + keyword : '검색어: 없음'
-        ];
-
-        summary.innerHTML =
-            '<strong>공식 매장 목록에서 확인해 주세요.</strong>' +
-            '<p>' + conditions.map(escapeHtml).join('<br>') +
-            '<br>타 브랜드 매장이 섞이지 않도록 달콤 공식 매장찾기로 연결합니다. 이동한 페이지에서 같은 검색 조건을 선택해 주세요.</p>';
-        resultsCount.textContent = '공식 매장 기준';
+        summary.innerHTML = '<strong>지도에서 검색 결과를 확인하세요.</strong><p>검색 조건: ' +
+            escapeHtml(query) +
+            '<br>지도 안의 장소 정보를 선택하면 위치와 길찾기 정보를 확인할 수 있습니다.</p>';
+        resultsCount.textContent = '지도 검색';
     }
 
     function escapeHtml(value) {
@@ -54,11 +67,9 @@
 
     brandOptions.forEach(function (option) {
         const input = option.querySelector('input');
-        if (!input) return;
         input.addEventListener('change', function () {
             brandOptions.forEach(function (item) {
-                const itemInput = item.querySelector('input');
-                item.classList.toggle('is-selected', !!itemInput && itemInput.checked);
+                item.classList.toggle('is-selected', item.querySelector('input').checked);
             });
         });
     });
@@ -68,15 +79,10 @@
         applySearch();
     });
 
-    const keywordInput = document.getElementById('store-keyword');
-    if (keywordInput) {
-        keywordInput.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                applySearch();
-            }
-        });
-    }
-
-    openMapLink.href = officialStoreUrl;
+    keywordInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            applySearch();
+        }
+    });
 })();
