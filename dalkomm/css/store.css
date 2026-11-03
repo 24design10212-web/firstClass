@@ -802,30 +802,31 @@
 }
 
 
-/* Store page refinement: hero pattern, compact store selector, larger map */
+/* Store page refinement: subtle organic hero pattern, compact selector and larger map */
 .store-hero {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background-color: #f8f4ef;
+    background-color: #faf6f1;
     background-image:
-        radial-gradient(circle at 82% 30%, rgba(235, 112, 56, .16) 0 2px, transparent 3px),
-        radial-gradient(circle at 82% 30%, transparent 0 78px, rgba(235, 112, 56, .12) 79px 80px, transparent 81px),
-        radial-gradient(circle at 82% 30%, transparent 0 118px, rgba(235, 112, 56, .10) 119px 120px, transparent 121px),
+        radial-gradient(ellipse 170px 115px at 83% 28%, rgba(225, 133, 88, .09) 0%, rgba(225, 133, 88, .09) 65%, transparent 66%),
+        radial-gradient(ellipse 110px 155px at 91% 73%, rgba(198, 150, 113, .08) 0%, rgba(198, 150, 113, .08) 64%, transparent 65%),
+        radial-gradient(ellipse 80px 55px at 72% 88%, rgba(225, 133, 88, .07) 0%, rgba(225, 133, 88, .07) 64%, transparent 65%),
         linear-gradient(115deg, #fbf8f4 0%, #f7eee5 100%);
 }
 
 .store-hero::after {
     position: absolute;
     z-index: -1;
-    top: -72px;
-    right: 8%;
-    width: 300px;
-    height: 300px;
-    border: 1px solid rgba(235, 112, 56, .16);
-    border-radius: 50%;
+    top: -78px;
+    right: 7%;
+    width: 310px;
+    height: 280px;
+    border: 1px solid rgba(194, 126, 88, .14);
+    border-radius: 42% 58% 63% 37% / 44% 38% 62% 56%;
     content: "";
-    box-shadow: 0 0 0 28px rgba(235, 112, 56, .035), 0 0 0 58px rgba(235, 112, 56, .025);
+    transform: rotate(-17deg);
+    box-shadow: 0 0 0 22px rgba(194, 126, 88, .025), 0 0 0 48px rgba(194, 126, 88, .018);
     pointer-events: none;
 }
 
@@ -915,16 +916,16 @@
 @media (max-width: 600px) {
     .store-hero {
         background-image:
-            radial-gradient(circle at 90% 20%, rgba(235, 112, 56, .13) 0 2px, transparent 3px),
-            radial-gradient(circle at 90% 20%, transparent 0 62px, rgba(235, 112, 56, .10) 63px 64px, transparent 65px),
+            radial-gradient(ellipse 105px 76px at 92% 22%, rgba(225, 133, 88, .09) 0%, rgba(225, 133, 88, .09) 65%, transparent 66%),
+            radial-gradient(ellipse 70px 105px at 97% 75%, rgba(198, 150, 113, .07) 0%, rgba(198, 150, 113, .07) 64%, transparent 65%),
             linear-gradient(115deg, #fbf8f4 0%, #f7eee5 100%);
     }
 
     .store-hero::after {
-        top: -50px;
-        right: -100px;
+        top: -38px;
+        right: -118px;
         width: 220px;
-        height: 220px;
+        height: 205px;
     }
 
     .store-map-frame,
