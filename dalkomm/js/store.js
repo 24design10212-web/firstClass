@@ -23,7 +23,6 @@
         { name: '군산문화점', brand: '달콤N', region: '전북', address: '전북 군산시 문화동 1F' },
         { name: '압구정리앤스타점', brand: '달콤N', region: '서울', address: '서울 강남구 언주로174길27 1F' },
         { name: '신림녹두거리점', brand: '달콤N', region: '서울', address: '서울 관악구 대학길 18 1F' },
-        { name: '송파오금점', brand: '달콤N', region: '서울', address: '서울특별시 송파구 동남로 317, 1층 102호(오금동, 한두리타워)' },
         { name: '부산송도케이블카점', brand: '달콤', region: '부산', address: '부산광역시 서구 송도해변로 171, 1층 105호(암남동, 송도해상케이블카 하부정류장)' }
     ];
 
