@@ -17,13 +17,19 @@
 
     // 공식 매장찾기 페이지의 검색 결과에서 매장명·브랜드·주소를 확인한 데이터
     const officialStores = [
+        // 달콤 공식 매장 상세 페이지에서 확인한 주소
+        { name: '부산송도케이블카점', brand: '달콤', region: '부산', address: '부산광역시 서구 송도해변로 171, 1층 105호(암남동, 송도해상케이블카 하부정류장)' },
+        { name: '부산아쿠아리움점', brand: '달콤', region: '부산', address: '부산시 해운대구 해운대해변로 266' },
+        { name: '제주공항점', brand: '달콤', region: '제주', address: '제주특별자치도 제주시 공항로 2, 제주공항 1층 도착장 로비' },
+        { name: '판교아이디스점', brand: '달콤', region: '경기', address: '경기도 성남시 분당구 판교로 344 아이디스타워 지상 1층' },
+        { name: '분당정자점', brand: '달콤', region: '경기', address: '경기도 성남시 분당구 정자일로 135 푸르지오시티 3차 108호, 109호' },
+        { name: '부천시청역점', brand: '달콤', region: '경기', address: '경기 부천시 석천로 171 1층 달콤커피' },
         { name: '대림점', brand: '달콤N', region: '서울', address: '서울특별시 영등포구 도림로38길 6-1, 1층 104호' },
         { name: '다날스퀘어점', brand: '달콤N', region: '서울', address: '서울특별시 성동구 연무장15길 11 SFACTORY 1-2층' },
         { name: '영종하늘도시점', brand: '달콤N', region: '인천', address: '인천광역시 영종구 하늘별빛로65번길 7-9, 1층 104호' },
         { name: '군산문화점', brand: '달콤N', region: '전북', address: '전북 군산시 문화동 1F' },
         { name: '압구정리앤스타점', brand: '달콤N', region: '서울', address: '서울 강남구 언주로174길27 1F' },
-        { name: '신림녹두거리점', brand: '달콤N', region: '서울', address: '서울 관악구 대학길 18 1F' },
-        { name: '부산송도케이블카점', brand: '달콤', region: '부산', address: '부산광역시 서구 송도해변로 171, 1층 105호(암남동, 송도해상케이블카 하부정류장)' }
+        { name: '신림녹두거리점', brand: '달콤N', region: '서울', address: '서울 관악구 대학길 18 1F' }
     ];
 
     let selectedStore = null;
