@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="달콤의 베이글, 커피, 시즌 메뉴와 시그니처 음료를 만나보세요.">
+    <title>MENU | Dal.Komm</title>
+    <link rel="stylesheet" href="../CSS/default.css">
+    <link rel="stylesheet" href="../font/css/pretendardvariable.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+<div id="wrap">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="달콤 메인으로 이동"><img src="img/BI.svg" alt="달콤"></a>
+            <nav class="main-nav" aria-label="주요 메뉴">
+                <div class="nav-item nav-item--brand">
+                    <button type="button" class="brand-trigger" aria-haspopup="true" aria-expanded="false">BRAND</button>
+                    <div class="brand-dropdown" aria-label="브랜드 메뉴">
+                        <a href="brand.html">달콤</a>
+                        <a href="index.html#brand-dalkomm-n">달콤 N</a>
+                        <a href="index.html#brand">회사소개</a>
+                    </div>
+                </div>
+                <div class="nav-item nav-item--menu">
+                    <a href="menu.html" aria-current="page" aria-haspopup="true">MENU</a>
+                    <div class="menu-dropdown" aria-label="메뉴 브랜드 선택">
+                        <a href="menu.html#dalkomm">달콤</a>
+                        <a href="menu.html#dalkomm-n">달콤 N</a>
+                    </div>
+                </div>
+                <a href="store.html">STORE</a>
+                <div class="nav-item nav-item--news">
+                    <a href="index.html#news" aria-haspopup="true">NEWS</a>
+                    <div class="news-dropdown" aria-label="새소식 메뉴">
+                        <a href="index.html#news">뉴스</a>
+                        <a href="index.html#event">이벤트</a>
+                        <a href="index.html#news">공지사항</a>
+                    </div>
+                </div>
+                <a href="index.html#app">APP</a>
+            </nav>
+            <a href="index.html#franchise" class="franchise-link">창업안내</a>
+        </div>
+    </header>
+
+    <main class="menu-page" id="dalkomm">
+        <section class="menu-hero" aria-labelledby="menu-page-title">
+            <div class="menu-hero-inner">
+                <p class="menu-eyebrow">DAL.KOMM MENU</p>
+                <h1 id="menu-page-title">취향에 달콤함을 더하다</h1>
+                <p>매일 즐기는 커피부터 달콤만의 시그니처와 시즌 메뉴까지,<br class="desktop-only"> 오늘의 취향에 맞는 메뉴를 찾아보세요.</p>
+                <a class="menu-hero-link" href="#menu-categories">메뉴 둘러보기 <span aria-hidden="true">↓</span></a>
+            </div>
+        </section>
+
+        <section class="menu-catalog" id="menu-categories" aria-labelledby="catalog-title">
+            <div class="menu-container">
+                <div class="menu-heading">
+                    <p class="menu-kicker">FIND YOUR FAVORITE</p>
+                    <h2 id="catalog-title">메뉴 한눈에 보기</h2>
+                    <p>카테고리를 선택하면 원하는 메뉴를 빠르게 확인할 수 있어요.</p>
+                </div>
+
+                <div class="menu-category-nav" role="group" aria-label="메뉴 카테고리 선택">
+                    <button type="button" class="menu-category is-active" data-category="all" aria-pressed="true">전체 메뉴</button>
+                    <button type="button" class="menu-category" data-category="bagel" aria-pressed="false">Bagel</button>
+                    <button type="button" class="menu-category" data-category="coffee" aria-pressed="false">Coffee</button>
+                    <button type="button" class="menu-category" data-category="season" aria-pressed="false">Season</button>
+                    <button type="button" class="menu-category" data-category="signature" aria-pressed="false">Signature</button>
+                    <button type="button" class="menu-category" data-category="ice-blended" aria-pressed="false">Ice Blended</button>
+                    <button type="button" class="menu-category" data-category="milk-beverage" aria-pressed="false">Milk Beverage</button>
+                    <button type="button" class="menu-category" data-category="juice-ade" aria-pressed="false">Juice / Ade</button>
+                </div>
+
+                <div class="menu-content">
+                    <section class="menu-group" data-menu-group="bagel" aria-labelledby="bagel-title">
+                        <div class="menu-group-heading">
+                            <div><p class="menu-kicker">BAKERY</p><h3 id="bagel-title">Bagel</h3></div>
+                            <p>든든하게 즐기는 베이글</p>
+                        </div>
+                        <div class="menu-empty"><span class="menu-empty-mark" aria-hidden="true">01</span><p>베이글 메뉴 이미지와 상세 정보가 준비되면 이 영역에 소개할게요.</p></div>
+                    </section>
+
+                    <section class="menu-group" data-menu-group="coffee" aria-labelledby="coffee-title">
+                        <div class="menu-group-heading">
+                            <div><p class="menu-kicker">DAILY COFFEE</p><h3 id="coffee-title">Coffee</h3></div>
+                            <p>매일 찾게 되는 커피</p>
+                        </div>
+                        <div class="menu-empty"><span class="menu-empty-mark" aria-hidden="true">02</span><p>커피 메뉴 이미지와 상세 정보가 준비되면 이 영역에 소개할게요.</p></div>
+                    </section>
+
+                    <section class="menu-group" data-menu-group="season" aria-labelledby="season-title">
+                        <div class="menu-group-heading">
+                            <div><p class="menu-kicker">LIMITED MENU</p><h3 id="season-title">Season</h3></div>
+                            <p>계절마다 새롭게 만나는 메뉴</p>
+                        </div>
+                        <div class="menu-empty"><span class="menu-empty-mark" aria-hidden="true">03</span><p>시즌 메뉴 이미지와 상세 정보가 준비되면 이 영역에 소개할게요.</p></div>
+                    </section>
+
+                    <section class="menu-group" data-menu-group="signature" aria-labelledby="signature-menu-title">
+                        <div class="menu-group-heading">
+                            <div><p class="menu-kicker">DAL.KOMM PICK</p><h3 id="signature-menu-title">Signature</h3></div>
+                            <p>달콤의 개성을 담은 시그니처</p>
+                        </div>
+                        <div class="menu-card-grid">
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/StrawberryCube.png" alt="스트로베리 큐브 음료" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>스트로베리 큐브</h4></div>
+                            </article>
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/Cube.png" alt="큐브라떼" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>큐브라떼</h4></div>
+                            </article>
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/HoneyGrapefruit_ice.png" alt="허니 자몽 아이스 음료" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>허니 자몽 아이스</h4></div>
+                            </article>
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/HoneyCube.png" alt="허니 큐브 음료" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>허니 큐브</h4></div>
+                            </article>
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/MangoCube.png" alt="망고 큐브 음료" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>망고 큐브</h4></div>
+                            </article>
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/Grapefruit%26Earl%20greyicedtea.png" alt="자몽 얼그레이 아이스티" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>자몽 얼그레이 아이스티</h4></div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="menu-group" data-menu-group="ice-blended" aria-labelledby="ice-blended-title">
+                        <div class="menu-group-heading">
+                            <div><p class="menu-kicker">COOL & REFRESHING</p><h3 id="ice-blended-title">Ice Blended</h3></div>
+                            <p>시원하게 즐기는 블렌디드</p>
+                        </div>
+                        <div class="menu-empty"><span class="menu-empty-mark" aria-hidden="true">05</span><p>아이스 블렌디드 메뉴 이미지와 상세 정보가 준비되면 이 영역에 소개할게요.</p></div>
+                    </section>
+
+                    <section class="menu-group" data-menu-group="milk-beverage" aria-labelledby="milk-beverage-title">
+                        <div class="menu-group-heading">
+                            <div><p class="menu-kicker">MILK & LATTE</p><h3 id="milk-beverage-title">Milk Beverage</h3></div>
+                            <p>부드럽고 고소한 한 잔</p>
+                        </div>
+                        <div class="menu-empty"><span class="menu-empty-mark" aria-hidden="true">06</span><p>밀크 음료 메뉴 이미지와 상세 정보가 준비되면 이 영역에 소개할게요.</p></div>
+                    </section>
+
+                    <section class="menu-group" data-menu-group="juice-ade" aria-labelledby="juice-ade-title">
+                        <div class="menu-group-heading">
+                            <div><p class="menu-kicker">FRUIT & SPARKLING</p><h3 id="juice-ade-title">Juice / Ade</h3></div>
+                            <p>과일의 산뜻함을 담은 음료</p>
+                        </div>
+                        <div class="menu-empty"><span class="menu-empty-mark" aria-hidden="true">07</span><p>주스와 에이드 메뉴 이미지 및 상세 정보가 준비되면 이 영역에 소개할게요.</p></div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="menu-bottom-cta" id="dalkomm-n" aria-label="다른 브랜드 메뉴 안내">
+            <div class="menu-bottom-cta-inner">
+                <div><p class="menu-kicker">MORE TO EXPLORE</p><h2>다른 취향의 메뉴도 만나보세요.</h2><p>달콤N 메뉴는 메인페이지의 브랜드 소개에서 확인할 수 있어요.</p></div>
+                <a href="index.html#brand" class="menu-cta-link">브랜드 살펴보기 <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <a class="footer-logo" href="index.html" aria-label="Dal.Komm 메인으로 이동"><img src="img/BI.svg" alt="Dal.Komm"></a>
+                <div class="footer-company">
+                    <p>(주)다날에프엔비 | 주소: 경기도 성남시 분당구 황새울로 312번길 5, 5층(서현동, 세원빌딩)</p>
+                    <p>대표이사: 전기홍 | 사업자등록번호: 144-81-09353 | 통신판매업신고: 제 2016-성남분당-0680호</p>
+                </div>
+                <div class="footer-actions">
+                    <a class="footer-icon-link" href="index.html" aria-label="메인페이지로 이동"><img src="img/Shopping%20bag.png" alt=""></a>
+                    <a class="footer-icon-link" href="tel:1661-1399" aria-label="고객 상담 전화 1661-1399"><img src="img/Call.png" alt=""></a>
+                    <button class="footer-family" type="button" aria-label="패밀리 사이트 메뉴">FAMILY SITE <img class="family-arrow" src="img/Keyboard%20arrow%20down.png" alt=""></button>
+                </div>
+            </div>
+            <div class="footer-bottom"><div class="footer-legal"><a href="index.html">메인으로</a><a href="tel:1661-1399">고객 상담센터 1661-1399</a></div></div>
+        </div>
+    </footer>
+</div>
+<script src="js/menu.js"></script>
+</body>
+</html>
