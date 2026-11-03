@@ -245,6 +245,13 @@
     transform-origin: left center;
 }
 
+.store-search-icon-image {
+    display: block;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
 .store-search-hint {
     margin: 16px 0 0;
     color: #777;
