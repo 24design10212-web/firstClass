@@ -119,16 +119,16 @@
                                 </button>
                             </div>
                         </div>
-                        <p class="store-search-hint">지도 검색은 브랜드명을 기준으로 결과를 찾습니다. 공식 매장 목록은 <a href="https://www.dalkomm.com/findStore" target="_blank" rel="noopener noreferrer">달콤 공식 매장찾기</a>에서 확인해 주세요.</p>
+                        <p class="store-search-hint">달콤 공식 매장찾기에서 확인한 매장만 목록에 표시합니다. 매장을 선택하면 해당 매장 위치가 지도에 표시됩니다. <a href="https://www.dalkomm.com/findStore" target="_blank" rel="noopener noreferrer">공식 매장찾기 바로가기</a></p>
                     </form>
 
                     <div class="store-results-layout">
                         <aside class="store-results-panel" aria-labelledby="store-results-title">
                             <div class="store-results-heading">
-                                <h3 id="store-results-title">검색 안내</h3>
+                                <h3 id="store-results-title">공식 매장 목록</h3>
                                 <span class="store-results-count" id="store-results-count">지도 검색</span>
                             </div>
-                            <div class="store-empty-state" id="store-empty-state" aria-live="polite">
+                            <div class="store-empty-state" id="store-empty-state" aria-live="polite" hidden>
                                 <span class="store-location-symbol" aria-hidden="true">
                                     <svg viewBox="0 0 48 48" fill="none">
                                         <path d="M38 20C38 30 24 42 24 42S10 30 10 20a14 14 0 1 1 28 0Z" stroke="currentColor" stroke-width="2"/>
@@ -138,7 +138,7 @@
                                 <strong>원하는 지역의 매장을 검색해 보세요.</strong>
                                 <p>지역과 브랜드를 선택한 뒤 검색하면 지도에서 매장 위치를 확인할 수 있습니다.</p>
                             </div>
-                            <div class="store-search-summary" id="store-search-summary" hidden></div>
+                            <div class="store-search-summary" id="store-search-summary" aria-live="polite"></div>
                             <a class="store-open-map" id="store-open-map" href="https://www.google.com/maps/search/?api=1&query=%22Dal.Komm%22%20%22%EB%8B%AC%EC%BD%A4.N%22%20%EB%A7%A4%EC%9E%A5%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD" target="_blank" rel="noopener noreferrer">
                                 지도 크게 보기 <span aria-hidden="true">↗</span>
                             </a>
