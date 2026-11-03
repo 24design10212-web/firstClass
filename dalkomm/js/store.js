@@ -78,22 +78,39 @@
             return;
         }
 
-        summary.innerHTML = '<p class="store-list-note">공식 매장찾기에서 확인한 매장입니다. 매장을 선택하면 해당 위치가 지도에 표시됩니다.</p>' +
-            '<ul class="store-result-list">' + stores.map(function (store) {
-                const isSelected = selectedStore && selectedStore.name === store.name && selectedStore.address === store.address;
-                return '<li><button type="button" class="store-result-item' + (isSelected ? ' is-active' : '') + '" data-store-name="' + escapeHtml(store.name) + '">' +
-                    '<span class="store-result-brand">' + escapeHtml(store.brand) + '</span>' +
-                    '<strong>' + escapeHtml(store.name) + '</strong>' +
-                    '<span class="store-result-address">' + escapeHtml(store.address) + '</span>' +
-                    '</button></li>';
-            }).join('') + '</ul>';
+        const selectedName = selectedStore && stores.some(function (store) {
+            return store.name === selectedStore.name && store.address === selectedStore.address;
+        }) ? selectedStore.name : stores[0].name;
 
-        summary.querySelectorAll('[data-store-name]').forEach(function (button) {
-            button.addEventListener('click', function () {
-                const store = stores.find(function (item) { return item.name === button.dataset.storeName; });
-                if (store) showStoreOnMap(store);
+        summary.innerHTML =
+            '<label class="store-list-select-label" for="store-list-select">매장 선택</label>' +
+            '<select class="store-list-select" id="store-list-select" aria-label="지도에 표시할 매장 선택">' +
+            stores.map(function (store) {
+                return '<option value="' + escapeHtml(store.name) + '"' +
+                    (store.name === selectedName ? ' selected' : '') + '>' +
+                    escapeHtml(store.name) + ' · ' + escapeHtml(store.brand) + '</option>';
+            }).join('') +
+            '</select>' +
+            '<p class="store-selected-address" id="store-selected-address"></p>' +
+            '<p class="store-list-note">매장을 선택하면 오른쪽 지도에서 위치를 확인할 수 있습니다.</p>';
+
+        const select = summary.querySelector('#store-list-select');
+        const address = summary.querySelector('#store-selected-address');
+
+        function updateSelectedStore() {
+            const store = stores.find(function (item) {
+                return item.name === select.value;
             });
+            if (!store) return;
+            address.textContent = store.address;
+            showStoreOnMap(store);
+        }
+
+        select.addEventListener('change', updateSelectedStore);
+        const initialStore = stores.find(function (store) {
+            return store.name === selectedName;
         });
+        if (initialStore) address.textContent = initialStore.address;
     }
 
     function escapeHtml(value) {
