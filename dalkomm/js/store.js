@@ -26,11 +26,21 @@
         const keyword = keywordInput.value.trim();
         const parts = [];
 
-        if (brand === 'all') {
-            parts.push('달콤 카페');
+        /*
+         * 브랜드 검색어는 공식 매장찾기 페이지의 브랜드 표기를 기준으로 사용합니다.
+         * 지도 서비스의 일반 키워드 검색은 공식 매장 데이터베이스가 아니므로,
+         * 결과가 공식 매장만으로 제한된다고 보장할 수 없습니다.
+         * 정확한 매장 목록은 아래 공식 매장찾기 링크에서도 확인할 수 있습니다.
+         */
+        if (brand === '달콤') {
+            parts.push('"Dal.Komm"');
+        } else if (brand === '달콤N') {
+            parts.push('"달콤.N"');
         } else {
-            parts.push(brand + ' 카페');
+            parts.push('"Dal.Komm" OR "달콤.N"');
         }
+
+        parts.push('매장');
 
         if (region) parts.push(region);
         if (keyword) parts.push(keyword);
