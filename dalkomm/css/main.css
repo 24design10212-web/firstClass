@@ -2100,3 +2100,68 @@ body {
         padding: 0;
     }
 }
+
+
+/* BRAND 드롭다운 최종 조정: NEWS와 같은 항목 스타일, 세 항목에 맞춘 컴팩트한 패널 */
+.main-nav .nav-item--brand > .brand-dropdown {
+    box-sizing: border-box;
+    width: 145px;
+    height: 120px;
+    min-height: 0;
+    padding: 8px 0;
+    gap: 0;
+    align-items: stretch;
+    justify-content: stretch;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    box-shadow: none;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown a {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    padding: 0 0 0 46px;
+    color: #222;
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    text-decoration: none;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown a:hover,
+.main-nav .nav-item--brand > .brand-dropdown a:focus-visible {
+    color: #ff671f;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 110px;
+        height: 94px;
+        padding: 6px 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown a {
+        padding-left: 35px;
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 90px;
+        height: 75px;
+        padding: 5px 0;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown a {
+        padding-left: 28px;
+        font-size: 9px !important;
+    }
+}
