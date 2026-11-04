@@ -1818,7 +1818,7 @@ body {
 }
 
 
-/* BRAND / MENU dropdown: NEWS와 동일한 흰색 패널 형태로 통일 */
+/* BRAND / MENU dropdown: 흰색 패널 형태 유지 */
 .main-nav .nav-item--brand > .brand-dropdown,
 .main-nav .nav-item--menu > .menu-dropdown {
     position: absolute;
@@ -1838,6 +1838,13 @@ body {
     border-radius: 0 0 14px 14px;
     box-shadow: none;
     transform: translateX(-50%);
+}
+
+/* MENU는 브랜드 선택 항목이 두 개이므로 패널 높이와 항목 간격을 줄임 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    width: 125px;
+    height: 100px;
+    padding: 8px 0;
 }
 
 /* BRAND는 기존 클릭 열기 동작을 유지하면서 패널 모양만 통일 */
@@ -1906,10 +1913,16 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .main-nav .nav-item--brand > .brand-dropdown,
-    .main-nav .nav-item--menu > .menu-dropdown {
+    .main-nav .nav-item--brand > .brand-dropdown {
         width: 145px;
         height: 164px;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 125px;
+        height: 100px;
+        padding: 8px 0;
         border-radius: 0 0 14px 14px;
     }
 
@@ -1921,10 +1934,15 @@ body {
 }
 
 @media (max-width: 600px) {
-    .main-nav .nav-item--brand > .brand-dropdown,
-    .main-nav .nav-item--menu > .menu-dropdown {
+    .main-nav .nav-item--brand > .brand-dropdown {
         width: 145px;
         height: 164px;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 125px;
+        height: 100px;
+        padding: 8px 0;
     }
 
     .main-nav .nav-item--brand > .brand-dropdown a,
