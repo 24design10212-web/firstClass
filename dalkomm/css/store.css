@@ -934,3 +934,40 @@
     }
 }
 
+
+
+/* Brand-specific official store finder link */
+.store-official-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 46px;
+    margin-top: 10px;
+    padding: 0 14px;
+    border: 1px solid var(--color-border-default);
+    border-radius: 10px;
+    color: var(--color-text-primary);
+    background: var(--color-surface-default);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+
+.store-official-link:hover {
+    border-color: var(--color-orange-500);
+    background: var(--color-accent-subtle);
+}
+
+.store-official-link:focus-visible {
+    outline: 2px solid var(--color-orange-500);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .store-official-link {
+        transition: none;
+    }
+}
