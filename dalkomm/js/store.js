@@ -9,7 +9,9 @@
     const keywordInput = document.getElementById('store-keyword');
     const mapFrame = document.getElementById('store-map');
     const openMapLink = document.getElementById('store-open-map');
+    const officialStoreLink = document.getElementById('store-official-link');
     const summary = document.getElementById('store-search-summary');
+    const resultsTitle = document.getElementById('store-results-title');
     const resultsCount = document.getElementById('store-results-count');
     const brandOptions = document.querySelectorAll('.store-brand-option');
 
@@ -43,6 +45,31 @@
     function getSelectedBrand() {
         const selected = form.querySelector('input[name="brand"]:checked');
         return selected ? selected.value : 'all';
+    }
+
+    function updateBrandLabels() {
+        const brand = getSelectedBrand();
+        const brandName = brand === '달콤N' ? '달콤.N' : brand === '달콤' ? '달콤' : '전체';
+        if (resultsTitle) {
+            resultsTitle.textContent = brand === 'all' ? '공식 매장 목록' : brandName + ' 매장 목록';
+        }
+        if (officialStoreLink) {
+            const officialUrl = new URL('https://www.dalkomm.com/findStore');
+            officialUrl.searchParams.set('city', '');
+            officialUrl.searchParams.set('sub_city', '');
+            officialUrl.searchParams.set('q', '');
+            if (brand === '달콤N') {
+                officialUrl.searchParams.set('brand_cd', 'DALKOMM_N');
+                officialStoreLink.textContent = '달콤.N 공식 매장찾기 ↗';
+            } else if (brand === '달콤') {
+                officialUrl.searchParams.set('brand_cd', 'DALKOMM');
+                officialStoreLink.textContent = '달콤 공식 매장찾기 ↗';
+            } else {
+                officialUrl.searchParams.delete('brand_cd');
+                officialStoreLink.textContent = '공식 매장찾기 ↗';
+            }
+            officialStoreLink.href = officialUrl.toString();
+        }
     }
 
     function getFilteredStores() {
@@ -126,6 +153,7 @@
     }
 
     function applySearch() {
+        updateBrandLabels();
         const stores = getFilteredStores();
         renderStoreList(stores);
         if (stores.length) {
