@@ -2424,3 +2424,32 @@ body {
         gap: 6px;
     }
 }
+
+
+/* 모든 헤더 드롭다운 항목의 폰트 규칙 통일: NEWS 기준 */
+.main-nav .nav-item--brand > .brand-dropdown a,
+.main-nav .nav-item--menu > .menu-dropdown a,
+.main-nav .nav-item--news > .news-dropdown a {
+    font-family: inherit;
+    font-size: 14px !important;
+    font-weight: 500;
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown a,
+    .main-nav .nav-item--menu > .menu-dropdown a,
+    .main-nav .nav-item--news > .news-dropdown a {
+        font-size: 11px !important;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown a,
+    .main-nav .nav-item--menu > .menu-dropdown a,
+    .main-nav .nav-item--news > .news-dropdown a {
+        font-size: 9px !important;
+        font-weight: 500;
+    }
+}
