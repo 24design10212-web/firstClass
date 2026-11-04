@@ -28,6 +28,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
+    // Cube Latte image <-> details toggle (only this menu item)
+    const cubeLatteCard = document.querySelector('.menu-card--cube-latte');
+    if (cubeLatteCard) {
+        const imageButton = cubeLatteCard.querySelector('.menu-card-image-toggle');
+        const detailsPanel = cubeLatteCard.querySelector('.cube-latte-details');
+        const backButton = cubeLatteCard.querySelector('.cube-latte-back');
+
+        function showCubeLatteDetails(showDetails) {
+            imageButton.hidden = showDetails;
+            detailsPanel.hidden = !showDetails;
+            imageButton.setAttribute('aria-expanded', String(showDetails));
+            imageButton.setAttribute('aria-label', showDetails ? '큐브라떼 상세 정보 보기' : '큐브라떼 상세 정보 보기');
+            if (showDetails) {
+                backButton.focus();
+            } else {
+                imageButton.focus();
+            }
+        }
+
+        imageButton.addEventListener('click', function () {
+            showCubeLatteDetails(true);
+        });
+        backButton.addEventListener('click', function () {
+            showCubeLatteDetails(false);
+        });
+    }
+
     const brandTrigger = document.querySelector('.brand-trigger');
     const brandNavItem = document.querySelector('.nav-item--brand');
     if (brandTrigger && brandNavItem) {
