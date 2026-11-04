@@ -2398,3 +2398,29 @@ body {
         min-height: 42px;
     }
 }
+
+
+/* MENU 드롭다운 항목 간격: 너무 붙지 않도록 여유 추가 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    padding: 16px 0;
+    gap: 12px;
+}
+
+.main-nav .nav-item--menu > .menu-dropdown a {
+    flex: 0 0 42px;
+    min-height: 42px;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        padding: 12px 0;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        padding: 8px 0;
+        gap: 6px;
+    }
+}
