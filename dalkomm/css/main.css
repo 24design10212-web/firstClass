@@ -2069,3 +2069,34 @@ body {
         font-size: 9px !important;
     }
 }
+
+
+/* BRAND 드롭다운: 두 항목에 맞춰 패널 크기와 세로 간격만 축소 */
+.main-nav .nav-item--brand > .brand-dropdown {
+    width: 125px;
+    height: 100px;
+    min-height: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown a {
+    flex: 1 1 0;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 110px;
+        height: 84px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 90px;
+        height: 68px;
+        padding: 0;
+    }
+}
