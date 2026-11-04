@@ -521,6 +521,7 @@ body {
 .brand-panel--dalkomm-n {
     background: var(--color-orange-500);
     color: var(--color-text-inverse);
+    padding-bottom: 120px;
 }
 .brand-panel-inner {
     display: flex;
@@ -616,6 +617,9 @@ body {
         min-height: 0;
         padding: 64px 0;
     }
+    .brand-panel--dalkomm-n {
+        padding-bottom: 96px;
+    }
     .brand-panel-inner {
         width: calc(100% - 80px);
         gap: 42px;
@@ -628,6 +632,9 @@ body {
 }
 @media (max-width: 600px) {
     .brand-panel { padding: 48px 0; }
+    .brand-panel--dalkomm-n {
+        padding-bottom: 72px;
+    }
     .brand-panel-inner {
         flex-direction: column;
         align-items: stretch;
