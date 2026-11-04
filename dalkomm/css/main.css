@@ -1425,6 +1425,35 @@ body {
 }
 
 
+/* Header logo: preserve the original BI.svg aspect ratio and prevent flex shrinking */
+.header-logo {
+    display: block;
+    flex: 0 0 117px;
+    width: 117px;
+    height: auto;
+    line-height: 0;
+}
+
+.header-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 117 / 30;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .header-logo {
+        flex: 0 0 90px;
+        width: 90px;
+    }
+
+    .header-logo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Header navigation hover color: orange, matching the Figma reference */
 .main-nav > a,
 .main-nav .nav-item > a,
