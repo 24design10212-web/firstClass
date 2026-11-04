@@ -512,7 +512,6 @@ body {
 .brand-panel {
     display: flex;
     align-items: center;
-    min-height: 594px;
     padding: 70px 0;
 }
 .brand-panel--dalkomm {
