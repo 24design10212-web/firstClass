@@ -1840,11 +1840,11 @@ body {
     transform: translateX(-50%);
 }
 
-/* MENU는 브랜드 선택 항목이 두 개이므로 패널 높이와 항목 간격을 줄임 */
+/* MENU의 두 항목은 동일한 상하 간격으로 배치 */
 .main-nav .nav-item--menu > .menu-dropdown {
     width: 125px;
     height: 100px;
-    padding: 8px 0;
+    padding: 0;
 }
 
 /* BRAND는 기존 클릭 열기 동작을 유지하면서 패널 모양만 통일 */
@@ -1922,7 +1922,7 @@ body {
     .main-nav .nav-item--menu > .menu-dropdown {
         width: 125px;
         height: 100px;
-        padding: 8px 0;
+        padding: 0;
         border-radius: 0 0 14px 14px;
     }
 
@@ -1942,7 +1942,7 @@ body {
     .main-nav .nav-item--menu > .menu-dropdown {
         width: 125px;
         height: 100px;
-        padding: 8px 0;
+        padding: 0;
     }
 
     .main-nav .nav-item--brand > .brand-dropdown a,
