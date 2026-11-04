@@ -2165,3 +2165,112 @@ body {
         font-size: 9px !important;
     }
 }
+
+
+/* BRAND dropdown 복구: NEWS dropdown과 동일한 패널 크기와 항목 스타일 */
+.main-nav .nav-item--brand > .brand-dropdown {
+    box-sizing: border-box;
+    width: 145px;
+    height: 164px;
+    min-height: 0;
+    padding: 16px 0;
+    gap: 0;
+    align-items: stretch;
+    justify-content: stretch;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    box-shadow: none;
+}
+.main-nav .nav-item--brand > .brand-dropdown a {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    padding: 0 0 0 46px;
+    color: #222;
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    text-decoration: none;
+}
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 110px;
+        height: 126px;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+    .main-nav .nav-item--brand > .brand-dropdown a {
+        padding-left: 35px;
+        font-size: 11px !important;
+    }
+}
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 90px;
+        height: 100px;
+        padding: 7px 0;
+    }
+    .main-nav .nav-item--brand > .brand-dropdown a {
+        padding-left: 28px;
+        font-size: 9px !important;
+    }
+}
+
+/* MENU dropdown: NEWS와 같은 글자·정렬 방식, 두 항목에 맞춘 작은 패널 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    box-sizing: border-box;
+    width: 125px;
+    height: 100px;
+    min-height: 0;
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
+    justify-content: stretch;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    box-shadow: none;
+}
+.main-nav .nav-item--menu > .menu-dropdown a {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    padding: 0 0 0 35px;
+    color: #222;
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    text-decoration: none;
+}
+@media (max-width: 1024px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 110px;
+        height: 84px;
+        padding: 0;
+        border-radius: 0 0 10px 10px;
+    }
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        padding-left: 28px;
+        font-size: 11px !important;
+    }
+}
+@media (max-width: 600px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 90px;
+        height: 68px;
+        padding: 0;
+    }
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        padding-left: 22px;
+        font-size: 9px !important;
+    }
+}
