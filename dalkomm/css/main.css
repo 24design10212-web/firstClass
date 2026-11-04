@@ -1816,3 +1816,120 @@ body {
         font-weight: 500 !important;
     }
 }
+
+
+/* BRAND / MENU dropdown: NEWS와 동일한 흰색 패널 형태로 통일 */
+.main-nav .nav-item--brand > .brand-dropdown,
+.main-nav .nav-item--menu > .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 9999;
+    box-sizing: border-box;
+    width: 145px;
+    height: 164px;
+    min-height: 0;
+    padding: 16px 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    background: #fff;
+    border: 0;
+    border-radius: 0 0 14px 14px;
+    box-shadow: none;
+    transform: translateX(-50%);
+}
+
+/* BRAND는 기존 클릭 열기 동작을 유지하면서 패널 모양만 통일 */
+.main-nav .nav-item--brand > .brand-dropdown {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.main-nav .nav-item--brand:hover > .brand-dropdown,
+.main-nav .nav-item--brand:focus-within > .brand-dropdown,
+.main-nav .nav-item--brand.is-open > .brand-dropdown {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(-50%) !important;
+}
+
+/* MENU는 NEWS와 같은 hover / keyboard focus 방식으로 표시 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    display: none !important;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.main-nav .nav-item--menu:hover > .menu-dropdown,
+.main-nav .nav-item--menu:focus-within > .menu-dropdown {
+    display: flex !important;
+}
+
+/* 세부 항목은 패널 안에서 균등하게 배치하고 왼쪽 정렬 */
+.main-nav .nav-item--brand > .brand-dropdown a,
+.main-nav .nav-item--menu > .menu-dropdown a {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    padding: 0 0 0 46px;
+    color: #222;
+    font-size: 16px !important;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    text-decoration: none;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown a:hover,
+.main-nav .nav-item--brand > .brand-dropdown a:focus-visible,
+.main-nav .nav-item--menu > .menu-dropdown a:hover,
+.main-nav .nav-item--menu > .menu-dropdown a:focus-visible {
+    color: #ff671f;
+}
+
+.main-nav .nav-item--brand:hover > .brand-trigger,
+.main-nav .nav-item--brand:focus-within > .brand-trigger,
+.main-nav .nav-item--menu:hover > a,
+.main-nav .nav-item--menu:focus-within > a {
+    color: #ff671f;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown,
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 145px;
+        height: 164px;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown a,
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        padding-left: 35px;
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown,
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 145px;
+        height: 164px;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown a,
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        padding-left: 28px;
+        font-size: 16px !important;
+    }
+}
