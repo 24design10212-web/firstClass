@@ -77,11 +77,18 @@
 
     function showStoreOnMap(store) {
         selectedStore = store;
-        const query = encodeURIComponent(store.name + ' ' + store.address);
+
+        // 매장명만 검색하면 주변의 다른 음식점이 함께 검색될 수 있어,
+        // 선택한 브랜드명과 매장명, 주소를 함께 넣어 해당 프랜차이즈 매장을 우선 검색합니다.
+        const brandSearchName = store.brand === '달콤N' ? '달콤.N' : '달콤커피';
+        const mapSearchText = '"' + brandSearchName + '" "' + store.name + '" ' + store.address;
+        const query = encodeURIComponent(mapSearchText);
+
         mapFrame.src = 'https://maps.google.com/maps?q=' + query + '&output=embed';
         openMapLink.href = 'https://www.google.com/maps/search/?api=1&query=' + query;
+
         const caption = document.querySelector('.store-map-caption');
-        if (caption) caption.textContent = store.name + ' · ' + store.brand;
+        if (caption) caption.textContent = store.name + ' · ' + (store.brand === '달콤N' ? '달콤.N' : '달콤');
         renderStoreList(getFilteredStores());
     }
 
