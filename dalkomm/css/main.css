@@ -2363,3 +2363,38 @@ body {
         font-size: 12px !important;
     }
 }
+
+
+/* MENU 드롭다운: 패널 크기는 유지하고 달콤/달콤 N 항목 간격만 축소 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    padding: 24px 0;
+    gap: 0;
+    justify-content: flex-start;
+}
+
+.main-nav .nav-item--menu > .menu-dropdown a {
+    flex: 0 0 42px;
+    min-height: 42px;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        padding: 16px 0;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        flex-basis: 42px;
+        min-height: 42px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        padding: 8px 0;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        flex-basis: 42px;
+        min-height: 42px;
+    }
+}
