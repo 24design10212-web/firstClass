@@ -1958,3 +1958,59 @@ body {
         font-size: 16px !important;
     }
 }
+
+
+/* MENU 헤더 드롭다운: 배경 안쪽 상하좌우 여백을 균등하게 유지 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    box-sizing: border-box;
+    width: 160px;
+    height: auto;
+    min-height: 0;
+    padding: 16px;
+    gap: 8px;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-radius: 0 0 14px 14px;
+}
+
+.main-nav .nav-item--menu > .menu-dropdown a {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 12px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.25;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 160px;
+        height: auto;
+        min-height: 0;
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        min-height: 40px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 150px;
+        height: auto;
+        min-height: 0;
+        padding: 14px;
+        gap: 8px;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown a {
+        min-height: 38px;
+        padding: 9px 10px;
+        font-size: 14px !important;
+    }
+}
