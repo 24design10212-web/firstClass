@@ -109,3 +109,95 @@
 @media (prefers-reduced-motion: reduce) {
     .menu-hero-link, .menu-category, .menu-card, .menu-cta-link { transition: none; }
 }
+
+
+/* Cube Latte: switch the image area to product information on click */
+.menu-card--cube-latte .menu-card-image-toggle {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+}
+.menu-card--cube-latte .menu-card-image-toggle:focus-visible,
+.cube-latte-back:focus-visible {
+    outline: 3px solid var(--color-orange-500, #d97835);
+    outline-offset: -4px;
+}
+.menu-card-image-hint {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(34, 34, 34, .84);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+}
+.cube-latte-details {
+    box-sizing: border-box;
+    min-height: 280px;
+    padding: 20px;
+    background: #f6f1e9;
+    color: #292521;
+}
+.cube-latte-details[hidden],
+.menu-card-image-toggle[hidden] {
+    display: none !important;
+}
+.cube-latte-back {
+    margin: 0 0 16px;
+    padding: 6px 0;
+    border: 0;
+    background: transparent;
+    color: #76513b;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.cube-latte-details h5 {
+    margin: 4px 0 10px;
+    font-size: 23px;
+    line-height: 1.25;
+}
+.cube-latte-description {
+    margin: 0 0 14px;
+    color: #5e5750;
+    font-size: 12px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+.cube-latte-size {
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+.cube-latte-info h6 {
+    margin: 10px 0 3px;
+    font-size: 11px;
+    font-weight: 750;
+}
+.cube-latte-info p {
+    margin: 0;
+    color: #5e5750;
+    font-size: 10px;
+    line-height: 1.65;
+    word-break: keep-all;
+}
+@media (max-width: 600px) {
+    .cube-latte-details { min-height: 0; padding: 14px 12px; }
+    .cube-latte-details h5 { font-size: 18px; }
+    .cube-latte-description { font-size: 11px; }
+    .cube-latte-info p { font-size: 10px; }
+    .menu-card-image-hint { right: 8px; bottom: 8px; padding: 6px 8px; font-size: 10px; }
+}
