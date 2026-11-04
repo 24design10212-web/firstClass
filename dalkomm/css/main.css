@@ -2016,7 +2016,7 @@ body {
 }
 
 
-/* BRAND 드롭다운: NEWS 드롭다운과 동일한 크기·정렬·글자 스타일로 통일 */
+/* BRAND 드롭다운: NEWS와 같은 가운데 정렬·간격 유지, 기존 글자 크기는 그대로 */
 .main-nav .nav-item--brand > .brand-dropdown {
     box-sizing: border-box;
     width: 145px;
@@ -2033,16 +2033,16 @@ body {
     display: flex;
     flex: 1 1 0;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     box-sizing: border-box;
     width: 100%;
     min-height: 0;
-    padding: 0 0 0 46px;
+    padding: 0;
     color: #222;
     font-size: 14px !important;
     font-weight: 400;
     line-height: 1;
-    text-align: left;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -2054,7 +2054,6 @@ body {
     }
 
     .main-nav .nav-item--brand > .brand-dropdown a {
-        padding-left: 35px;
         font-size: 11px !important;
     }
 }
@@ -2067,7 +2066,6 @@ body {
     }
 
     .main-nav .nav-item--brand > .brand-dropdown a {
-        padding-left: 28px;
         font-size: 9px !important;
     }
 }
