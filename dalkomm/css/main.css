@@ -213,10 +213,15 @@ body {
 
 .hero-sec .swiper {
     width: 100%;
-    height: 720px;
+    aspect-ratio: 1920 / 680;
+    height: auto;
 }
 
-/* 배너 이미지를 슬라이드 영역에 맞춰 표시 */
+/* PC 히어로 배너는 1920 × 680 비율을 유지하며 화면 너비에 맞춰 반응형으로 표시 */
+.hero-sec .swiper-slide {
+    height: 100%;
+}
+
 .hero-sec .swiper-slide img {
     display: block;
     width: 100%;
