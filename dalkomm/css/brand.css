@@ -1682,3 +1682,41 @@
         height: 142px !important;
     }
 }
+
+
+/* BRAND EXPERIENCE — temporary text-only cards with Dal.Komm brand palette */
+.brand-contents .contents-card,
+.brand-contents .contents-card:nth-child(n) {
+    min-height: 300px;
+    padding: 28px 24px;
+    border: 1px solid rgba(73, 49, 38, .12);
+    border-radius: 22px;
+    box-shadow: 0 10px 24px rgba(73, 49, 38, .08);
+}
+.brand-contents .contents-card--coffee { background: #ef785f; color: #382b28; }
+.brand-contents .contents-card--beverage { background: #f6c5b5; color: #493126; }
+.brand-contents .contents-card--bakery { background: #f6d982; color: #493126; }
+.brand-contents .contents-card--goods { background: #d8c6ed; color: #382b50; }
+.brand-contents .contents-card .contents-illustration,
+.brand-contents .contents-card img,
+.brand-contents .contents-card svg,
+.brand-contents .contents-card picture {
+    display: none !important;
+}
+.brand-contents .contents-card > p:last-of-type {
+    color: #493126 !important;
+}
+@media (max-width: 1024px) {
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        min-height: 270px;
+        padding: 24px 22px;
+    }
+}
+@media (max-width: 600px) {
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        min-height: 230px;
+        padding: 22px;
+    }
+}
