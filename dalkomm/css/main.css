@@ -2453,3 +2453,27 @@ body {
         font-weight: 500;
     }
 }
+
+
+/* Header submenu typography: slightly larger for readability */
+.main-nav .nav-item--brand > .brand-dropdown a,
+.main-nav .nav-item--menu > .menu-dropdown a,
+.main-nav .nav-item--news > .news-dropdown a {
+    font-size: 15px !important;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown a,
+    .main-nav .nav-item--menu > .menu-dropdown a,
+    .main-nav .nav-item--news > .news-dropdown a {
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown a,
+    .main-nav .nav-item--menu > .menu-dropdown a,
+    .main-nav .nav-item--news > .news-dropdown a {
+        font-size: 12px !important;
+    }
+}
