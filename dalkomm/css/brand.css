@@ -1754,3 +1754,18 @@
 .brand-contents .contents-card--goods > p:last-of-type {
     color: #fff !important;
 }
+
+
+/* BRAND EXPERIENCE — white typography on black Beverage and Goods cards */
+.brand-contents .contents-card--beverage,
+.brand-contents .contents-card--goods {
+    color: #fff !important;
+}
+.brand-contents .contents-card--beverage h3,
+.brand-contents .contents-card--beverage p,
+.brand-contents .contents-card--beverage .contents-label,
+.brand-contents .contents-card--goods h3,
+.brand-contents .contents-card--goods p,
+.brand-contents .contents-card--goods .contents-label {
+    color: #fff !important;
+}
