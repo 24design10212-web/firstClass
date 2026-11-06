@@ -1551,3 +1551,24 @@
     display: none !important;
     visibility: hidden !important;
 }
+
+
+/* BRAND EXPERIENCE section: one continuous background across the full width */
+.brand-contents.brand-container {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 88px clamp(24px, 5vw, 80px) 100px;
+    background-color: #f7e8df;
+}
+.brand-contents .brand-section-heading,
+.brand-contents .contents-grid,
+.brand-contents .brand-store-link {
+    position: relative;
+}
+@media (max-width: 600px) {
+    .brand-contents.brand-container {
+        padding: 72px 20px 80px;
+    }
+}
