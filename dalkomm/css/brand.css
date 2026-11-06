@@ -1572,3 +1572,71 @@
         padding: 72px 20px 80px;
     }
 }
+
+
+/* BRAND EXPERIENCE — hand-drawn doodle illustrations */
+.brand-contents .contents-card,
+.brand-contents .contents-card:nth-child(n) {
+    min-height: 390px;
+    padding: 26px 22px 168px;
+    border: 1.5px solid rgba(63, 43, 35, .12);
+    border-radius: 24px;
+}
+.brand-contents .contents-card--coffee { background: #d8c6ed; color: #382b50; }
+.brand-contents .contents-card--beverage { background: #f5b4bd; color: #573342; }
+.brand-contents .contents-card--bakery { background: #f7d982; color: #55451f; }
+.brand-contents .contents-card--goods { background: #f3a17e; color: #653a2b; }
+.brand-contents .contents-label {
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+.brand-contents .contents-card h3 {
+    max-width: 100%;
+    margin: 0 0 10px;
+    font-size: clamp(23px, 2vw, 29px);
+}
+.brand-contents .contents-card > p:last-of-type {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.65;
+}
+.brand-contents .contents-card .contents-illustration {
+    position: absolute;
+    z-index: 1;
+    right: 8px;
+    bottom: 4px;
+    display: block !important;
+    visibility: visible !important;
+    width: min(66%, 190px);
+    height: 158px;
+    object-fit: contain;
+    object-position: right bottom;
+    pointer-events: none;
+}
+.brand-contents .contents-card--coffee .contents-illustration { width: 62%; }
+.brand-contents .contents-card--beverage .contents-illustration { width: 64%; }
+.brand-contents .contents-card--bakery .contents-illustration { width: 72%; }
+.brand-contents .contents-card--goods .contents-illustration { width: 72%; }
+@media (max-width: 1024px) {
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        min-height: 370px;
+        padding: 24px 20px 158px;
+    }
+    .brand-contents .contents-card .contents-illustration {
+        height: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        min-height: 330px;
+        padding: 22px 22px 145px;
+    }
+    .brand-contents .contents-card .contents-illustration {
+        right: 8px;
+        bottom: 0;
+        height: 142px;
+        width: min(60%, 180px);
+    }
+}
