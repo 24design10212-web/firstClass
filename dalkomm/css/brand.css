@@ -1720,3 +1720,37 @@
         padding: 22px;
     }
 }
+
+
+/* BRAND EXPERIENCE — restore Dal.Komm core orange & black palette */
+.brand-contents .contents-card,
+.brand-contents .contents-card:nth-child(n) {
+    border: 1px solid #191817;
+    box-shadow: 0 10px 24px rgba(25, 24, 23, .12);
+}
+.brand-contents .contents-card--coffee,
+.brand-contents .contents-card--bakery {
+    background: #ff671f;
+    color: #191817;
+}
+.brand-contents .contents-card--beverage,
+.brand-contents .contents-card--goods {
+    background: #191817;
+    color: #fff;
+}
+.brand-contents .contents-card .contents-label {
+    background: rgba(255, 255, 255, .22);
+    color: inherit;
+}
+.brand-contents .contents-card > p:last-of-type {
+    color: inherit !important;
+}
+.brand-contents .contents-card--beverage .contents-label,
+.brand-contents .contents-card--goods .contents-label {
+    background: rgba(255, 255, 255, .14);
+    color: #fff;
+}
+.brand-contents .contents-card--beverage > p:last-of-type,
+.brand-contents .contents-card--goods > p:last-of-type {
+    color: #fff !important;
+}
