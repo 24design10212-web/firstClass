@@ -971,3 +971,130 @@
         transition: none;
     }
 }
+
+
+/* Typography hierarchy: 16px body baseline for the store page */
+.store-page {
+    font-size: 16px;
+}
+
+.store-page p,
+.store-page label,
+.store-page legend,
+.store-page select,
+.store-page input,
+.store-page button,
+.store-page a {
+    font-size: 16px;
+}
+
+/* Keep display headings clearly above the body baseline */
+.store-hero h1 {
+    font-size: clamp(40px, 4vw, 58px);
+}
+
+.store-section-heading h2,
+.store-guide-inner > div:first-child h2 {
+    font-size: 40px;
+}
+
+.store-results-heading h3,
+.store-guide-item h3 {
+    font-size: 18px;
+}
+
+/* Secondary information remains smaller, but comfortably readable */
+.store-eyebrow,
+.store-kicker {
+    font-size: 13px;
+}
+
+.store-map-topline,
+.store-map-caption,
+.store-results-count,
+.store-result-brand,
+.store-list-select-label,
+.store-search-hint,
+.store-empty-state p,
+.store-search-summary p,
+.store-open-map,
+.store-list-note,
+.store-result-address,
+.store-no-results,
+.store-selected-address,
+.store-official-link {
+    font-size: 14px;
+}
+
+.store-brand-option span,
+.store-select-label,
+#store-region,
+#store-keyword,
+.store-search-button,
+.store-guide-item p,
+.store-hero-subcopy,
+.store-section-heading > div > p:last-child,
+.store-result-item strong,
+.store-empty-state strong,
+.store-search-summary {
+    font-size: 16px;
+}
+
+/* Mobile: preserve the same 16px body baseline and heading hierarchy */
+@media (max-width: 600px) {
+    .store-page p,
+    .store-page label,
+    .store-page legend,
+    .store-page select,
+    .store-page input,
+    .store-page button,
+    .store-page a {
+        font-size: 16px;
+    }
+
+    .store-hero-subcopy,
+    .store-section-heading > div > p:last-child,
+    .store-brand-field legend,
+    .store-brand-option span,
+    .store-select-label,
+    #store-region,
+    #store-keyword,
+    .store-search-button,
+    .store-guide-item p {
+        font-size: 16px;
+    }
+
+    .store-eyebrow,
+    .store-kicker {
+        font-size: 13px;
+    }
+
+    .store-map-topline,
+    .store-map-caption,
+    .store-results-count,
+    .store-search-hint,
+    .store-empty-state p,
+    .store-search-summary p,
+    .store-open-map,
+    .store-list-note,
+    .store-result-brand,
+    .store-result-address,
+    .store-no-results,
+    .store-selected-address,
+    .store-official-link {
+        font-size: 14px;
+    }
+
+    .store-section-heading h2 {
+        font-size: 28px;
+    }
+
+    .store-guide-inner > div:first-child h2 {
+        font-size: 26px;
+    }
+
+    .store-guide-item h3,
+    .store-results-heading h3 {
+        font-size: 18px;
+    }
+}
