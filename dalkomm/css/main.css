@@ -2477,3 +2477,18 @@ body {
         font-size: 12px !important;
     }
 }
+
+
+/* NEWS는 드롭다운을 여는 메뉴명으로만 표시하고 섹션 이동 링크는 사용하지 않음 */
+.main-nav .nav-item--news > .news-label {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--color-text-primary);
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+@media (max-width: 1024px) {
+    .main-nav .nav-item--news > .news-label { font-size: 11px; }
+}
