@@ -2492,3 +2492,11 @@ body {
 @media (max-width: 1024px) {
     .main-nav .nav-item--news > .news-label { font-size: 11px; }
 }
+
+
+/* NEWS 메뉴명도 마우스 오버 및 키보드 포커스 시 포인트 컬러 적용 */
+.main-nav .nav-item--news:hover > .news-label,
+.main-nav .nav-item--news:focus-within > .news-label {
+    color: var(--color-orange-500);
+    transition: color .18s ease;
+}
