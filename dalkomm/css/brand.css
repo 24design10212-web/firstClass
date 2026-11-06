@@ -314,7 +314,7 @@
 }
 .brand-hero-cta:hover { color: #fff; }
 .brand-hero-art {
-    z-index: -1;
+    z-index: 0;
     right: max(4vw, calc((100vw - 1440px) / 2));
     width: min(48%, 650px);
     height: 82%;
