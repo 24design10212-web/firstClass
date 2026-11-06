@@ -1532,3 +1532,22 @@
     display: none !important;
     content: none !important;
 }
+
+
+/* FINAL FIX: cards are text-only — remove every decorative illustration */
+.brand-contents .contents-grid .contents-card::before,
+.brand-contents .contents-grid .contents-card::after {
+    display: none !important;
+    visibility: hidden !important;
+    content: none !important;
+    background: none !important;
+    background-image: none !important;
+    opacity: 0 !important;
+}
+.brand-contents .contents-grid .contents-card .contents-symbol,
+.brand-contents .contents-grid .contents-card img,
+.brand-contents .contents-grid .contents-card svg,
+.brand-contents .contents-grid .contents-card picture {
+    display: none !important;
+    visibility: hidden !important;
+}
