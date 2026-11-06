@@ -1640,3 +1640,45 @@
         width: min(60%, 180px);
     }
 }
+
+
+/* FIX: show the four real card illustration images.
+   Earlier text-only cleanup hid every img inside the cards. */
+.brand-contents .contents-grid .contents-card img.contents-illustration {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    z-index: 2 !important;
+    right: 8px !important;
+    bottom: 4px !important;
+    width: min(66%, 190px) !important;
+    height: 158px !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+    filter: none !important;
+    transform: none !important;
+    pointer-events: none !important;
+}
+.brand-contents .contents-grid .contents-card {
+    overflow: hidden;
+}
+.brand-contents .contents-grid .contents-card--coffee img.contents-illustration { width: min(62%, 180px) !important; }
+.brand-contents .contents-grid .contents-card--beverage img.contents-illustration { width: min(64%, 184px) !important; }
+.brand-contents .contents-grid .contents-card--bakery img.contents-illustration,
+.brand-contents .contents-grid .contents-card--goods img.contents-illustration { width: min(72%, 200px) !important; }
+@media (max-width: 1024px) {
+    .brand-contents .contents-grid .contents-card img.contents-illustration {
+        height: 150px !important;
+        bottom: 4px !important;
+    }
+}
+@media (max-width: 600px) {
+    .brand-contents .contents-grid .contents-card img.contents-illustration {
+        right: 8px !important;
+        bottom: 0 !important;
+        width: min(60%, 180px) !important;
+        height: 142px !important;
+    }
+}
