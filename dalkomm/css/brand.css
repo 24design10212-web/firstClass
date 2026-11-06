@@ -1523,3 +1523,12 @@
         line-height: 1.7;
     }
 }
+
+
+/* BRAND EXPERIENCE — remove decorative drawings from cards */
+.brand-contents .contents-card::before,
+.brand-contents .contents-card::after,
+.brand-contents .contents-symbol {
+    display: none !important;
+    content: none !important;
+}
