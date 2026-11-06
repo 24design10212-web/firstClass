@@ -1071,3 +1071,217 @@
         transition: none;
     }
 }
+
+
+/* BRAND EXPERIENCE — pastel tilted card composition based on the supplied reference */
+.brand-contents {
+    padding: 104px 0 116px;
+    overflow: hidden;
+    background: #fffaf5;
+}
+.brand-contents .brand-section-heading {
+    max-width: 820px;
+    margin: 0 auto 54px;
+    text-align: center;
+}
+.brand-contents .brand-section-heading .brand-kicker {
+    color: #ef785f;
+}
+.brand-contents .brand-section-heading h2 {
+    font-size: clamp(34px, 4.2vw, 54px);
+    letter-spacing: -.055em;
+}
+.brand-contents .brand-section-heading > p:last-child {
+    margin-top: 16px;
+    color: #776b64;
+}
+.brand-contents .contents-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 0;
+    align-items: center;
+    padding: 18px 3.5% 30px;
+    border: 0;
+}
+.brand-contents .contents-card,
+.brand-contents .contents-card:nth-child(n) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: auto;
+    min-width: 0;
+    min-height: 330px;
+    margin: 0 -7px;
+    padding: 26px 25px 28px;
+    overflow: hidden;
+    border: 1px solid rgba(74, 53, 44, .06);
+    border-radius: 22px;
+    box-shadow: 0 12px 26px rgba(82, 58, 43, .10);
+    isolation: isolate;
+    transform: rotate(-2deg);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.brand-contents .contents-card:nth-child(2) { transform: translateY(13px) rotate(2.5deg); }
+.brand-contents .contents-card:nth-child(3) { transform: translateY(-5px) rotate(-1.5deg); }
+.brand-contents .contents-card:nth-child(4) { transform: translateY(10px) rotate(2deg); }
+.brand-contents .contents-card:nth-child(5) { transform: translateY(-7px) rotate(-2.5deg); }
+.brand-contents .contents-card:nth-child(6) { transform: translateY(12px) rotate(1.5deg); }
+.brand-contents .contents-card:hover {
+    z-index: 3;
+    transform: translateY(-10px) rotate(0) scale(1.025);
+    box-shadow: 0 20px 34px rgba(82, 58, 43, .16);
+}
+.brand-contents .contents-card::before {
+    position: absolute;
+    z-index: -1;
+    top: 78px;
+    right: 20px;
+    width: 116px;
+    height: 116px;
+    border: 1px solid currentColor;
+    border-radius: 48% 52% 43% 57%;
+    content: "";
+    opacity: .18;
+    transform: rotate(24deg);
+}
+.brand-contents .contents-card::after {
+    position: absolute;
+    z-index: -1;
+    top: 96px;
+    right: 38px;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+    opacity: .08;
+}
+.brand-contents .contents-label {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    min-height: 23px;
+    margin: 0 0 26px;
+    padding: 4px 9px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.55);
+    color: currentColor;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+.brand-contents .contents-card h3 {
+    position: relative;
+    z-index: 1;
+    max-width: 88%;
+    margin: auto 0 12px;
+    font-size: clamp(24px, 2.4vw, 34px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -.05em;
+}
+.brand-contents .contents-card > p:last-of-type {
+    position: relative;
+    z-index: 1;
+    max-width: 95%;
+    margin: 0;
+    color: currentColor;
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: .82;
+}
+.brand-contents .contents-symbol {
+    position: absolute;
+    top: 82px;
+    right: 34px;
+    display: grid;
+    place-items: center;
+    width: 82px;
+    height: 82px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: currentColor;
+    font-family: Georgia, serif;
+    font-size: 43px;
+    line-height: 1;
+    opacity: .48;
+    transform: rotate(-12deg);
+}
+.brand-contents .contents-card--coffee { background: #b9a4d8; color: #fff; }
+.brand-contents .contents-card--beverage { background: #f4a6b6; color: #573342; }
+.brand-contents .contents-card--bakery { background: #ffdf79; color: #55451f; }
+.brand-contents .contents-card--goods { background: #f5b08f; color: #653a2b; }
+.brand-contents .contents-card--music { background: #c8d8ed; color: #34455e; }
+.brand-contents .contents-card--character { background: #c9dfb9; color: #3b5135; }
+.brand-contents .brand-store-link {
+    display: flex;
+    width: fit-content;
+    margin: 48px auto 0;
+    border-color: #42352f;
+    color: #42352f;
+}
+.brand-contents .brand-store-link:hover {
+    border-color: #ef785f;
+    background: #ef785f;
+    color: #fff;
+}
+@media (max-width: 900px) {
+    .brand-contents .contents-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 8px;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        min-height: 300px;
+        margin: 0 -4px;
+    }
+}
+@media (max-width: 600px) {
+    .brand-contents {
+        padding: 72px 0 80px;
+    }
+    .brand-contents .brand-section-heading {
+        margin-bottom: 34px;
+        text-align: left;
+    }
+    .brand-contents .contents-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 8px 12px 20px;
+    }
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        min-height: 255px;
+        margin: 0;
+        padding: 23px;
+        border-radius: 20px;
+        transform: rotate(-1deg);
+    }
+    .brand-contents .contents-card:nth-child(2n) {
+        transform: rotate(1.2deg);
+    }
+    .brand-contents .contents-card:hover {
+        transform: translateY(-4px) rotate(0);
+    }
+    .brand-contents .contents-card h3 {
+        font-size: 30px;
+    }
+    .brand-contents .contents-symbol {
+        top: 70px;
+        right: 30px;
+        width: 76px;
+        height: 76px;
+        font-size: 40px;
+    }
+    .brand-contents .brand-store-link {
+        margin-top: 28px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .brand-contents .contents-card {
+        transition: none;
+    }
+}
