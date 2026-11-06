@@ -663,3 +663,39 @@
 @media (max-width: 600px) {
     .brand-identity .logo-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+
+/* Brand Logo Type: final 2x2 flush square layout */
+.brand-identity .logo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+}
+.brand-identity .logo-card {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #ffdfd2;
+}
+.brand-identity .logo-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+}
+@media (max-width: 600px) {
+    .brand-identity .logo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
