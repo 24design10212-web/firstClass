@@ -359,3 +359,13 @@
     .menu-hero-product--sub { right: 4%; bottom: 0; width: 150px; height: 170px; }
     .menu-hero-stamp { top: 0; right: 2%; width: 62px; height: 62px; font-size: 8px; }
 }
+
+
+/* Hero image removed: keep the intro copy centered in a single column */
+.menu-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+}
+.menu-hero-copy {
+    max-width: 760px;
+}
