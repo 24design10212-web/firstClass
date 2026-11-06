@@ -481,3 +481,106 @@
 @media (max-width: 600px) {
     .logo-gallery, .character-gallery { grid-template-columns: 1fr; }
 }
+
+
+/* Brand Logo Type — unified editorial gallery */
+.brand-identity {
+    position: relative;
+}
+.brand-identity .brand-section-heading {
+    max-width: 760px;
+    margin-bottom: 48px;
+}
+.brand-identity .brand-section-heading h2 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+}
+.brand-identity .brand-section-heading h2::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 54px;
+    height: 4px;
+    border-radius: 4px;
+    background: #ef5937;
+    content: "";
+}
+.brand-identity .brand-section-heading > p:last-child {
+    max-width: 560px;
+    margin-top: 18px;
+}
+.logo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+.logo-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 350px;
+    margin: 0;
+    padding: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(40, 32, 27, .07);
+    border-radius: 28px;
+    box-shadow: 0 12px 32px rgba(54, 39, 28, .045);
+}
+.logo-card-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 260px;
+    padding: 28px;
+    border-radius: 19px;
+}
+.logo-card-visual img {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    height: 230px;
+    object-fit: contain;
+}
+.logo-card figcaption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 4px 2px;
+    color: #625a54;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+.logo-card figcaption span {
+    display: inline-grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 27px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 9px;
+    letter-spacing: 0;
+}
+.logo-card--orange { background: #fff8f4; color: #fff; }
+.logo-card--orange .logo-card-visual { background: #ff592e; }
+.logo-card--dark { background: #f5f2ee; color: #fff; }
+.logo-card--dark .logo-card-visual { background: #222; }
+.logo-card--light { background: #f5f2ee; color: #25211f; }
+.logo-card--light .logo-card-visual { background: #fff; border: 1px solid #eee9e3; }
+.logo-card--brand4 { background: #fff0e8; color: #25211f; }
+.logo-card--brand4 .logo-card-visual { background: #ffdfd2; }
+.logo-card--orange figcaption, .logo-card--dark figcaption { color: #625a54; }
+@media (max-width: 700px) {
+    .brand-identity { padding-top: 76px; padding-bottom: 80px; }
+    .brand-identity .brand-section-heading { margin-bottom: 30px; }
+    .logo-gallery { grid-template-columns: 1fr; gap: 16px; }
+    .logo-card { min-height: 300px; padding: 16px; border-radius: 23px; }
+    .logo-card-visual { min-height: 220px; padding: 18px; }
+    .logo-card-visual img { height: 190px; }
+    .logo-card figcaption { padding-top: 16px; }
+}
