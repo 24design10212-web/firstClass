@@ -699,3 +699,180 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+
+/* BRAND CONTENTS — number-free colorful editorial cards */
+.brand-contents .brand-section-heading {
+    max-width: 760px;
+    margin-bottom: 42px;
+}
+.brand-contents .contents-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 18px;
+    border: 0;
+}
+.brand-contents .contents-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 0;
+    min-height: 280px;
+    grid-column: span 4;
+    padding: 30px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 30px;
+    isolation: isolate;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.brand-contents .contents-card:nth-child(1),
+.brand-contents .contents-card:nth-child(4) {
+    grid-column: span 7;
+}
+.brand-contents .contents-card:nth-child(2),
+.brand-contents .contents-card:nth-child(3),
+.brand-contents .contents-card:nth-child(5),
+.brand-contents .contents-card:nth-child(6) {
+    grid-column: span 5;
+}
+.brand-contents .contents-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(56, 38, 26, .10);
+}
+.brand-contents .contents-card::before {
+    position: absolute;
+    z-index: -1;
+    top: -58px;
+    right: -38px;
+    width: 230px;
+    height: 230px;
+    border: 1px solid currentColor;
+    border-radius: 46% 54% 60% 40%;
+    content: "";
+    opacity: .16;
+    transform: rotate(-18deg);
+}
+.brand-contents .contents-card::after {
+    position: absolute;
+    z-index: -1;
+    top: 28px;
+    right: 42px;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+    opacity: .08;
+}
+.brand-contents .contents-label {
+    margin: 0 0 auto;
+    color: currentColor;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    opacity: .72;
+}
+.brand-contents .contents-card h3 {
+    max-width: 85%;
+    margin: 46px 0 10px;
+    font-size: clamp(25px, 3vw, 38px);
+    font-weight: 700;
+    letter-spacing: -.045em;
+    line-height: 1.1;
+}
+.brand-contents .contents-card > p:last-of-type {
+    max-width: 440px;
+    margin: 0;
+    color: inherit;
+    font-size: 14px;
+    line-height: 1.75;
+    opacity: .78;
+}
+.brand-contents .contents-symbol {
+    position: absolute;
+    top: 46px;
+    right: 54px;
+    display: grid;
+    place-items: center;
+    width: 104px;
+    height: 104px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: inherit;
+    font-family: Georgia, serif;
+    font-size: 58px;
+    line-height: 1;
+    opacity: .78;
+    transform: rotate(-10deg);
+}
+.brand-contents .contents-card--coffee {
+    min-height: 340px;
+    background: #f6c9ad;
+    color: #542e20;
+}
+.brand-contents .contents-card--beverage {
+    background: #f7e6a9;
+    color: #59431d;
+}
+.brand-contents .contents-card--bakery {
+    background: #f2e8df;
+    color: #513b31;
+}
+.brand-contents .contents-card--goods {
+    min-height: 340px;
+    background: #ef8b69;
+    color: #fff9f4;
+}
+.brand-contents .contents-card--music {
+    background: #d9d8f4;
+    color: #343052;
+}
+.brand-contents .contents-card--character {
+    background: #d9e7d5;
+    color: #304a35;
+}
+.brand-contents .brand-store-link {
+    margin-top: 34px;
+}
+@media (max-width: 900px) {
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        grid-column: span 6;
+        min-height: 270px;
+    }
+    .brand-contents .contents-card--coffee,
+    .brand-contents .contents-card--goods {
+        min-height: 300px;
+    }
+}
+@media (max-width: 600px) {
+    .brand-contents .contents-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+    .brand-contents .contents-card,
+    .brand-contents .contents-card:nth-child(n) {
+        grid-column: 1;
+        min-height: 245px;
+        padding: 24px;
+        border-radius: 24px;
+    }
+    .brand-contents .contents-card h3 {
+        margin-top: 38px;
+        font-size: 29px;
+    }
+    .brand-contents .contents-symbol {
+        top: 34px;
+        right: 38px;
+        width: 82px;
+        height: 82px;
+        font-size: 46px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .brand-contents .contents-card {
+        transition: none;
+    }
+}
