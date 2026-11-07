@@ -1,4 +1,4 @@
-// 뉴스 제목, 요약, 검색 키워드를 기준으로 목록 필터링
+// 뉴스 제목과 요약을 기준으로 카드 검색
 document.addEventListener('DOMContentLoaded', function () {
     const searchForm = document.querySelector('.news-search');
     const searchInput = document.querySelector('#news-search-input');
@@ -6,30 +6,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const count = document.querySelector('#news-count');
     const emptyMessage = document.querySelector('#news-empty');
 
-    if (searchForm && searchInput && count && emptyMessage) {
-        function filterNews() {
-            const keyword = searchInput.value.trim().toLocaleLowerCase('ko');
-            let visibleCount = 0;
+    if (!searchForm || !searchInput || !count || !emptyMessage) return;
 
-            cards.forEach(function (card) {
-                const searchableText = (card.dataset.search + ' ' + card.textContent).toLocaleLowerCase('ko');
-                const isMatched = searchableText.includes(keyword);
+    function filterNews() {
+        const keyword = searchInput.value.trim().toLocaleLowerCase('ko');
+        let visibleCount = 0;
 
-                card.hidden = !isMatched;
-                if (isMatched) visibleCount += 1;
-            });
+        cards.forEach(function (card) {
+            const searchableText = (card.dataset.search + ' ' + card.textContent).toLocaleLowerCase('ko');
+            const isMatched = searchableText.includes(keyword);
 
-            count.textContent = visibleCount;
-            emptyMessage.hidden = visibleCount !== 0;
-        }
-
-        searchForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            filterNews();
+            card.hidden = !isMatched;
+            if (isMatched) visibleCount += 1;
         });
 
-        searchInput.addEventListener('input', filterNews);
+        count.textContent = visibleCount;
+        emptyMessage.hidden = visibleCount !== 0;
     }
+
+    searchForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        filterNews();
+    });
+
+    searchInput.addEventListener('input', filterNews);
 });
 
 // 메인페이지와 같은 BRAND 드롭다운 동작
