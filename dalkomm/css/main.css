@@ -2572,3 +2572,105 @@ main .subpage-breadcrumb a:focus-visible {
     main .subpage-heading-description { margin-top: 14px; font-size: 14px; }
     main .subpage-breadcrumb { margin-top: 22px; }
 }
+
+
+/* BRAND 드롭다운 최종 레이아웃 복구
+   세 항목(달콤 / 달콤 N / 회사소개)을 동일한 높이로 정렬 */
+.main-nav .nav-item--brand {
+    position: relative;
+    align-self: stretch;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 9999;
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    box-sizing: border-box;
+    width: 145px;
+    height: 164px;
+    min-height: 0;
+    margin: 0;
+    padding: 8px 0;
+    gap: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(25, 24, 23, .08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity .18s ease, visibility .18s ease;
+}
+
+/* 링크와 비링크 항목 모두 같은 행 스타일을 적용 */
+.main-nav .nav-item--brand > .brand-dropdown > a,
+.main-nav .nav-item--brand > .brand-dropdown > span {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0 18px 0 42px;
+    border: 0;
+    background: transparent;
+    color: #222;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown > a:hover,
+.main-nav .nav-item--brand > .brand-dropdown > a:focus-visible {
+    color: #ff671f;
+}
+
+.main-nav .nav-item--brand:hover > .brand-dropdown,
+.main-nav .nav-item--brand:focus-within > .brand-dropdown,
+.main-nav .nav-item--brand.is-open > .brand-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 130px;
+        height: 150px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown > a,
+    .main-nav .nav-item--brand > .brand-dropdown > span {
+        padding-left: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown {
+        width: 112px;
+        height: 138px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown > a,
+    .main-nav .nav-item--brand > .brand-dropdown > span {
+        padding-left: 22px;
+        font-size: 12px;
+    }
+}
