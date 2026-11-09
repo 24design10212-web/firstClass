@@ -2880,22 +2880,27 @@ main .subpage-breadcrumb a:focus-visible {
 }
 
 
-/* MENU 드롭다운 두 항목을 동일한 왼쪽 기준선에 맞춤
-   a 요소에 지정된 기존 중앙 정렬 규칙보다 구체적인 선택자로 덮어씀 */
+/* MENU 드롭다운: 왼쪽 정렬된 텍스트 열을 패널 중앙에 배치 */
 .main-nav .nav-item--menu > .menu-dropdown > a {
+    box-sizing: border-box;
+    width: 76px;
+    min-width: 76px;
+    margin: 0 auto;
+    padding: 0;
     justify-content: flex-start;
-    padding: 0 12px 0 32px;
     text-align: left;
 }
 
 @media (max-width: 1024px) {
     .main-nav .nav-item--menu > .menu-dropdown > a {
-        padding-left: 28px;
+        width: 70px;
+        min-width: 70px;
     }
 }
 
 @media (max-width: 600px) {
     .main-nav .nav-item--menu > .menu-dropdown > a {
-        padding-left: 22px;
+        width: 62px;
+        min-width: 62px;
     }
 }
