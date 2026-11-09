@@ -253,15 +253,31 @@
 .membership-info { border-top: 1px solid var(--color-neutral-200); }
 .membership-info-item {
     display: grid;
-    grid-template-columns: 42px minmax(0,1fr) 24px;
+    grid-template-columns: minmax(0, 1fr) 24px;
     align-items: center;
-    gap: 18px;
+    gap: 20px;
     min-height: 108px;
+    padding: 20px 4px;
     border-bottom: 1px solid var(--color-neutral-200);
 }
-.membership-number { color: var(--color-orange-500); font-size: 13px; font-weight: 700; }
-.membership-info-item h3 { margin: 0; font-size: 19px; font-weight: 600; }
-.membership-info-item p { margin: 8px 0 0; color: rgba(34, 34, 34, .62); font-size: 13px; line-height: 1.55; }
+.membership-info-item > div {
+    min-width: 0;
+}
+.membership-info-item h3 {
+    margin: 0;
+    color: var(--color-neutral-900);
+    font-size: 19px;
+    font-weight: 650;
+    line-height: 1.4;
+    letter-spacing: -.025em;
+}
+.membership-info-item p {
+    margin: 7px 0 0;
+    color: rgba(34, 34, 34, .66);
+    font-size: 14px;
+    line-height: 1.65;
+    word-break: keep-all;
+}
 .membership-arrow { color: var(--color-neutral-900); font-size: 20px; transition: transform .2s ease, color .2s ease; }
 .membership-info-item:hover .membership-arrow { color: var(--color-orange-500); transform: translate(3px,-3px); }
 .app-content-note { margin: 20px 0 0; color: rgba(34, 34, 34, .5); font-size: 11px; line-height: 1.5; }
@@ -465,9 +481,9 @@
     .membership-layout { grid-template-columns: 1fr; gap: 30px; margin-top: 36px; }
     .membership-main-card { min-height: 230px; padding: 22px; border-radius: 16px; }
     .membership-card-mark { font-size: 78px; }
-    .membership-info-item { grid-template-columns: 28px minmax(0,1fr) 18px; gap: 12px; min-height: 92px; }
+    .membership-info-item { grid-template-columns: minmax(0, 1fr) 18px; gap: 12px; min-height: 92px; padding: 17px 2px; }
     .membership-info-item h3 { font-size: 16px; }
-    .membership-info-item p { font-size: 12px; }
+    .membership-info-item p { margin-top: 6px; font-size: 12px; line-height: 1.6; }
     .app-content-note { font-size: 10px; }
     .app-features-inner { grid-template-columns: 1fr; gap: 38px; }
     .app-feature-visual { min-height: 420px; border-radius: 16px; }
