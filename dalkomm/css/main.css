@@ -2674,3 +2674,141 @@ main .subpage-breadcrumb a:focus-visible {
         font-size: 12px;
     }
 }
+
+
+/* 헤더 드롭다운 최종 통합 보정: BRAND / MENU / NEWS 각각의 항목 수에 맞춰 독립 정렬 */
+.main-nav .nav-item--brand,
+.main-nav .nav-item--menu,
+.main-nav .nav-item--news {
+    position: relative;
+    align-self: stretch;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown,
+.main-nav .nav-item--menu > .menu-dropdown,
+.main-nav .nav-item--news > .news-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 9999;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    margin: 0;
+    padding: 8px 0;
+    gap: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(25, 24, 23, .08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity .18s ease, visibility .18s ease;
+}
+
+/* BRAND와 NEWS는 3개 항목 */
+.main-nav .nav-item--brand > .brand-dropdown,
+.main-nav .nav-item--news > .news-dropdown {
+    width: 145px;
+    height: 164px;
+}
+
+/* MENU는 2개 항목 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    width: 130px;
+    height: 108px;
+}
+
+/* 링크와 텍스트 항목을 동일한 행으로 정렬 */
+.main-nav .nav-item--brand > .brand-dropdown > *,
+.main-nav .nav-item--menu > .menu-dropdown > *,
+.main-nav .nav-item--news > .news-dropdown > * {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0 12px;
+    border: 0;
+    background: transparent;
+    color: #222;
+    font-family: inherit;
+    font-size: 15px !important;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.main-nav .nav-item--brand > .brand-dropdown > a:hover,
+.main-nav .nav-item--brand > .brand-dropdown > a:focus-visible,
+.main-nav .nav-item--menu > .menu-dropdown > a:hover,
+.main-nav .nav-item--menu > .menu-dropdown > a:focus-visible,
+.main-nav .nav-item--news > .news-dropdown > a:hover,
+.main-nav .nav-item--news > .news-dropdown > a:focus-visible {
+    color: #ff671f;
+}
+
+.main-nav .nav-item--brand:hover > .brand-dropdown,
+.main-nav .nav-item--brand:focus-within > .brand-dropdown,
+.main-nav .nav-item--brand.is-open > .brand-dropdown,
+.main-nav .nav-item--menu:hover > .menu-dropdown,
+.main-nav .nav-item--menu:focus-within > .menu-dropdown,
+.main-nav .nav-item--news:hover > .news-dropdown,
+.main-nav .nav-item--news:focus-within > .news-dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown,
+    .main-nav .nav-item--news > .news-dropdown {
+        width: 130px;
+        height: 150px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 120px;
+        height: 104px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown > *,
+    .main-nav .nav-item--menu > .menu-dropdown > *,
+    .main-nav .nav-item--news > .news-dropdown > * {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown,
+    .main-nav .nav-item--news > .news-dropdown {
+        width: 112px;
+        height: 138px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown {
+        width: 105px;
+        height: 94px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .main-nav .nav-item--brand > .brand-dropdown > *,
+    .main-nav .nav-item--menu > .menu-dropdown > *,
+    .main-nav .nav-item--news > .news-dropdown > * {
+        font-size: 12px !important;
+    }
+}
