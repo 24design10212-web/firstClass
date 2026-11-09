@@ -2878,3 +2878,27 @@ main .subpage-breadcrumb a:focus-visible {
 #menu-categories {
     scroll-margin-top: 110px;
 }
+
+
+/* 헤더 하위 메뉴의 '달콤'과 '달콤 N' 텍스트 시작 위치 통일 */
+.main-nav .nav-item--brand > .brand-dropdown > *,
+.main-nav .nav-item--menu > .menu-dropdown > * {
+    justify-content: flex-start;
+    padding-left: 46px;
+    padding-right: 12px;
+    text-align: left;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--brand > .brand-dropdown > *,
+    .main-nav .nav-item--menu > .menu-dropdown > * {
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--brand > .brand-dropdown > *,
+    .main-nav .nav-item--menu > .menu-dropdown > * {
+        padding-left: 28px;
+    }
+}
