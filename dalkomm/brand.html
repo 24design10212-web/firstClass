@@ -15,7 +15,7 @@
 <div id="wrap">
     <header class="site-header">
         <div class="header-inner">
-            <a href="index.html" class="header-logo" aria-label="달콤 메인으로 이동"><img src="img/BI.svg" alt="달콤"></a>
+            <a href="index.html" class="header-logo" aria-label="달콤 홈"><img src="img/BI.svg" alt="달콤"></a>
             <nav class="main-nav" aria-label="주요 메뉴">
                 <div class="nav-item nav-item--brand">
                     <button type="button" class="brand-trigger" aria-haspopup="true" aria-expanded="false">BRAND</button>
@@ -26,22 +26,22 @@
                     </div>
                 </div>
                 <div class="nav-item nav-item--menu">
-                    <a href="index.html#menu" aria-haspopup="true">MENU</a>
+                    <a href="menu.html" aria-haspopup="true">MENU</a>
                     <div class="menu-dropdown" aria-label="메뉴 브랜드 선택">
-                        <a href="index.html#menu">달콤</a>
-                        <a href="index.html#menu">달콤 N</a>
+                        <a href="menu.html#dalkomm">달콤</a>
+                        <a href="menu.html#dalkomm-n">달콤 N</a>
                     </div>
                 </div>
                 <a href="store.html">STORE</a>
                 <div class="nav-item nav-item--news">
-                    <a href="index.html#news" aria-haspopup="true">NEWS</a>
+                    <span class="news-label" aria-haspopup="true">NEWS</span>
                     <div class="news-dropdown" aria-label="새소식 메뉴">
                         <a href="news.html">뉴스</a>
                         <a href="index.html#event">이벤트</a>
                         <a href="index.html#news">공지사항</a>
                     </div>
                 </div>
-                <a href="index.html#app">APP</a>
+                <a href="app.html">APP</a>
             </nav>
             <a href="index.html#franchise" class="franchise-link">창업안내</a>
         </div>
@@ -170,5 +170,41 @@
     </footer>
 </div>
 <script src="js/brand.js"></script>
+    <script>
+        // 메인페이지와 동일한 BRAND 드롭다운 열기/닫기 동작
+        const brandNavItem = document.querySelector('.nav-item--brand');
+        const brandTrigger = document.querySelector('.brand-trigger');
+
+        function setBrandDropdown(isOpen) {
+            brandNavItem.classList.toggle('is-open', isOpen);
+            brandTrigger.setAttribute('aria-expanded', String(isOpen));
+        }
+
+        if (brandNavItem && brandTrigger) {
+            brandTrigger.addEventListener('click', function (event) {
+                event.stopPropagation();
+                setBrandDropdown(!brandNavItem.classList.contains('is-open'));
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!brandNavItem.contains(event.target)) {
+                    setBrandDropdown(false);
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && brandNavItem.classList.contains('is-open')) {
+                    setBrandDropdown(false);
+                    brandTrigger.focus();
+                }
+            });
+
+            brandNavItem.querySelectorAll('.brand-dropdown a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    setBrandDropdown(false);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
