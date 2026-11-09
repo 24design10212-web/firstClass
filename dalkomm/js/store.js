@@ -164,4 +164,39 @@
 
     // 최초 진입 시 공식 매장 목록을 보여주고 첫 번째 매장을 지도에 표시합니다.
     applySearch();
+
+    // 공통 헤더 BRAND 드롭다운: 클릭으로 열고 외부 클릭·ESC로 닫습니다.
+    const brandNavItem = document.querySelector('.nav-item--brand');
+    const brandTrigger = document.querySelector('.brand-trigger');
+
+    function setBrandDropdown(isOpen) {
+        if (!brandNavItem || !brandTrigger) return;
+        brandNavItem.classList.toggle('is-open', isOpen);
+        brandTrigger.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    if (brandNavItem && brandTrigger) {
+        brandTrigger.addEventListener('click', function (event) {
+            event.stopPropagation();
+            setBrandDropdown(!brandNavItem.classList.contains('is-open'));
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!brandNavItem.contains(event.target)) setBrandDropdown(false);
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && brandNavItem.classList.contains('is-open')) {
+                setBrandDropdown(false);
+                brandTrigger.focus();
+            }
+        });
+
+        brandNavItem.querySelectorAll('.brand-dropdown a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                setBrandDropdown(false);
+            });
+        });
+    }
+
 })();
