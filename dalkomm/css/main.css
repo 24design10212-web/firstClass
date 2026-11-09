@@ -2880,27 +2880,37 @@ main .subpage-breadcrumb a:focus-visible {
 }
 
 
-/* MENU 드롭다운: 왼쪽 정렬된 텍스트 열을 패널 중앙에 배치 */
+/* MENU 드롭다운: 두 텍스트를 하나의 왼쪽 정렬 열로 묶어 패널 중앙에 배치 */
+.main-nav .nav-item--menu > .menu-dropdown {
+    align-items: center !important;
+}
+
 .main-nav .nav-item--menu > .menu-dropdown > a {
-    box-sizing: border-box;
-    width: 76px;
-    min-width: 76px;
-    margin: 0 auto;
-    padding: 0;
-    justify-content: flex-start;
-    text-align: left;
+    display: flex !important;
+    flex: 0 0 76px !important;
+    width: 76px !important;
+    min-width: 76px !important;
+    max-width: 76px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
 }
 
 @media (max-width: 1024px) {
     .main-nav .nav-item--menu > .menu-dropdown > a {
-        width: 70px;
-        min-width: 70px;
+        flex-basis: 70px !important;
+        width: 70px !important;
+        min-width: 70px !important;
+        max-width: 70px !important;
     }
 }
 
 @media (max-width: 600px) {
     .main-nav .nav-item--menu > .menu-dropdown > a {
-        width: 62px;
-        min-width: 62px;
+        flex-basis: 62px !important;
+        width: 62px !important;
+        min-width: 62px !important;
+        max-width: 62px !important;
     }
 }
