@@ -34,7 +34,7 @@
 .app-section-heading h2 span { color: var(--color-orange-500); }
 .app-section-heading > p:last-child {
     margin: 20px 0 0;
-    color: #666;
+    color: rgba(34, 34, 34, .68);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -125,9 +125,9 @@
     width: 250px;
     height: 490px;
     padding: 9px;
-    border: 2px solid #555;
+    border: 2px solid var(--color-neutral-200);
     border-radius: 38px;
-    background: #111;
+    background: var(--color-neutral-900);
     box-shadow: 0 28px 70px rgba(0,0,0,.32);
 }
 .app-phone-camera {
@@ -138,7 +138,7 @@
     width: 64px;
     height: 16px;
     border-radius: 20px;
-    background: #111;
+    background: var(--color-neutral-900);
     transform: translateX(-50%);
 }
 .app-phone-screen {
@@ -185,8 +185,8 @@
     font-size: 16px;
     font-style: normal;
 }
-.app-preview-bottom { display: flex; justify-content: space-around; margin-top: auto; padding-top: 12px; border-top: 1px solid #eee; }
-.app-preview-bottom span { width: 15px; height: 4px; border-radius: 5px; background: #ddd; }
+.app-preview-bottom { display: flex; justify-content: space-around; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--color-neutral-200); }
+.app-preview-bottom span { width: 15px; height: 4px; border-radius: 5px; background: var(--color-neutral-200); }
 .app-preview-bottom span:first-child { background: var(--color-orange-500); }
 .app-visual-caption {
     position: absolute;
@@ -250,21 +250,21 @@
 .membership-card-bottom { align-items: flex-end; }
 .membership-card-bottom strong { font-size: 13px; }
 .membership-card-bottom span { color: rgba(255,255,255,.58); font-size: 9px; }
-.membership-info { border-top: 1px solid #d8d3ce; }
+.membership-info { border-top: 1px solid var(--color-neutral-200); }
 .membership-info-item {
     display: grid;
     grid-template-columns: 42px minmax(0,1fr) 24px;
     align-items: center;
     gap: 18px;
     min-height: 108px;
-    border-bottom: 1px solid #d8d3ce;
+    border-bottom: 1px solid var(--color-neutral-200);
 }
 .membership-number { color: var(--color-orange-500); font-size: 13px; font-weight: 700; }
 .membership-info-item h3 { margin: 0; font-size: 19px; font-weight: 600; }
-.membership-info-item p { margin: 8px 0 0; color: #777; font-size: 13px; line-height: 1.55; }
+.membership-info-item p { margin: 8px 0 0; color: rgba(34, 34, 34, .62); font-size: 13px; line-height: 1.55; }
 .membership-arrow { color: var(--color-neutral-900); font-size: 20px; transition: transform .2s ease, color .2s ease; }
 .membership-info-item:hover .membership-arrow { color: var(--color-orange-500); transform: translate(3px,-3px); }
-.app-content-note { margin: 20px 0 0; color: #888; font-size: 11px; line-height: 1.5; }
+.app-content-note { margin: 20px 0 0; color: rgba(34, 34, 34, .5); font-size: 11px; line-height: 1.5; }
 
 /* App features */
 .app-features { padding: 110px 0; background: var(--color-neutral-0); }
@@ -304,13 +304,13 @@
     border-radius: 13px;
     background: var(--color-orange-50);
 }
-.app-feature-banner small { margin-bottom: 8px; color: #777; font-size: 9px; }
+.app-feature-banner small { margin-bottom: 8px; color: rgba(34, 34, 34, .62); font-size: 9px; }
 .app-feature-banner strong { font-size: 20px; line-height: 1.25; }
 .app-feature-menu-title { margin-top: 18px; font-size: 9px; font-weight: 700; letter-spacing: .1em; }
 .app-feature-menu { display: flex; justify-content: space-between; margin-top: 10px; }
-.app-feature-menu span { display: grid; width: 45px; height: 38px; place-items: center; border-radius: 9px; background: #f2f2f2; font-size: 8px; font-weight: 700; }
+.app-feature-menu span { display: grid; width: 45px; height: 38px; place-items: center; border-radius: 9px; background: var(--color-neutral-100); font-size: 8px; font-weight: 700; }
 .app-feature-list { display: grid; gap: 7px; margin-top: 14px; }
-.app-feature-list i { display: block; height: 6px; border-radius: 8px; background: #eee; }
+.app-feature-list i { display: block; height: 6px; border-radius: 8px; background: var(--color-neutral-200); }
 .app-feature-list i:nth-child(2) { width: 82%; }
 .app-feature-list i:nth-child(3) { width: 65%; }
 .app-feature-sticker {
@@ -333,19 +333,19 @@
 }
 .app-feature-copy h2 { margin: 16px 0 0; font-size: 44px; font-weight: 600; line-height: 1.2; letter-spacing: -.045em; }
 .app-feature-copy h2 span { color: var(--color-orange-500); }
-.app-feature-lead { margin: 22px 0 0; color: #666; font-size: 15px; line-height: 1.7; }
+.app-feature-lead { margin: 22px 0 0; color: rgba(34, 34, 34, .68); font-size: 15px; line-height: 1.7; }
 .app-feature-list-copy { margin-top: 32px; border-top: 1px solid var(--color-neutral-200); }
 .app-feature-list-copy article { display: flex; gap: 22px; padding: 19px 0; border-bottom: 1px solid var(--color-neutral-200); }
 .app-feature-list-copy article > span { padding-top: 3px; color: var(--color-orange-500); font-size: 12px; font-weight: 700; }
 .app-feature-list-copy h3 { margin: 0; font-size: 17px; font-weight: 600; }
-.app-feature-list-copy p { margin: 6px 0 0; color: #777; font-size: 13px; line-height: 1.5; }
+.app-feature-list-copy p { margin: 6px 0 0; color: rgba(34, 34, 34, .62); font-size: 13px; line-height: 1.5; }
 .app-inline-link { display: inline-flex; gap: 20px; margin-top: 28px; padding-bottom: 7px; border-bottom: 1px solid var(--color-neutral-900); color: var(--color-neutral-900); font-size: 13px; font-weight: 600; }
 .app-inline-link span { color: var(--color-orange-500); }
 
 /* Gift card slider */
 .app-giftcard { padding: 110px 0 100px; background: var(--color-neutral-100); }
 .giftcard-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
-.giftcard-heading > p { margin: 0 0 5px; color: #666; font-size: 14px; line-height: 1.7; }
+.giftcard-heading > p { margin: 0 0 5px; color: rgba(34, 34, 34, .68); font-size: 14px; line-height: 1.7; }
 .giftcard-slider-wrap { position: relative; margin-top: 56px; padding: 0 62px; }
 .gift-swiper { overflow: hidden; }
 .gift-swiper .swiper-slide { height: auto; }
@@ -388,7 +388,7 @@
     width: 42px;
     height: 42px;
     place-items: center;
-    border: 1px solid #aaa;
+    border: 1px solid var(--color-neutral-200);
     border-radius: 50%;
     background: var(--color-neutral-0);
     color: var(--color-neutral-900);
@@ -400,9 +400,9 @@
 .gift-prev { left: 0; }
 .gift-next { right: 0; }
 .gift-nav span { font-size: 18px; }
-.giftcard-bottom-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 42px; padding-top: 24px; border-top: 1px solid #d8d3ce; }
+.giftcard-bottom-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 42px; padding-top: 24px; border-top: 1px solid var(--color-neutral-200); }
 .giftcard-bottom-row strong { font-size: 12px; letter-spacing: .1em; }
-.giftcard-bottom-row p { margin: 8px 0 0; color: #777; font-size: 12px; line-height: 1.5; }
+.giftcard-bottom-row p { margin: 8px 0 0; color: rgba(34, 34, 34, .62); font-size: 12px; line-height: 1.5; }
 
 /* Final CTA */
 .app-download { padding: 88px 24px 96px; background: var(--color-orange-500); text-align: center; }
