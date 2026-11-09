@@ -8,14 +8,12 @@
     const regionSelect = document.getElementById('store-region');
     const keywordInput = document.getElementById('store-keyword');
     const mapFrame = document.getElementById('store-map');
-    const openMapLink = document.getElementById('store-open-map');
-    const officialStoreLink = document.getElementById('store-official-link');
     const summary = document.getElementById('store-search-summary');
     const resultsTitle = document.getElementById('store-results-title');
     const resultsCount = document.getElementById('store-results-count');
     const brandOptions = document.querySelectorAll('.store-brand-option');
 
-    if (!form || !mapFrame || !openMapLink || !summary) return;
+    if (!form || !mapFrame || !summary) return;
 
     // 공식 매장찾기 페이지의 검색 결과에서 매장명·브랜드·주소를 확인한 데이터
     const officialStores = [
@@ -42,23 +40,7 @@
         if (resultsTitle) {
             resultsTitle.textContent = brand === 'all' ? '공식 매장 목록' : brandName + ' 매장 목록';
         }
-        if (officialStoreLink) {
-            const officialUrl = new URL('https://www.dalkomm.com/findStore');
-            officialUrl.searchParams.set('city', '');
-            officialUrl.searchParams.set('sub_city', '');
-            officialUrl.searchParams.set('q', '');
-            if (brand === '달콤N') {
-                officialUrl.searchParams.set('brand_cd', 'DALKOMM_N');
-                officialStoreLink.textContent = '달콤.N 공식 매장찾기 ↗';
-            } else if (brand === '달콤') {
-                officialUrl.searchParams.set('brand_cd', 'DALKOMM');
-                officialStoreLink.textContent = '달콤 공식 매장찾기 ↗';
-            } else {
-                officialUrl.searchParams.delete('brand_cd');
-                officialStoreLink.textContent = '공식 매장찾기 ↗';
-            }
-            officialStoreLink.href = officialUrl.toString();
-        }
+
     }
 
     function getFilteredStores() {
@@ -85,7 +67,6 @@
         const query = encodeURIComponent(mapSearchText);
 
         mapFrame.src = 'https://maps.google.com/maps?q=' + query + '&output=embed';
-        openMapLink.href = 'https://www.google.com/maps/search/?api=1&query=' + query;
 
         const caption = document.querySelector('.store-map-caption');
         if (caption) caption.textContent = store.name + ' · ' + (store.brand === '달콤N' ? '달콤.N' : '달콤');
@@ -163,7 +144,6 @@
             if (caption) caption.textContent = '검색 결과 없음';
             summary.innerHTML = '<p class="store-no-results">선택한 조건에 해당하는 공식 매장이 없습니다. 지역이나 검색어를 바꿔 보세요.</p>';
             mapFrame.src = 'about:blank';
-            openMapLink.href = 'https://www.dalkomm.com/findStore';
         }
     }
 
