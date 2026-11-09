@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const brandTrigger = document.querySelector('.brand-trigger');
     const brandNavItem = document.querySelector('.nav-item--brand');
     if (brandTrigger && brandNavItem) {
-        brandTrigger.addEventListener('click', function () {
+        brandTrigger.addEventListener('click', function (event) {
+            event.stopPropagation();
             const isOpen = brandNavItem.classList.toggle('is-open');
             brandTrigger.setAttribute('aria-expanded', String(isOpen));
         });
