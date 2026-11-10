@@ -2957,3 +2957,39 @@ main .subpage-breadcrumb a:focus-visible {
         font-size: 12px !important;
     }
 }
+
+
+/* NEWS 드롭다운의 비링크 항목(이벤트/공지사항)도 뉴스와 같은 행 기준으로 정렬 */
+.main-nav .nav-item--news > .news-dropdown > a,
+.main-nav .nav-item--news > .news-dropdown > span {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0 12px;
+    font-family: inherit;
+    font-size: 15px !important;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .main-nav .nav-item--news > .news-dropdown > a,
+    .main-nav .nav-item--news > .news-dropdown > span {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav .nav-item--news > .news-dropdown > a,
+    .main-nav .nav-item--news > .news-dropdown > span {
+        font-size: 12px !important;
+    }
+}
