@@ -2958,38 +2958,37 @@ main .subpage-breadcrumb a:focus-visible {
     }
 }
 
-
-/* NEWS 드롭다운의 비링크 항목(이벤트/공지사항)도 뉴스와 같은 행 기준으로 정렬 */
-.main-nav .nav-item--news > .news-dropdown > a,
+/* NEWS 드롭다운의 이벤트/공지사항도 메인 페이지 링크와 같은 좌측 정렬 */
 .main-nav .nav-item--news > .news-dropdown > span {
     display: flex;
     flex: 1 1 0;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
     min-height: 0;
     margin: 0;
-    padding: 0 12px;
+    padding: 0 0 0 46px;
+    color: #222;
     font-family: inherit;
     font-size: 15px !important;
     font-weight: 500;
     line-height: 1.2;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
 }
 
 @media (max-width: 1024px) {
-    .main-nav .nav-item--news > .news-dropdown > a,
     .main-nav .nav-item--news > .news-dropdown > span {
+        padding-left: 35px;
         font-size: 14px !important;
     }
 }
 
 @media (max-width: 600px) {
-    .main-nav .nav-item--news > .news-dropdown > a,
     .main-nav .nav-item--news > .news-dropdown > span {
+        padding-left: 28px;
         font-size: 12px !important;
     }
 }
