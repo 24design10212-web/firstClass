@@ -65,82 +65,34 @@
 
         <section class="news-archive" aria-labelledby="news-archive-title">
             <div class="news-archive-inner">
-                <div class="news-archive-heading">
-                    <div class="news-archive-title-group">
-                        <p class="news-section-kicker">WHAT'S NEW</p>
-                        <h2 id="news-archive-title">새로운 소식</h2>
-                    </div>
-                    <p class="news-archive-description">달콤의 브랜드와 메뉴에 관한 최신 소식을 전해드립니다.</p>
-                </div>
-
-                <div class="news-tools">
-                    <div class="news-filters" role="group" aria-label="뉴스 카테고리 필터">
-                        <button class="news-filter is-active" type="button" data-filter="all" aria-pressed="true">전체</button>
-                        <button class="news-filter" type="button" data-filter="NEW MENU" aria-pressed="false">신메뉴</button>
-                        <button class="news-filter" type="button" data-filter="BRAND STORY" aria-pressed="false">브랜드</button>
-                        <button class="news-filter" type="button" data-filter="SEASON MENU" aria-pressed="false">시즌 메뉴</button>
-                    </div>
-                    <form class="news-search" role="search">
-                        <label class="sr-only" for="news-search-input">뉴스 검색</label>
-                        <input id="news-search-input" type="search" placeholder="검색어를 입력하세요" autocomplete="off">
-                        <button type="submit" aria-label="뉴스 검색">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                <circle cx="10.8" cy="10.8" r="6.3"></circle>
-                                <path d="m15.5 15.5 4.2 4.2"></path>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-
-                <div class="news-result-line">
-                    <p class="news-result-count">전체 <strong id="news-count" aria-live="polite">3</strong>건</p>
-                    <span class="news-result-caption">DAL.KOMM STORY &amp; NEWS</span>
-                </div>
-
-                <div class="news-featured-list" id="news-list">
-                    <article class="news-featured" data-category="NEW MENU" data-search="숙성라떼 숙성우유 시그니처 메뉴 신메뉴 달콤N 다날에프엔비">
-                        <div class="news-featured-image">
-                            <img src="img/img4.png" alt="달콤N 숙성라떼 신메뉴 이미지" loading="lazy">
+                <div class="news-layout">
+                    <div class="news-notice-area">
+                        <p class="news-section-kicker">DAL.KOMM NEWS &amp; NOTICE</p>
+                        <h2 class="news-main-title" id="news-archive-title">달콤의 새로운 소식과<br>다양한 이야기를 만나보세요.</h2>
+                        <div class="news-notice-heading"><h3>NEWS &amp; NOTICE</h3><span class="news-more-circle" aria-hidden="true">+</span></div>
+                        <div class="news-notice-grid">
+                            <article class="news-notice-item"><div class="news-notice-rule"></div><p class="news-notice-category">BRAND STORY</p><h4>달콤.N 팝업스토어, 성수 ‘다날스퀘어’ 입점</h4><div class="news-notice-meta"><time datetime="2026-07-09">2026.07.09</time><span>더보기 ↗</span></div></article>
+                            <article class="news-notice-item"><div class="news-notice-rule"></div><p class="news-notice-category">NEW MENU</p><h4>달콤.N, 무더위를 겨냥한 여름 시즌 신메뉴 3종 출시</h4><div class="news-notice-meta"><time datetime="2026-07-06">2026.07.06</time><span>더보기 ↗</span></div></article>
+                            <article class="news-notice-item"><div class="news-notice-rule"></div><p class="news-notice-category">NEW MENU</p><h4>달콤.N, 두 가지 맛을 한 번에 즐기는 반반 크림치즈 베이글 출시</h4><div class="news-notice-meta"><time datetime="2026-06-12">2026.06.12</time><span>더보기 ↗</span></div></article>
+                            <article class="news-notice-item"><div class="news-notice-rule"></div><p class="news-notice-category">SEASON MENU</p><h4>달콤.N, 여름 시즌 맞아 수박주스와 크림치즈 베이글 선보여</h4><div class="news-notice-meta"><time datetime="2026-06-02">2026.06.02</time><span>더보기 ↗</span></div></article>
                         </div>
-                        <div class="news-featured-content">
-                            <p class="news-category">NEW MENU <span>FEATURED</span></p>
-                            <h3>다날에프엔비 달콤.N, 숙성우유로 깊은 풍미 살린 시그니처 메뉴 ‘숙성라떼’ 출시</h3>
-                            <p class="news-summary">다날의 커피(F&amp;B) 전문 기업 다날에프엔비는 카페 브랜드 ‘달콤.N’의 시그니처 메뉴로 숙성우유의 풍미를 살린 ‘숙성라떼’를 선보입니다.</p>
-                            <div class="news-featured-meta">
-                                <time datetime="2026-07-29">2026.07.29</time>
-                                <span>DAL.KOMM NEWS</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div class="news-archive-list">
-                        <article class="news-archive-card" data-category="BRAND STORY" data-search="달콤N 팝업스토어 성수 복합문화공간 에스팩토리 다날스퀘어 브랜드 소식">
-                            <div class="news-archive-image">
-                                <img src="img/img5.png" alt="성수 복합문화공간 에스팩토리의 달콤N 팝업스토어" loading="lazy">
-                            </div>
-                            <div class="news-archive-content">
-                                <p class="news-category">BRAND STORY</p>
-                                <h3>달콤N 팝업스토어, 성수 복합문화공간 에스팩토리 ‘다날스퀘어’ 입점</h3>
-                                <p class="news-summary">다날에프엔비의 커피 브랜드 달콤.N은 성수동 복합문화공간 에스팩토리(F-Sactory)에 새롭게 조성된 ‘다날스퀘어’에 입점했습니다.</p>
-                                <time datetime="2026-07-09">2026.07.09</time>
-                            </div>
-                        </article>
-
-                        <article class="news-archive-card" data-category="SEASON MENU" data-search="달콤N 여름 시즌 신메뉴 음료 3종 시즌 메뉴 무더위">
-                            <div class="news-archive-image">
-                                <img src="img/img6.png" alt="달콤N 여름 시즌 음료 신메뉴 세 종류" loading="lazy">
-                            </div>
-                            <div class="news-archive-content">
-                                <p class="news-category">SEASON MENU</p>
-                                <h3>달콤.N, 무더위 겨냥한 여름 시즌 신메뉴 3종 출시</h3>
-                                <p class="news-summary">다날에프엔비의 커피 브랜드 달콤.N이 본격적인 무더위 시즌을 앞두고 여름철 고객을 사로잡기 위한 새로운 시즌 음료 3종을 출시했습니다.</p>
-                                <time datetime="2026-07-06">2026.07.06</time>
-                            </div>
-                        </article>
                     </div>
+                    <aside class="news-feature-card" aria-label="대표 뉴스">
+                        <div class="news-feature-card-heading"><h3>DAL.KOMM<br>HIGHLIGHT</h3><span class="news-more-circle" aria-hidden="true">+</span></div>
+                        <div class="news-feature-slide" aria-live="polite">
+                            <div class="news-feature-image"><img id="news-feature-image" src="img/img4.png" alt="달콤.N 숙성라떼 이미지"></div>
+                            <p class="news-feature-category" id="news-feature-category">NEW MENU · 2026.07.29</p>
+                            <h4 id="news-feature-title">더 깊고, 진해졌다! 달콤.N 시그니처 숙성라떼</h4>
+                            <p class="news-feature-summary" id="news-feature-summary">숙성우유의 묵직한 바디감과 고소한 풍미를 담은 달콤.N의 새로운 시그니처 메뉴를 만나보세요.</p>
+                        </div>
+                        <div class="news-feature-controls">
+                            <button type="button" class="news-slide-button" id="news-slide-prev" aria-label="이전 대표 뉴스">‹</button>
+                            <span class="news-slide-current" id="news-slide-current">01 / 03</span>
+                            <button type="button" class="news-detail-button" disabled>자세히</button>
+                            <button type="button" class="news-slide-button" id="news-slide-next" aria-label="다음 대표 뉴스">›</button>
+                        </div>
+                    </aside>
                 </div>
-
-                <p class="news-empty" id="news-empty" hidden>검색 결과가 없습니다. 다른 카테고리나 검색어를 선택해 주세요.</p>
             </div>
         </section>
     </main>
