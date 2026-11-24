@@ -3041,3 +3041,179 @@ main .subpage-breadcrumb a:focus-visible {
         height: 2px;
     }
 }
+
+
+/* =========================================================
+   MOBILE HEADER / GNB / FRANCHISE CTA
+   작은 화면에서 로고·CTA와 GNB를 두 줄로 분리해 가독성 확보
+========================================================= */
+@media (max-width: 600px) {
+    .site-header {
+        height: auto !important;
+        min-height: 0;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(34, 34, 34, .06);
+    }
+
+    .header-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 32px) !important;
+        max-width: none;
+        height: auto;
+        min-height: 0;
+        margin: 0 auto;
+        padding: 12px 0 0;
+        row-gap: 0;
+    }
+
+    .header-logo {
+        display: flex;
+        flex: 0 0 auto !important;
+        align-items: center;
+        width: 104px !important;
+        height: 30px;
+    }
+
+    .header-logo img {
+        display: block;
+        width: 104px !important;
+        height: auto !important;
+        max-height: 30px;
+        object-fit: contain;
+    }
+
+    /* 창업안내 CTA를 숨기지 않고 로고 오른쪽에 배치 */
+    .franchise-link {
+        display: inline-flex !important;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        min-width: 94px;
+        min-height: 36px !important;
+        margin: 0 0 0 auto !important;
+        padding: 0 16px !important;
+        border-radius: 999px;
+        background: #222;
+        color: #fff !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        line-height: 1;
+        letter-spacing: -.02em;
+    }
+
+    .franchise-link:hover,
+    .franchise-link:focus-visible {
+        background: #ff671f;
+        color: #fff !important;
+    }
+
+    /* GNB는 두 번째 줄 전체 폭을 사용해 터치하기 쉽게 배치 */
+    .main-nav {
+        order: 3;
+        display: flex;
+        flex: 0 0 100%;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 0 !important;
+        width: 100%;
+        min-width: 0;
+        height: 46px;
+        margin-top: 10px;
+        padding: 0 2px;
+        overflow-x: auto;
+        overflow-y: visible;
+        border-top: 1px solid #eee;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-nav > a,
+    .main-nav .nav-item--menu > a,
+    .main-nav .nav-item--news > a,
+    .main-nav .nav-item--brand > .brand-trigger {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        min-width: 0;
+        padding: 0 7px;
+        color: #222;
+        font-size: 12px !important;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: .015em;
+        white-space: nowrap;
+    }
+
+    .main-nav .nav-item--brand,
+    .main-nav .nav-item--menu,
+    .main-nav .nav-item--news {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: stretch;
+        align-self: stretch;
+        height: 46px;
+    }
+
+    .main-nav .nav-item--brand > .brand-trigger {
+        cursor: pointer;
+    }
+
+    .main-nav > a:hover,
+    .main-nav > a:focus-visible,
+    .main-nav .nav-item--menu > a:hover,
+    .main-nav .nav-item--menu > a:focus-visible,
+    .main-nav .nav-item--news > a:hover,
+    .main-nav .nav-item--news > a:focus-visible,
+    .main-nav .nav-item--brand > .brand-trigger:hover,
+    .main-nav .nav-item--brand > .brand-trigger:focus-visible {
+        color: #ff671f;
+    }
+
+    /* 드롭다운은 모바일에서도 메뉴 바로 아래에 표시 */
+    .main-nav .nav-item--brand > .brand-dropdown,
+    .main-nav .nav-item--news > .news-dropdown {
+        top: 100%;
+        z-index: 120;
+    }
+
+    .main-nav .nav-item--menu > .menu-dropdown {
+        top: 100%;
+        z-index: 120;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-inner {
+        width: calc(100% - 24px) !important;
+    }
+
+    .header-logo,
+    .header-logo img {
+        width: 94px !important;
+    }
+
+    .franchise-link {
+        min-width: 86px;
+        min-height: 34px !important;
+        padding: 0 12px !important;
+        font-size: 11px !important;
+    }
+
+    .main-nav > a,
+    .main-nav .nav-item--menu > a,
+    .main-nav .nav-item--news > a,
+    .main-nav .nav-item--brand > .brand-trigger {
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 11px !important;
+    }
+}
