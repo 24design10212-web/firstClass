@@ -2992,3 +2992,52 @@ main .subpage-breadcrumb a:focus-visible {
         font-size: 12px !important;
     }
 }
+
+
+/* =========================================================
+   HERO 모바일 배너 높이 보정
+   모바일 이미지의 세로 비율을 유지하고 슬라이더가 잘라내지 않도록 설정
+========================================================= */
+@media (max-width: 1024px) {
+    .hero-sec .swiper {
+        height: auto !important;
+        aspect-ratio: auto !important;
+    }
+
+    .hero-sec .swiper-wrapper {
+        height: auto !important;
+        align-items: flex-start;
+    }
+
+    .hero-sec .swiper-slide {
+        height: auto !important;
+        align-self: flex-start;
+    }
+
+    .hero-sec .swiper-slide img.pc {
+        display: none !important;
+    }
+
+    .hero-sec .swiper-slide img.mo {
+        display: block !important;
+        width: 100%;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain;
+    }
+
+    .hero-controls {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-controls {
+        bottom: 14px;
+        gap: 12px;
+    }
+
+    .hero-progress {
+        height: 2px;
+    }
+}
