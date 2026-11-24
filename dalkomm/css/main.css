@@ -3217,3 +3217,217 @@ main .subpage-breadcrumb a:focus-visible {
         font-size: 11px !important;
     }
 }
+
+
+/* =========================================================
+   RESPONSIVE HEADER FINAL FIX
+   모바일/태블릿에서 절대 위치 GNB가 로고·CTA 위에 겹치지 않도록
+   헤더를 2행 CSS Grid 구조로 재배치
+========================================================= */
+@media (max-width: 1024px) {
+    .site-header {
+        height: auto !important;
+        min-height: 0;
+        background: #fff;
+    }
+
+    .site-header .header-inner {
+        position: static !important;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "logo cta"
+            "nav nav";
+        align-items: center;
+        justify-content: initial;
+        column-gap: 16px;
+        row-gap: 8px;
+        width: calc(100% - 48px) !important;
+        max-width: 1720px;
+        height: auto !important;
+        min-height: 0;
+        margin: 0 auto;
+        padding: 12px 0 0;
+        box-sizing: border-box;
+    }
+
+    .site-header .header-logo {
+        grid-area: logo;
+        display: flex;
+        position: static;
+        flex: none !important;
+        align-items: center;
+        justify-self: start;
+        width: 117px !important;
+        height: 32px;
+        margin: 0 !important;
+    }
+
+    .site-header .header-logo img {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 32px;
+        object-fit: contain;
+    }
+
+    .site-header .franchise-link {
+        grid-area: cta;
+        position: static !important;
+        display: inline-flex !important;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        justify-self: end;
+        min-width: 112px;
+        min-height: 40px !important;
+        margin: 0 !important;
+        padding: 0 20px !important;
+        box-sizing: border-box;
+        border-radius: 999px;
+        background: #222;
+        color: #fff !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .site-header .main-nav {
+        grid-area: nav;
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        display: flex !important;
+        flex: none;
+        align-items: stretch;
+        justify-content: center;
+        gap: clamp(24px, 5vw, 56px) !important;
+        width: 100%;
+        min-width: 0;
+        height: 48px;
+        margin: 0 !important;
+        padding: 0 4px;
+        box-sizing: border-box;
+        overflow: visible;
+        border-top: 1px solid #eee;
+    }
+
+    .site-header .main-nav > a,
+    .site-header .main-nav .nav-item--brand > .brand-trigger,
+    .site-header .main-nav .nav-item--menu > a,
+    .site-header .main-nav .nav-item--news > a {
+        position: static;
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        min-width: 0;
+        margin: 0;
+        padding: 0 6px;
+        color: #222;
+        font-size: 14px !important;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .site-header .main-nav .nav-item--brand,
+    .site-header .main-nav .nav-item--menu,
+    .site-header .main-nav .nav-item--news {
+        position: relative;
+        display: flex;
+        flex: 0 0 auto;
+        align-items: stretch;
+        align-self: stretch;
+        height: 48px;
+        margin: 0;
+    }
+
+    .site-header .main-nav .nav-item--brand > .brand-trigger {
+        z-index: auto;
+        cursor: pointer;
+    }
+
+    .site-header .main-nav .brand-dropdown,
+    .site-header .main-nav .menu-dropdown,
+    .site-header .main-nav .news-dropdown {
+        top: 100%;
+        z-index: 120;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header .header-inner {
+        width: calc(100% - 32px) !important;
+        column-gap: 10px;
+        row-gap: 6px;
+        padding-top: 10px;
+    }
+
+    .site-header .header-logo {
+        width: 100px !important;
+        height: 28px;
+    }
+
+    .site-header .header-logo img {
+        max-height: 28px;
+    }
+
+    .site-header .franchise-link {
+        min-width: 96px;
+        min-height: 36px !important;
+        padding: 0 14px !important;
+        font-size: 12px !important;
+    }
+
+    .site-header .main-nav {
+        justify-content: space-between;
+        gap: 0 !important;
+        height: 44px;
+        padding: 0;
+    }
+
+    .site-header .main-nav > a,
+    .site-header .main-nav .nav-item--brand > .brand-trigger,
+    .site-header .main-nav .nav-item--menu > a,
+    .site-header .main-nav .nav-item--news > a {
+        height: 44px;
+        padding: 0 5px;
+        font-size: 12px !important;
+    }
+
+    .site-header .main-nav .nav-item--brand,
+    .site-header .main-nav .nav-item--menu,
+    .site-header .main-nav .nav-item--news {
+        height: 44px;
+    }
+}
+
+@media (max-width: 360px) {
+    .site-header .header-inner {
+        width: calc(100% - 24px) !important;
+    }
+
+    .site-header .header-logo {
+        width: 88px !important;
+    }
+
+    .site-header .franchise-link {
+        min-width: 88px;
+        min-height: 34px !important;
+        padding: 0 10px !important;
+        font-size: 11px !important;
+    }
+
+    .site-header .main-nav > a,
+    .site-header .main-nav .nav-item--brand > .brand-trigger,
+    .site-header .main-nav .nav-item--menu > a,
+    .site-header .main-nav .nav-item--news > a {
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 11px !important;
+    }
+}
