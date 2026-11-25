@@ -673,54 +673,25 @@
  .official-app-bottom > .official-app-inner > p:not(.app-kicker) { font-size:13px; }
 }
 
-/* EASY TABLE ORDER & STAMP 섹션을 하나의 라운드 박스로 구성 */
+/* TABLE ORDER와 STAMP 카드를 각각 독립된 라운드 박스로 표시 */
 .official-order-section > .official-app-inner {
-    box-sizing: border-box;
-    padding: 76px 60px 80px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.official-order-card {
     border-radius: 28px;
-    background: #f7f5f2;
 }
 
 @media (max-width: 900px) {
-    .official-order-section > .official-app-inner {
-        padding: 56px 32px 60px;
+    .official-order-card {
         border-radius: 24px;
     }
 }
 
 @media (max-width: 600px) {
-    .official-order-section > .official-app-inner {
-        padding: 42px 18px 44px;
+    .official-order-card {
         border-radius: 20px;
     }
-}
-
-/* 멤버십 등급은 선택 버튼이 아닌 일반 안내 텍스트로 표시 */
-.official-membership-levels {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    margin-top: 26px;
-}
-.official-membership-levels span {
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    color: #555;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .06em;
-}
-.official-membership-levels span + span::before {
-    content: "/";
-    display: inline-block;
-    margin: 0 13px;
-    color: #c5beb6;
-    font-weight: 400;
-}
-.official-membership-levels span:last-child {
-    border: 0;
-    color: #555;
 }
