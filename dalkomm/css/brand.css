@@ -1770,8 +1770,8 @@
     color: #fff !important;
 }
 
-/* 브랜드 메시지의 닫는 큰따옴표 */
+/* 브랜드 메시지의 닫는 큰따옴표를 문구 아래 중앙에 배치 */
 .story-note-mark--closing {
-    align-self: flex-end;
-    margin: -24px 8px -20px 0;
+    align-self: center;
+    margin: -10px 0 4px;
 }
