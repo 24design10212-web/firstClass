@@ -3431,3 +3431,9 @@ main .subpage-breadcrumb a:focus-visible {
         font-size: 11px !important;
     }
 }
+
+/* MENU 드롭다운: 최종 우선순위에서 두 항목의 텍스트를 패널 정중앙에 정렬 */
+.main-nav .nav-item--menu > .menu-dropdown > a {
+    justify-content: center !important;
+    text-align: center !important;
+}
