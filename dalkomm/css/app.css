@@ -672,3 +672,25 @@
  .official-app-bottom h2 { font-size:36px; }
  .official-app-bottom > .official-app-inner > p:not(.app-kicker) { font-size:13px; }
 }
+
+/* EASY TABLE ORDER & STAMP 섹션을 하나의 라운드 박스로 구성 */
+.official-order-section > .official-app-inner {
+    box-sizing: border-box;
+    padding: 76px 60px 80px;
+    border-radius: 28px;
+    background: #f7f5f2;
+}
+
+@media (max-width: 900px) {
+    .official-order-section > .official-app-inner {
+        padding: 56px 32px 60px;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .official-order-section > .official-app-inner {
+        padding: 42px 18px 44px;
+        border-radius: 20px;
+    }
+}
