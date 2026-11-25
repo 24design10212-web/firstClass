@@ -3434,6 +3434,11 @@ main .subpage-breadcrumb a:focus-visible {
 
 /* MENU 드롭다운: 최종 우선순위에서 두 항목의 텍스트를 패널 정중앙에 정렬 */
 .main-nav .nav-item--menu > .menu-dropdown > a {
-    justify-content: center !important;
-    text-align: center !important;
+    align-self: center !important;
+    width: 56px !important;
+    min-width: 56px !important;
+    max-width: 56px !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    text-align: left !important;
 }
