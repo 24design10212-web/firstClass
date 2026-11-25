@@ -695,3 +695,39 @@
         border-radius: 20px;
     }
 }
+
+
+/* 멤버십 등급은 선택 요소가 아닌 단순 정보 텍스트로 표시 */
+.official-membership-levels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    margin-top: 26px;
+}
+
+.official-membership-levels span {
+    display: inline;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    cursor: default;
+}
+
+.official-membership-levels span + span::before {
+    content: "/";
+    display: inline-block;
+    margin: 0 13px;
+    color: #c5beb6;
+    font-weight: 400;
+}
+
+.official-membership-levels span:last-child {
+    border: 0;
+    color: #555;
+}
