@@ -1770,11 +1770,19 @@
     color: #fff !important;
 }
 
-/* 브랜드 메시지의 닫는 큰따옴표를 영문 캡션 아래, 여는 따옴표와 비슷한 간격으로 배치 */
+/* 브랜드 메시지와 두 따옴표를 타원형 박스의 정중앙에 균형 있게 배치 */
+.story-note {
+    gap: 14px;
+}
+
+.story-note p {
+    margin: 0;
+}
+
 .story-note-mark--closing {
     align-self: center;
     order: 1;
-    margin: 58px 0 0;
+    margin: 0;
 }
 
 .story-note-caption {
