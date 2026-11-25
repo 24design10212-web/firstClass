@@ -1769,3 +1769,9 @@
 .brand-contents .contents-card--goods .contents-label {
     color: #fff !important;
 }
+
+/* 브랜드 메시지의 닫는 큰따옴표 */
+.story-note-mark--closing {
+    align-self: flex-end;
+    margin: -24px 8px -20px 0;
+}
