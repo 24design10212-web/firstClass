@@ -3665,3 +3665,142 @@ main .subpage-breadcrumb a:focus-visible {
         transform-origin: right center;
     }
 }
+
+
+/* =========================================================
+   Figma 1:64 typography and spacing alignment
+   요청 범위: 글자 크기와 텍스트 간격만 조정
+========================================================= */
+
+/* Header navigation: Figma 18px / Medium */
+.main-nav > a,
+.main-nav .nav-item--brand > .brand-trigger,
+.main-nav .nav-item--menu > a,
+.main-nav .nav-item--news > a,
+.franchise-link {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Brand copy: tagline 32px, description 20px */
+.brand-tagline {
+    margin-top: 0;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+.brand-description {
+    margin-top: 49px;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+/* Signature heading and supporting copy */
+.signature-description {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 1;
+}
+.signature-tabs {
+    margin-top: 60px;
+}
+
+/* Event heading / card typography and vertical rhythm */
+.event-heading h2,
+.news-heading h2,
+.signature-heading h2 {
+    font-size: 48px;
+    line-height: 1;
+}
+.event-heading {
+    margin-bottom: 60px;
+}
+.event-category {
+    margin: 30px 0 20px;
+    font-size: 18px;
+    line-height: 1;
+}
+.event-card h3 {
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+/* News cards: title 24px, body 16px, date 16px */
+.news-card-content {
+    padding: 20px 30px 22px;
+}
+.news-card h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+.news-card-content > p {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+.news-card time {
+    font-size: 16px;
+}
+
+/* Figma button labels use 16px */
+.event-more,
+.news-more,
+.brand-link,
+.signature-tab {
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .main-nav > a,
+    .main-nav .nav-item--brand > .brand-trigger,
+    .main-nav .nav-item--menu > a,
+    .main-nav .nav-item--news > a,
+    .franchise-link {
+        font-size: 14px;
+    }
+    .brand-tagline { font-size: 26px; }
+    .brand-description { margin-top: 32px; font-size: 17px; }
+    .signature-description { font-size: 19px; }
+    .event-heading h2,
+    .news-heading h2,
+    .signature-heading h2 { font-size: 36px; }
+    .event-category { font-size: 15px; }
+    .event-card h3 { font-size: 21px; }
+    .news-card h3 { font-size: 19px; }
+    .news-card-content > p { font-size: 15px; }
+    .news-card time { font-size: 13px; }
+    .event-more,
+    .news-more,
+    .brand-link,
+    .signature-tab { font-size: 13px; }
+}
+
+@media (max-width: 600px) {
+    .main-nav > a,
+    .main-nav .nav-item--brand > .brand-trigger,
+    .main-nav .nav-item--menu > a,
+    .main-nav .nav-item--news > a,
+    .franchise-link {
+        font-size: 12px;
+    }
+    .brand-tagline { font-size: 21px; }
+    .brand-description { margin-top: 24px; font-size: 14px; }
+    .signature-description { font-size: 15px; }
+    .event-heading h2,
+    .news-heading h2,
+    .signature-heading h2 { font-size: 30px; }
+    .event-category { margin: 20px 0 12px; font-size: 13px; }
+    .event-card h3 { font-size: 17px; line-height: 1.3; }
+    .news-card-content { padding: 16px; }
+    .news-card h3 { font-size: 17px; }
+    .news-card-content > p { margin-top: 10px; font-size: 14px; }
+    .news-card time { font-size: 12px; }
+    .event-more,
+    .news-more,
+    .brand-link,
+    .signature-tab { font-size: 12px; }
+}
