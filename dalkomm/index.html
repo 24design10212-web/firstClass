@@ -345,15 +345,14 @@
 
         renderSignatureMenus('dalkomm');
 
-        // EVENT 슬라이드: PC는 카드 3개 노출, 모바일은 중앙 기준 1.5개 노출
+        // EVENT 슬라이드: PC는 3개, 모바일은 중앙 정렬된 1.5개 노출
         const eventSwiper = new Swiper('.event-list', {
             slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 29,
             centeredSlides: false,
-            loop: false,
+            loop: true,
             watchOverflow: true,
-            grabCursor: true,
             pagination: {
                 el: '.event-pagination',
                 clickable: true,
@@ -361,13 +360,11 @@
             breakpoints: {
                 0: {
                     slidesPerView: 1.5,
-                    slidesPerGroup: 1,
                     spaceBetween: 16,
                     centeredSlides: true,
                 },
                 601: {
                     slidesPerView: 3,
-                    slidesPerGroup: 1,
                     spaceBetween: 29,
                     centeredSlides: false,
                 },
