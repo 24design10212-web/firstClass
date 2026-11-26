@@ -737,10 +737,10 @@ body {
     outline-offset: 4px;
 }
 .event-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 29px;
+    width: 100%;
+    overflow: hidden;
 }
+
 .event-card {
     min-width: 0;
 }
@@ -779,21 +779,25 @@ body {
     letter-spacing: -.035em;
 }
 .event-pagination {
+    position: static;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 14px;
     margin-top: 58px;
 }
-.event-pagination span {
+.event-pagination .swiper-pagination-bullet {
     display: block;
     width: 8px;
     height: 8px;
+    margin: 0 !important;
     border-radius: 50%;
     background: var(--color-orange-500);
     opacity: .85;
+    cursor: pointer;
+    transition: width .25s ease, opacity .25s ease;
 }
-.event-pagination span.is-active {
+.event-pagination .swiper-pagination-bullet-active {
     width: 97px;
     height: 8px;
     border-radius: 999px;
@@ -824,7 +828,7 @@ body {
     .event-category { margin: 14px 0 7px; font-size: 11px; }
     .event-card h3 { font-size: 15px; }
     .event-pagination { margin-top: 32px; gap: 9px; }
-    .event-pagination span.is-active { width: 52px; }
+    .event-pagination .swiper-pagination-bullet-active { width: 52px; }
 }
 
 /* Align both visible brand logos to the same text edge and baseline */
