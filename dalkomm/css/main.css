@@ -3451,3 +3451,127 @@ main .subpage-breadcrumb a:focus-visible {
     padding: 0 !important;
     text-align: left !important;
 }
+
+/* ========================================
+   Homepage typography system
+   섹션 제목 / 카드 제목 / 본문 / 보조 정보의 위계를 통일
+======================================== */
+.signature-heading h2,
+.event-heading h2,
+.news-heading h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -.03em;
+}
+
+/* 브랜드 소개 문구와 섹션 설명 */
+.brand-tagline {
+    font-size: 24px;
+    line-height: 1.45;
+}
+.brand-description,
+.signature-description,
+.news-card-content > p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 카드 제목은 콘텐츠 종류와 관계없이 같은 단계로 정리 */
+.signature-card-title,
+.event-card h3,
+.news-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -.025em;
+}
+.event-category {
+    font-size: 14px;
+    font-weight: 500;
+}
+.news-card time {
+    font-size: 13px;
+}
+
+/* 버튼 및 하단 정보 */
+.event-more,
+.news-more,
+.brand-link,
+.signature-tab {
+    font-size: 14px;
+}
+.footer-company,
+.footer-legal a {
+    font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+    .signature-heading h2,
+    .event-heading h2,
+    .news-heading h2 {
+        font-size: 36px;
+    }
+    .brand-tagline {
+        font-size: 20px;
+    }
+    .brand-description,
+    .signature-description,
+    .news-card-content > p {
+        font-size: 15px;
+    }
+    .signature-card-title,
+    .event-card h3,
+    .news-card h3 {
+        font-size: 18px;
+    }
+    .event-category {
+        font-size: 13px;
+    }
+    .event-more,
+    .news-more,
+    .brand-link,
+    .signature-tab {
+        font-size: 13px;
+    }
+    .footer-company,
+    .footer-legal a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signature-heading h2,
+    .event-heading h2,
+    .news-heading h2 {
+        font-size: 30px;
+    }
+    .brand-tagline {
+        font-size: 17px;
+    }
+    .brand-description,
+    .signature-description,
+    .news-card-content > p {
+        font-size: 14px;
+    }
+    .signature-card-title,
+    .event-card h3,
+    .news-card h3 {
+        font-size: 16px;
+    }
+    .event-category,
+    .news-card time {
+        font-size: 12px;
+    }
+    .event-more,
+    .news-more,
+    .brand-link,
+    .signature-tab {
+        font-size: 12px;
+    }
+    .footer-company,
+    .footer-legal a {
+        font-size: 11px;
+    }
+}
+
