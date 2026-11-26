@@ -406,7 +406,7 @@ body {
     background: #fff;
     color: #222;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
 }
 .signature-tab.is-active { border-color: #222; background: #222; color: #fff; }
