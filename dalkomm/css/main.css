@@ -3801,3 +3801,23 @@ main .subpage-breadcrumb a:focus-visible {
     .brand-link,
     .signature-tab { font-size: 12px; }
 }
+
+/* EVENT '더보기'와 NEWS '더 많은 소식 보러가기' 글자 크기 통일 */
+.event-heading .event-more,
+.news-heading .news-more {
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .event-heading .event-more,
+    .news-heading .news-more {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .event-heading .event-more,
+    .news-heading .news-more {
+        font-size: 12px;
+    }
+}
