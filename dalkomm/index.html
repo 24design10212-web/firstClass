@@ -135,35 +135,32 @@
                             더보기 <span aria-hidden="true">›</span>
                         </button>
                     </div>
-                    <div class="event-list">
-                        <article class="event-card">
-                            <span aria-label="도라에몽과 함께하는 Summer Vacation 이벤트 자세히 보기">
-                                <img src="img/img1.png" alt="도라에몽과 함께하는 여름 음료 프로모션">
-                            </span>
-                            <p class="event-category">NEWS</p>
-                            <h3>도라에몽과 함께하는 Summer Vacation!</h3>
-                        </article>
-                        <article class="event-card">
-                            <span aria-label="70% 할인 이벤트 자세히 보기">
-                                <img src="img/img2.png" alt="7월 5일부터 7월 31일까지 70% 할인 이벤트">
-                            </span>
-                            <p class="event-category">NEWS</p>
-                            <h3>축! 당첨! 당신은 70% 할인에 당첨되셨습니다!</h3>
-                        </article>
-                        <article class="event-card">
-                            <span aria-label="영화 타마록 개봉 기념 콜라보레이션 자세히 보기">
-                                <img src="img/img3.png" alt="영화 타마록 개봉 기념 스페셜 콜라보레이션 포스터">
-                            </span>
-                            <p class="event-category">NEWS</p>
-                            <h3>영화[타마록] 개봉 기념 스페셜 콜라보레이션!</h3>
-                        </article>
+                    <div class="event-list swiper" aria-label="이벤트 슬라이드">
+                        <div class="swiper-wrapper">
+                            <article class="event-card swiper-slide">
+                                <span aria-label="도라에몽과 함께하는 Summer Vacation 이벤트 자세히 보기">
+                                    <img src="img/img1.png" alt="도라에몽과 함께하는 여름 음료 프로모션">
+                                </span>
+                                <p class="event-category">NEWS</p>
+                                <h3>도라에몽과 함께하는 Summer Vacation!</h3>
+                            </article>
+                            <article class="event-card swiper-slide">
+                                <span aria-label="70% 할인 이벤트 자세히 보기">
+                                    <img src="img/img2.png" alt="7월 5일부터 7월 31일까지 70% 할인 이벤트">
+                                </span>
+                                <p class="event-category">NEWS</p>
+                                <h3>축! 당첨! 당신은 70% 할인에 당첨되셨습니다!</h3>
+                            </article>
+                            <article class="event-card swiper-slide">
+                                <span aria-label="영화 타마록 개봉 기념 콜라보레이션 자세히 보기">
+                                    <img src="img/img3.png" alt="영화 타마록 개봉 기념 스페셜 콜라보레이션 포스터">
+                                </span>
+                                <p class="event-category">NEWS</p>
+                                <h3>영화[타마록] 개봉 기념 스페셜 콜라보레이션!</h3>
+                            </article>
+                        </div>
                     </div>
-                    <div class="event-pagination" aria-label="이벤트 페이지 표시">
-                        <span class="is-active" aria-current="page"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                    <div class="event-pagination swiper-pagination" aria-label="이벤트 페이지 표시"></div>
                 </div>
             </section>
             <!-- News section: 이벤트 섹션 아래 -->
@@ -347,6 +344,32 @@
         });
 
         renderSignatureMenus('dalkomm');
+
+        // EVENT 슬라이드: PC는 3개, 모바일은 중앙 정렬된 1.5개 노출
+        const eventSwiper = new Swiper('.event-list', {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 29,
+            centeredSlides: false,
+            loop: true,
+            watchOverflow: true,
+            pagination: {
+                el: '.event-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 16,
+                    centeredSlides: true,
+                },
+                601: {
+                    slidesPerView: 3,
+                    spaceBetween: 29,
+                    centeredSlides: false,
+                },
+            },
+        });
 
         function updateHeroProgress(swiper) {
             const duplicateSlides = swiper.el.querySelectorAll('.swiper-slide-duplicate').length;
