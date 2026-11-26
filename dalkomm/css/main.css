@@ -3658,7 +3658,7 @@ main .subpage-breadcrumb a:focus-visible {
 @media (max-width: 600px) {
     .floating-quick-menu {
         right: 8px;
-        transform: translateY(-50%) scale(.72);
+        transform: translateY(-50%) scale(.58);
         transform-origin: right center;
     }
 }
