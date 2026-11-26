@@ -3497,8 +3497,7 @@ main .subpage-breadcrumb a:focus-visible {
 /* 버튼 및 하단 정보 */
 .event-more,
 .news-more,
-.brand-link,
-.signature-tab {
+.brand-link {
     font-size: 14px;
 }
 .footer-company,
@@ -3530,8 +3529,7 @@ main .subpage-breadcrumb a:focus-visible {
     }
     .event-more,
     .news-more,
-    .brand-link,
-    .signature-tab {
+    .brand-link {
         font-size: 13px;
     }
     .footer-company,
@@ -3565,8 +3563,7 @@ main .subpage-breadcrumb a:focus-visible {
     }
     .event-more,
     .news-more,
-    .brand-link,
-    .signature-tab {
+    .brand-link {
         font-size: 12px;
     }
     .footer-company,
