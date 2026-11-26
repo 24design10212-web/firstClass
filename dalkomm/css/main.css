@@ -3575,3 +3575,93 @@ main .subpage-breadcrumb a:focus-visible {
     }
 }
 
+
+
+/* ========================================
+   Figma 12:189 - Floating quick menu
+   화면 스크롤과 관계없이 뷰포트 우측에 고정
+======================================== */
+.floating-quick-menu {
+    position: fixed;
+    top: 50%;
+    right: 32px;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+    box-sizing: border-box;
+    width: 99px;
+    height: 332px;
+    padding-top: 51px;
+    overflow: hidden;
+    border-radius: 9999px;
+    background: #222;
+    transform: translateY(-50%);
+}
+
+.floating-quick-item {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: #fff;
+    font-family: "Pretendard Variable", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.floating-quick-item--call {
+    width: 60px;
+}
+
+.floating-quick-item--call img {
+    display: block;
+    width: 30px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.floating-quick-item--shop {
+    width: 77px;
+}
+
+.floating-quick-item--shop img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.floating-quick-item:hover,
+.floating-quick-item:focus-visible {
+    color: #ff671f;
+}
+
+.floating-quick-item:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+    border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+    .floating-quick-menu {
+        right: 16px;
+        transform: translateY(-50%) scale(.86);
+        transform-origin: right center;
+    }
+}
+
+@media (max-width: 600px) {
+    .floating-quick-menu {
+        right: 8px;
+        transform: translateY(-50%) scale(.72);
+        transform-origin: right center;
+    }
+}
