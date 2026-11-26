@@ -675,13 +675,13 @@ body {
    Event section: Figma reference
 ======================================== */
 .event-sec {
-    padding: 90px 0 100px;
+    padding: 97px 0 96px;
     background: var(--color-neutral-100);
     color: var(--color-neutral-900);
 }
 .event-inner {
     width: calc(100% - 120px);
-    max-width: 1600px;
+    max-width: 1670px;
     margin: 0 auto;
 }
 .event-heading {
@@ -689,65 +689,65 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    margin-bottom: 42px;
+    min-height: 49px;
+    margin-bottom: 55px;
 }
 .event-heading h2 {
     margin: 0;
-    font-size: 40px;
+    font-size: 46px;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.1;
     letter-spacing: -.03em;
 }
-.event-arrows {
+.event-more {
     position: absolute;
     top: 50%;
     right: 0;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    transform: translateY(-50%);
-}
-.event-arrows button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 26px;
     box-sizing: border-box;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border: 1px solid #b8b8b8;
-    border-radius: 50%;
+    width: 146px;
+    height: 49px;
+    padding: 0 20px;
+    border: 1px solid #333;
+    border-radius: 999px;
     background: #fff;
-    color: #222;
+    color: #111;
     font-family: inherit;
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1;
     cursor: pointer;
-    transition: background .2s ease, border-color .2s ease, color .2s ease;
+    transform: translateY(-50%);
+    transition: background .2s ease, color .2s ease;
 }
-.event-arrows button:hover {
-    border-color: #222;
+.event-more span {
+    font-size: 27px;
+    font-weight: 300;
+    line-height: .8;
+}
+.event-more:hover {
     background: #222;
     color: #fff;
 }
-.event-arrows button:focus-visible {
+.event-more:focus-visible {
     outline: 2px solid var(--color-orange-500);
     outline-offset: 4px;
 }
 .event-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px;
+    gap: 29px;
 }
 .event-card {
     min-width: 0;
 }
-.event-card > a {
+.event-card > span {
     display: block;
     overflow: hidden;
-    border-radius: 18px;
+    border-radius: 20px;
     background: #e8e4df;
 }
 .event-card img {
@@ -757,74 +757,75 @@ body {
     object-fit: cover;
     transition: transform .35s ease;
 }
-.event-card > a:hover img {
+.event-card > span:hover img {
     transform: scale(1.035);
 }
-.event-card > a:focus-visible,
-.event-arrows button:focus-visible {
+.event-card > span:focus-visible {
     outline: 2px solid var(--color-orange-500);
     outline-offset: 4px;
 }
 .event-category {
-    margin: 24px 0 10px;
+    margin: 28px 0 14px;
     color: var(--color-orange-500);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.2;
 }
 .event-card h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.4;
     letter-spacing: -.035em;
 }
 .event-pagination {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 14px;
     margin-top: 58px;
 }
 .event-pagination span {
     display: block;
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: var(--color-orange-500);
-    opacity: .8;
+    opacity: .85;
 }
 .event-pagination span.is-active {
-    width: 92px;
-    height: 7px;
+    width: 97px;
+    height: 8px;
     border-radius: 999px;
     opacity: 1;
 }
 @media (max-width: 1024px) {
     .event-sec { padding: 72px 0 80px; }
     .event-inner { width: calc(100% - 64px); }
-    .event-heading { margin-bottom: 30px; }
-    .event-heading h2 { font-size: 34px; }
+    .event-heading { margin-bottom: 34px; }
+    .event-heading h2 { font-size: 38px; }
+    .event-more { width: 130px; height: 44px; gap: 18px; font-size: 14px; }
     .event-list { gap: 18px; }
-    .event-card > a { border-radius: 14px; }
-    .event-category { margin-top: 18px; font-size: 12px; }
-    .event-card h3 { font-size: 16px; }
-    .event-pagination { margin-top: 42px; }
+    .event-card > span { border-radius: 16px; }
+    .event-category { margin: 20px 0 10px; font-size: 14px; }
+    .event-card h3 { font-size: 18px; }
+    .event-pagination { margin-top: 44px; }
 }
 @media (max-width: 600px) {
     .event-sec { padding: 56px 0 60px; }
     .event-inner { width: calc(100% - 32px); }
-    .event-heading { margin-bottom: 24px; }
+    .event-heading { min-height: 40px; margin-bottom: 24px; }
     .event-heading h2 { font-size: 28px; }
+    .event-more { width: 104px; height: 36px; gap: 12px; padding: 0 12px; font-size: 12px; }
+    .event-more span { font-size: 21px; }
     .event-list { grid-template-columns: 1fr; gap: 28px; }
-    .event-card > a { border-radius: 12px; }
+    .event-card > span { border-radius: 12px; }
     .event-card img { aspect-ratio: 1.58 / 1; }
     .event-category { margin: 14px 0 7px; font-size: 11px; }
     .event-card h3 { font-size: 15px; }
     .event-pagination { margin-top: 32px; gap: 9px; }
     .event-pagination span.is-active { width: 52px; }
 }
-
 
 /* Align both visible brand logos to the same text edge and baseline */
 .brand-copy h2.brand-logo {
