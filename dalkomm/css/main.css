@@ -809,7 +809,6 @@ body {
     .event-heading { margin-bottom: 34px; }
     .event-heading h2 { font-size: 38px; }
     .event-more { width: 130px; height: 44px; gap: 18px; font-size: 14px; }
-    .event-list { gap: 18px; }
     .event-card > span { border-radius: 16px; }
     .event-category { margin: 20px 0 10px; font-size: 14px; }
     .event-card h3 { font-size: 18px; }
@@ -822,7 +821,6 @@ body {
     .event-heading h2 { font-size: 28px; }
     .event-more { width: 104px; height: 36px; gap: 12px; padding: 0 12px; font-size: 12px; }
     .event-more span { font-size: 21px; }
-    .event-list { grid-template-columns: 1fr; gap: 28px; }
     .event-card > span { border-radius: 12px; }
     .event-card img { aspect-ratio: 1.58 / 1; }
     .event-category { margin: 14px 0 7px; font-size: 11px; }
