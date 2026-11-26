@@ -3806,6 +3806,7 @@ main .subpage-breadcrumb a:focus-visible {
 .event-heading .event-more,
 .news-heading .news-more {
     font-size: 16px;
+    font-weight: 500;
 }
 
 @media (max-width: 1024px) {
