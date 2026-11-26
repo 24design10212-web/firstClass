@@ -924,6 +924,10 @@ body {
     background: var(--color-neutral-900);
     color: var(--color-neutral-0);
 }
+
+.news-more:hover .arrow-icon {
+    filter: brightness(0) invert(1);
+}
 .news-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
