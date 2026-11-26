@@ -3575,3 +3575,44 @@ main .subpage-breadcrumb a:focus-visible {
     }
 }
 
+
+
+/* 브랜드 소개 로고: 검정 바탕 + 흰색 로고 */
+.brand-sec .brand-copy h2.brand-logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: fit-content;
+    min-width: 220px;
+    min-height: 86px;
+    margin: 0;
+    padding: 14px 22px;
+    background: #000;
+    border-radius: 0;
+}
+
+.brand-sec .brand-logo img {
+    display: block;
+    width: auto;
+    max-width: 300px;
+    height: 54px;
+    max-height: 54px;
+    object-fit: contain;
+    object-position: left center;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 600px) {
+    .brand-sec .brand-copy h2.brand-logo {
+        min-width: 190px;
+        min-height: 70px;
+        padding: 10px 18px;
+    }
+
+    .brand-sec .brand-logo img {
+        max-width: 250px;
+        height: 46px;
+        max-height: 46px;
+    }
+}
