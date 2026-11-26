@@ -689,14 +689,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 49px;
+    min-height: 44px;
     margin-bottom: 55px;
 }
 .event-heading h2 {
     margin: 0;
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 600;
-    line-height: 1.1;
+    line-height: 1.2;
     letter-spacing: -.03em;
 }
 .event-more {
@@ -807,7 +807,7 @@ body {
     .event-sec { padding: 72px 0 80px; }
     .event-inner { width: calc(100% - 64px); }
     .event-heading { margin-bottom: 34px; }
-    .event-heading h2 { font-size: 38px; }
+    .event-heading h2 { font-size: 34px; }
     .event-more { width: 130px; height: 44px; gap: 18px; font-size: 14px; }
     .event-card > span { border-radius: 16px; }
     .event-category { margin: 20px 0 10px; font-size: 14px; }
