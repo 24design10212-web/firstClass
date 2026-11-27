@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/default.css">
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/menu.css?v=20261127-honeycube1">
 </head>
 <body>
 <div id="wrap">
@@ -115,8 +115,33 @@
                                 <div class="menu-card-image"><img src="img/HoneyGrapefruit_ice.png" alt="허니 자몽 아이스 음료" loading="lazy"></div>
                                 <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>허니 자몽 아이스</h4></div>
                             </article>
-                            <article class="menu-card">
-                                <div class="menu-card-image"><img src="img/HoneyCube.png" alt="허니 큐브 음료" loading="lazy"></div>
+                            <article class="menu-card menu-card--honey-cube">
+                                <button class="menu-card-image menu-card-image-toggle" type="button" aria-expanded="false" aria-controls="honey-cube-details" aria-label="허니 큐브 상세 정보 보기">
+                                    <img src="img/HoneyCube.png" alt="허니 큐브 음료" loading="lazy">
+                                    <span class="menu-card-image-hint">정보 보기 +</span>
+                                </button>
+                                <div class="cube-latte-details" id="honey-cube-details" hidden>
+                                    <button class="cube-latte-back" type="button" aria-label="허니 큐브 이미지로 돌아가기">← 이미지 보기</button>
+                                    <p class="menu-card-category">SIGNATURE</p>
+                                    <h5>Honey Cube</h5>
+                                    <p class="cube-latte-description">곱게 갈은 에스프레소 큐브 얼음에 꿀이 어우러져 더욱 달콤해진 dal.komm만의 허니음료</p>
+                                    <p class="cube-latte-size">Size : Regular</p>
+                                    <section class="cube-latte-info" aria-label="허니 큐브 Regular 영양성분">
+                                        <h6>영양성분</h6>
+                                        <p>제공량 355ml, 213kcal, 나트륨 69mg, 당류 22g, 포화지방 4g, 단백질 7g, 카페인 206mg</p>
+                                    </section>
+                                    <p class="cube-latte-size">Size : Large</p>
+                                    <section class="cube-latte-info" aria-label="허니 큐브 Large 영양성분">
+                                        <h6>영양성분</h6>
+                                        <p>제공량 473ml, 300kcal, 나트륨 124mg, 당류 31g, 포화지방 6g, 단백질 11g, 카페인 235mg</p>
+                                    </section>
+                                    <section class="cube-latte-info" aria-label="허니 큐브 알레르기 및 카페인 정보">
+                                        <h6>알레르기 유발물질</h6>
+                                        <p>우유</p>
+                                        <h6>고카페인</h6>
+                                        <p>어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.</p>
+                                    </section>
+                                </div>
                                 <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>허니 큐브</h4></div>
                             </article>
                             <article class="menu-card">
@@ -126,6 +151,14 @@
                             <article class="menu-card">
                                 <div class="menu-card-image"><img src="img/Grapefruit%26Earl%20greyicedtea.png" alt="자몽 얼그레이 아이스티" loading="lazy"></div>
                                 <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>자몽 얼그레이 아이스티</h4></div>
+                            </article>
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/HoneyGrapefruit%20.png" alt="HOT 허니몽" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>HOT 허니몽</h4></div>
+                            </article>
+                            <article class="menu-card">
+                                <div class="menu-card-image"><img src="img/Grapefruit%26Earlgreytea.png" alt="자몽 얼그레이 티 핫 음료" loading="lazy"></div>
+                                <div class="menu-card-copy"><p class="menu-card-category">SIGNATURE</p><h4>자몽 얼그레이 티 (Hot)</h4></div>
                             </article>
                         </div>
                     </section>
