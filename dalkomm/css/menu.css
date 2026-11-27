@@ -217,6 +217,13 @@
 }
 
 
+/* Shorter menu descriptions: keep the detail panel compact */
+.menu-card--grapefruit-earl-grey-iced-tea .cube-latte-details,
+.menu-card--ice-honey-grapefruit .cube-latte-details,
+.menu-card--hot-honey-grapefruit .cube-latte-details {
+    min-height: 0;
+}
+
 /* Menu hero: 카탈로그로 자연스럽게 이어지는 브랜드 인트로 */
 .menu-hero {
     position: relative;
