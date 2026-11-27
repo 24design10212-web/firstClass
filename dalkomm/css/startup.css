@@ -141,11 +141,29 @@
     word-break: keep-all;
 }
 
-.franchise-benefits { background: var(--startup-white); }
+.franchise-benefits {
+    background: var(--startup-white);
+    padding: 100px 24px;
+}
+.franchise-benefits .franchise-section-heading {
+    margin: 0 auto 80px;
+}
+.franchise-benefits .franchise-section-heading h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -.04em;
+}
+.franchise-benefits .franchise-section-heading > p:not(.eyebrow) {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 1.4;
+}
 .benefit-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 52px 38px;
+    grid-template-columns: repeat(3, minmax(0, 460px));
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 50px;
     width: min(1480px, 100%);
     margin: 0 auto;
 }
@@ -153,22 +171,23 @@
 .benefit-card img {
     display: block;
     width: 100%;
-    aspect-ratio: 1.55 / 1;
-    border-radius: 32px 32px 0 0;
+    aspect-ratio: 460 / 316;
+    border-radius: 24px;
     object-fit: cover;
 }
 .benefit-card h3 {
-    margin: 22px 0 8px;
+    margin: 40px 0 20px;
     color: var(--startup-black);
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 24px;
+    line-height: 1;
     font-weight: 700;
+    letter-spacing: -.03em;
 }
 .benefit-card p {
     margin: 0;
     color: #777;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1;
 }
 
 .franchise-cost-section { background: var(--startup-cream); }
@@ -489,10 +508,14 @@
     .brand-choice-card h3 { margin-bottom: 32px; font-size: 38px; }
     .brand-choice-card dl > div { grid-template-columns: 100px minmax(0,1fr); margin-top: 17px; }
     .brand-choice-card dt, .brand-choice-card dd { font-size: 13px; }
-    .benefit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 28px 16px; }
-    .benefit-card img { border-radius: 18px 18px 0 0; }
-    .benefit-card h3 { margin-top: 14px; font-size: 15px; }
-    .benefit-card p { font-size: 12px; }
+    .franchise-benefits { padding: 64px 20px; }
+    .franchise-benefits .franchise-section-heading { margin-bottom: 40px; }
+    .franchise-benefits .franchise-section-heading h2 { font-size: 32px; }
+    .franchise-benefits .franchise-section-heading > p:not(.eyebrow) { font-size: 14px; }
+    .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px 20px; }
+    .benefit-card img { border-radius: 18px; }
+    .benefit-card h3 { margin: 22px 0 10px; font-size: 18px; line-height: 1.35; }
+    .benefit-card p { font-size: 13px; line-height: 1.45; }
     .cost-table-title h3 { font-size: 18px; }
     .cost-table { font-size: 11px; }
     .cost-table th, .cost-table td { padding: 10px 7px; }
@@ -509,7 +532,9 @@
 }
 @media (max-width: 420px) {
     .franchise-quick-nav a { font-size: 10px; }
-    .benefit-grid { grid-template-columns: 1fr; }
+    .benefit-grid { grid-template-columns: minmax(0, 460px); }
+    .benefit-card h3 { margin-top: 18px; font-size: 17px; }
+    .benefit-card p { font-size: 12px; }
     .brand-choice-card dl > div { grid-template-columns: 88px minmax(0,1fr); gap: 10px; }
     .cost-table { font-size: 10px; }
     .cost-table th, .cost-table td { padding: 8px 5px; }
