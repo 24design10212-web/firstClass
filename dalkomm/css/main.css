@@ -866,6 +866,12 @@ body {
         max-width: min(100%, 270px);
         max-height: 44px;
     }
+
+    /* 모바일에서는 로고와 브랜드 문구의 왼쪽 시작선을 맞춤 */
+    .brand-panel--dalkomm .brand-logo img,
+    .brand-panel--dalkomm-n .brand-logo img {
+        margin-left: 0;
+    }
 }
 
 /* ========================================
