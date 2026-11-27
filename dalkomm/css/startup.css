@@ -695,3 +695,35 @@
 @media (prefers-reduced-motion: reduce) {
     .franchise-top-button { transition: none; }
 }
+
+
+/* 창업 랜딩 히어로 비주얼 */
+.franchise-hero {
+    overflow: hidden;
+    background: #242424;
+}
+.franchise-hero-image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.franchise-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .12), rgba(0, 0, 0, .06) 55%, rgba(0, 0, 0, .18));
+    pointer-events: none;
+}
+.franchise-hero .franchise-quick-nav {
+    z-index: 5;
+}
+@media (max-width: 760px) {
+    .franchise-hero-image {
+        object-position: center;
+    }
+}
