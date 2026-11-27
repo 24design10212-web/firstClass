@@ -412,7 +412,23 @@
     color: #666;
     font-size: 13px;
 }
-.privacy-consent input { width: 16px; height: 16px; accent-color: var(--startup-orange); }
+.privacy-consent input {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--startup-orange);
+    cursor: pointer;
+}
+.privacy-consent span { cursor: pointer; }
+.franchise-page .site-footer .footer-logo { width: 117px; }
+.franchise-page .site-footer .footer-logo img {
+    display: block;
+    width: 117px;
+    height: 30px;
+    object-fit: contain;
+    object-position: left center;
+}
 .inquiry-submit {
     display: flex;
     grid-column: 1 / -1;
