@@ -641,3 +641,57 @@
         padding: 8px 12px;
     }
 }
+
+
+/* Figma TOP 퀵메뉴 */
+.franchise-top-button {
+    position: fixed;
+    right: 22px;
+    bottom: 37px;
+    z-index: 1100;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 25px;
+    background: #222;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.franchise-top-button img {
+    display: block;
+    width: 25px;
+    height: 43px;
+    object-fit: contain;
+    transform: rotate(90deg);
+    filter: brightness(0) invert(1);
+}
+.franchise-top-button:hover {
+    background: var(--startup-orange);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .2);
+}
+.franchise-top-button:focus-visible {
+    outline: 3px solid var(--startup-orange);
+    outline-offset: 4px;
+}
+@media (max-width: 760px) {
+    .franchise-top-button {
+        right: 16px;
+        bottom: 20px;
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+    }
+    .franchise-top-button img {
+        width: 17px;
+        height: 29px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .franchise-top-button { transition: none; }
+}
