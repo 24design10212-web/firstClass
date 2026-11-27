@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/franchise.css?v=20261127">
-    <link rel="stylesheet" href="css/startup.css?v=20261127-motion1">
+    <link rel="stylesheet" href="css/startup.css?v=20261127-sticky1">
 </head>
 <body>
 <div id="wrap" class="franchise-page">
@@ -244,6 +244,31 @@
         document.querySelector('#form-notice').classList.add('is-visible');
         document.querySelector('#form-notice').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
+
+    // 상단 바로가기 메뉴: 히어로 영역을 지나면 화면 상단에 고정
+    (function () {
+        const quickNav = document.querySelector('.franchise-quick-nav');
+        const hero = document.querySelector('.franchise-hero');
+        if (!quickNav || !hero) return;
+
+        const placeholder = document.createComment('quick-nav-sticky-placeholder');
+        quickNav.parentNode.insertBefore(placeholder, quickNav);
+
+        function updateQuickNav() {
+            const shouldFix = window.scrollY > hero.offsetHeight - 80;
+            if (shouldFix && !quickNav.classList.contains('is-fixed')) {
+                document.body.appendChild(quickNav);
+                quickNav.classList.add('is-fixed');
+            } else if (!shouldFix && quickNav.classList.contains('is-fixed')) {
+                placeholder.parentNode.insertBefore(quickNav, placeholder.nextSibling);
+                quickNav.classList.remove('is-fixed');
+            }
+        }
+
+        window.addEventListener('scroll', updateQuickNav, { passive: true });
+        window.addEventListener('resize', updateQuickNav);
+        updateQuickNav();
+    })();
 
     // 창업 성공 전략: 제목과 카드가 화면에 들어올 때 아래에서 위로 부드럽게 등장
     (function () {

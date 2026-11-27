@@ -617,3 +617,27 @@
         will-change: auto;
     }
 }
+
+/* 스크롤 시 상단에 고정되는 창업 바로가기 메뉴 */
+.franchise-quick-nav.is-fixed {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    z-index: 1000;
+    width: min(860px, calc(100% - 48px));
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .12);
+    transform: translateX(-50%);
+    animation: quick-nav-drop-in .28s ease-out both;
+}
+@keyframes quick-nav-drop-in {
+    from { opacity: .75; transform: translate(-50%, -12px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+@media (max-width: 760px) {
+    .franchise-quick-nav.is-fixed {
+        top: 8px;
+        width: calc(100% - 28px);
+        min-height: 52px;
+        padding: 8px 12px;
+    }
+}
