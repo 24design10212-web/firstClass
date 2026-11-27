@@ -589,7 +589,7 @@
 .official-app-copy h2 { margin:28px 0 0; font-size:26px; line-height:1.35; font-weight:650; letter-spacing:-.04em; }
 .official-app-copy > p:not(.app-kicker) { margin:18px 0 0; color:#666; font-size:16px; line-height:1.8; word-break:keep-all; }
 .official-app-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
-.official-app-store { display:inline-flex; align-items:center; justify-content:space-between; gap:30px; min-width:160px; padding:14px 18px; border:1px solid #222; border-radius:4px; background:#fff; color:#222; font-size:14px; font-weight:600; }
+.official-app-store { display:inline-flex; align-items:center; justify-content:space-between; gap:30px; min-width:160px; padding:14px 18px; border:1px solid #222; border-radius:14px; background:#fff; color:#222; font-size:14px; font-weight:600; }
 .official-app-store--dark { background:#222; color:#fff; }
 .official-app-store span { font-size:18px; }
 .official-app-hero-image { position:relative; display:flex; align-items:center; justify-content:center; min-height:600px; }
