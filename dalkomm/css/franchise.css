@@ -101,10 +101,12 @@ body.brand-choice-page {
 }
 .brand-choice-panel::before {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     inset: 0;
     content: "";
     opacity: 0;
+    pointer-events: none;
+    background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
