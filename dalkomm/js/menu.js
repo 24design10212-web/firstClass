@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Menu card image <-> details toggle
-    document.querySelectorAll('.menu-card--cube-latte, .menu-card--honey-cube, .menu-card--strawberry-cube, .menu-card--mango-cube, .menu-card--hot-honey-grapefruit').forEach(function (card) {
+    document.querySelectorAll('.menu-card--cube-latte, .menu-card--honey-cube, .menu-card--strawberry-cube, .menu-card--mango-cube, .menu-card--hot-honey-grapefruit, .menu-card--ice-honey-grapefruit').forEach(function (card) {
         const imageButton = card.querySelector('.menu-card-image-toggle');
         const detailsPanel = card.querySelector('.cube-latte-details');
         if (!imageButton || !detailsPanel) return;
