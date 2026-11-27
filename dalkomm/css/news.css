@@ -653,3 +653,40 @@
 @media (max-width: 700px) {
     .news-feature-card-heading h3 { font-size: clamp(18px, 5vw, 22px); }
 }
+
+
+/* 뉴스 페이지 하단 브랜드 사이트 바로가기 */
+.news-brand-site-cta {
+    display: flex;
+    align-items: center;
+    min-height: 86px;
+    padding: 19px 14px;
+    background: #222;
+}
+.news-brand-site-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 224px;
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: 999px;
+    background: #fff;
+    color: #171717;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.news-brand-site-arrow {
+    font-size: 24px;
+    line-height: 1;
+}
+.news-brand-site-button:hover {
+    background: #f2f2f2;
+    transform: translateX(2px);
+}
+.news-brand-site-button:focus-visible {
+    outline: 2px solid #ff671f;
+    outline-offset: 4px;
+}
