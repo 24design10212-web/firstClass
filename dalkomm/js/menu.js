@@ -33,15 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.menu-card--cube-latte, .menu-card--honey-cube').forEach(function (card) {
         const imageButton = card.querySelector('.menu-card-image-toggle');
         const detailsPanel = card.querySelector('.cube-latte-details');
-        const backButton = card.querySelector('.cube-latte-back');
-        if (!imageButton || !detailsPanel || !backButton) return;
+        if (!imageButton || !detailsPanel) return;
 
         function showDetails(showDetails) {
             imageButton.hidden = showDetails;
             detailsPanel.hidden = !showDetails;
             imageButton.setAttribute('aria-expanded', String(showDetails));
             if (showDetails) {
-                backButton.focus();
+                detailsPanel.focus();
             } else {
                 imageButton.focus();
             }
@@ -50,8 +49,14 @@ document.addEventListener('DOMContentLoaded', function () {
         imageButton.addEventListener('click', function () {
             showDetails(true);
         });
-        backButton.addEventListener('click', function () {
+        detailsPanel.addEventListener('click', function () {
             showDetails(false);
+        });
+        detailsPanel.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                showDetails(false);
+            }
         });
     });
 
