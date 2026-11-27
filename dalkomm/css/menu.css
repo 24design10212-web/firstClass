@@ -219,8 +219,7 @@
 
 /* Shorter menu descriptions: keep the detail panel compact */
 .menu-card--grapefruit-earl-grey-iced-tea .cube-latte-details,
-.menu-card--ice-honey-grapefruit .cube-latte-details,
-.menu-card--hot-honey-grapefruit .cube-latte-details {
+.menu-card--ice-honey-grapefruit .cube-latte-details {
     min-height: 0;
 }
 
