@@ -639,3 +639,17 @@
 .news-slide-button:focus-visible,.news-detail-button:focus-visible{outline:2px solid #191817;outline-offset:3px}
 @media(max-width:1024px){.news-archive{padding:38px 0 60px}.news-archive-inner{width:calc(100% - 64px)}.news-layout{grid-template-columns:minmax(0,1fr) minmax(320px,.9fr);gap:28px}.news-main-title{margin-bottom:52px;font-size:34px}.news-notice-grid{column-gap:22px;row-gap:30px}.news-notice-item h4{font-size:16px}.news-feature-card{min-height:600px;padding:25px;border-radius:24px}.news-feature-card-heading h3{font-size:23px}}
 @media(max-width:700px){.news-archive{padding:32px 0 48px}.news-archive-inner{width:calc(100% - 40px)}.news-layout{grid-template-columns:minmax(0,1fr);gap:42px}.news-notice-area{padding-top:0}.news-section-kicker{margin-bottom:22px;font-size:12px}.news-main-title{margin-bottom:42px;font-size:30px;line-height:1.4}.news-notice-heading{margin-bottom:20px}.news-notice-heading h3{font-size:24px}.news-notice-grid{grid-template-columns:minmax(0,1fr);row-gap:26px}.news-notice-item{min-height:126px}.news-notice-item h4{min-height:0;font-size:17px}.news-notice-meta{padding-top:12px;font-size:13px}.news-feature-card{min-height:0;padding:22px;border-radius:22px}.news-feature-card-heading{margin-bottom:20px}.news-feature-card-heading h3{font-size:22px}.news-feature-image{border-radius:18px}.news-feature-slide h4{font-size:18px}.news-feature-controls{margin-top:26px;padding-top:0}}
+
+
+/* 뉴스 서브페이지: 불필요한 플러스 버튼 제거 후 HIGHLIGHT 한 줄 유지 */
+.news-feature-card-heading h3 {
+    white-space: nowrap;
+    word-break: keep-all;
+    font-size: clamp(19px, 1.9vw, 27px);
+}
+@media (max-width: 1024px) {
+    .news-feature-card-heading h3 { font-size: clamp(19px, 2.2vw, 23px); }
+}
+@media (max-width: 700px) {
+    .news-feature-card-heading h3 { font-size: clamp(18px, 5vw, 22px); }
+}
