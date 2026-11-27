@@ -1,550 +1,94 @@
-/* Dal.Komm franchise landing page */
-.franchise-page {
-    overflow: hidden;
-    color: #222;
-    font-family: "Pretendard Variable", sans-serif;
+/* Figma 62:181 - 기본 브랜드선택화면 */
+* { box-sizing: border-box; }
+html, body { width: 100%; min-height: 100%; margin: 0; }
+body.brand-choice-page {
+    min-width: 320px;
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    color: #fff;
 }
-.franchise-header {
-    position: absolute;
-    inset: 0 0 auto;
-    z-index: 50;
-    background: #fff;
-}
-.franchise-header .header-inner {
-    max-width: 1700px;
-    width: calc(100% - 220px);
-}
-.franchise-header .header-logo,
-.franchise-header .header-logo img {
-    width: 117px;
-    height: 30px;
-}
-.franchise-nav {
+.brand-choice {
     display: flex;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+.brand-choice-panel {
+    display: flex;
+    flex: 0 0 50%;
+    min-width: 0;
+    min-height: 100vh;
+    min-height: 100svh;
     align-items: center;
-    gap: clamp(34px, 4.5vw, 86px);
-}
-.franchise-nav a {
-    color: #222;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color .2s ease;
-}
-.franchise-nav a:hover,
-.franchise-nav a:focus-visible {
-    color: #ff671f;
-}
-.franchise-menu-toggle { display: none; }
-.franchise-hero {
-    position: relative;
-    width: 100%;
-    height: 876px;
+    justify-content: center;
     overflow: hidden;
-    background: #e8e1d8;
 }
-.franchise-hero-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.franchise-section-heading {
-    margin: 0 auto 72px;
-    text-align: center;
-}
-.franchise-section-heading .eyebrow {
-    margin: 0 0 10px;
-    color: #77716b;
-    font-size: 13px;
-    letter-spacing: .08em;
-}
-.franchise-section-heading h2 {
-    margin: 0;
-    color: #222;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1.35;
-    letter-spacing: -.04em;
-}
-.franchise-section-heading > p:not(.eyebrow) {
-    margin: 12px 0 0;
-    color: #777;
-    font-size: 17px;
-    line-height: 1.5;
-}
-.franchise-benefits {
-    padding: 115px max(6.25vw, 32px) 100px;
-    background: #fff;
-}
-.franchise-benefits .franchise-section-heading { margin-bottom: 74px; }
-.benefit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 52px 42px;
-    width: min(100%, 1500px);
-    margin: 0 auto;
-}
-.benefit-card { min-width: 0; }
-.benefit-card img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 460 / 316;
-    border-radius: 26px 26px 0 0;
-    object-fit: cover;
-    background: #f3f0ec;
-}
-.benefit-card h3 {
-    margin: 20px 0 8px;
-    color: #222;
-    font-size: 20px;
-    font-weight: 650;
-    letter-spacing: -.03em;
-}
-.benefit-card p {
-    margin: 0;
-    color: #666;
-    font-size: 15px;
-    line-height: 1.55;
-}
-.brand-choice-section {
-    padding: 110px max(6.25vw, 32px) 120px;
-    background: #fff;
-}
-.brand-choice-section .franchise-section-heading { margin-bottom: 68px; }
-.brand-choice-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 44px;
-    width: min(100%, 1480px);
-    margin: 0 auto;
-}
-.brand-choice-card {
-    min-width: 0;
-    padding: 54px 58px 48px;
-    border-radius: 24px;
-}
-.brand-choice-card--n {
-    background: #ff671f;
-    color: #222;
-}
-.brand-choice-card--classic {
-    background: #222;
-    color: #fff;
-}
-.brand-model {
-    margin: 0 0 8px;
-    font-size: 20px;
-    font-weight: 500;
-}
-.brand-choice-card h3 {
-    margin: 0 0 48px;
-    font-size: 38px;
-    font-weight: 750;
-    letter-spacing: -.04em;
-}
-.brand-choice-card dl { margin: 0; }
-.brand-choice-card dl > div {
-    display: grid;
-    grid-template-columns: 130px minmax(0, 1fr);
-    gap: 20px;
-    align-items: start;
-    margin-top: 25px;
-}
-.brand-choice-card dt,
-.brand-choice-card dd {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.55;
-}
-.brand-choice-card dt { font-weight: 650; }
-.brand-choice-card dd { font-weight: 400; }
-.franchise-cost-section {
-    padding: 120px max(5.2vw, 28px) 110px;
-    background: #f7f5f0;
-}
-.franchise-cost-section .franchise-section-heading { margin-bottom: 68px; }
-.cost-tables {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 48px;
-    width: min(100%, 1570px);
-    margin: 0 auto;
-}
-.cost-table-wrap { min-width: 0; }
-.cost-table-title { margin-bottom: 18px; }
-.cost-table-title h3 {
-    margin: 0 0 5px;
-    font-size: 23px;
-    font-weight: 700;
-}
-.cost-table-title p {
-    margin: 0;
-    color: #777;
-    font-size: 12px;
-}
-.cost-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    overflow: hidden;
-    border-radius: 14px;
-    background: #fff;
-    table-layout: fixed;
-}
-.cost-table th,
-.cost-table td {
-    padding: 15px 12px;
-    font-size: 13px;
-    line-height: 1.45;
-    text-align: left;
-    vertical-align: middle;
-    overflow-wrap: anywhere;
-}
-.cost-table thead th {
-    background: #ff671f;
-    color: #222;
-    font-weight: 700;
-    text-align: center;
-}
-.cost-table tbody tr:nth-child(even) { background: #f0efed; }
-.cost-table tbody th {
-    width: 18%;
-    font-weight: 650;
-    white-space: nowrap;
-}
-.cost-table tbody td:nth-child(2) {
-    width: 62%;
-    color: #666;
-    font-size: 12px;
-}
-.cost-table tbody td:last-child {
-    width: 20%;
-    font-weight: 650;
-    text-align: right;
-}
-.cost-table tfoot th,
-.cost-table tfoot td {
-    background: #050505;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 700;
-}
-.cost-table tfoot th { text-align: right; }
-.cost-table tfoot td { text-align: right; white-space: nowrap; }
-.cost-note {
-    margin: 12px 0 0;
-    color: #777;
-    font-size: 11px;
-    line-height: 1.6;
-}
-.franchise-process-section {
-    padding: 115px max(6.25vw, 32px) 125px;
-    background: #fff;
-}
-.franchise-process-section .franchise-section-heading { margin-bottom: 82px; }
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 64px 28px;
-    width: min(100%, 1360px);
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-}
-.process-grid li {
-    position: relative;
+.brand-choice-coffee { background: #ff671f; }
+.brand-choice-franchise { background: #222; }
+.brand-choice-content {
     display: flex;
-    min-width: 0;
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+    padding: 32px 20px;
     text-align: center;
 }
-.process-number {
-    position: absolute;
-    top: -9px;
-    left: calc(50% + 22px);
-    z-index: 1;
-    display: grid;
-    width: 25px;
-    height: 25px;
-    place-items: center;
-    border-radius: 50%;
-    background: #ff671f;
+.brand-choice-content h1,
+.brand-choice-content h2 {
+    margin: 0;
     color: #fff;
-    font-size: 11px;
+    font-size: 40px;
     font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
 }
-.process-icon {
-    display: grid;
-    width: 100px;
-    height: 100px;
-    place-items: center;
-    border: 1px solid #e9e7e4;
-    border-radius: 50%;
-    color: #222;
-    font-size: 42px;
-    font-weight: 300;
-}
-.process-grid h3 {
-    margin: 15px 0 6px;
-    color: #222;
-    font-size: 17px;
-    font-weight: 650;
-}
-.process-grid p {
-    max-width: 220px;
+.brand-choice-content p {
     margin: 0;
-    color: #666;
-    font-size: 12px;
-    line-height: 1.55;
-}
-.franchise-inquiry-section {
-    padding: 120px max(5.2vw, 28px) 130px;
-    background: #f7f5f0;
-}
-.franchise-inquiry-section .franchise-section-heading { margin-bottom: 70px; }
-.franchise-inquiry-form {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px 40px;
-    width: min(100%, 1720px);
-    margin: 0 auto;
-}
-.choice-field {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-.choice-field legend,
-.form-field > span {
-    display: block;
-    width: 100%;
-    margin-bottom: 12px;
-    color: #222;
-    font-size: 14px;
-    font-weight: 650;
-}
-.choice-field label { cursor: pointer; }
-.choice-field input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-}
-.choice-field label span {
-    display: inline-flex;
-    min-width: 74px;
-    height: 42px;
-    align-items: center;
-    justify-content: center;
-    padding: 0 18px;
-    border: 1px solid #dedbd6;
-    border-radius: 8px;
-    background: #fff;
-    color: #444;
-    font-size: 14px;
-    transition: .18s ease;
-}
-.choice-field input:checked + span {
-    border-color: #ff671f;
-    background: #fff0e8;
-    color: #222;
-}
-.choice-field input:focus-visible + span {
-    outline: 2px solid #222;
-    outline-offset: 3px;
-}
-.form-field {
-    display: block;
-    min-width: 0;
-}
-.form-field input,
-.form-field textarea {
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 52px;
-    padding: 14px 18px;
-    border: 1px solid #dedbd6;
-    border-radius: 7px;
-    outline: 0;
-    background: #fff;
-    color: #222;
-    font: inherit;
-    font-size: 14px;
-}
-.form-field textarea {
-    min-height: 80px;
-    resize: vertical;
-}
-.form-field input:focus,
-.form-field textarea:focus {
-    border-color: #ff671f;
-    box-shadow: 0 0 0 3px rgba(255,103,31,.12);
-}
-.form-field input::placeholder,
-.form-field textarea::placeholder { color: #aaa39c; }
-.form-field--message { grid-column: 1; }
-.privacy-consent {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #777;
-    font-size: 12px;
-}
-.privacy-consent input { width: 16px; height: 16px; accent-color: #ff671f; }
-.inquiry-submit {
-    grid-column: 1 / -1;
-    display: flex;
-    min-height: 58px;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border: 0;
-    border-radius: 999px;
-    background: #302820;
     color: #fff;
-    font: inherit;
-    font-size: 15px;
-    font-weight: 650;
-    cursor: pointer;
-    transition: background .2s ease;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
 }
-.inquiry-submit:hover { background: #ff671f; color: #222; }
-.form-notice {
-    display: none;
-    grid-column: 1 / -1;
-    margin: -8px 0 0;
-    color: #66584d;
-    font-size: 13px;
-    text-align: center;
+.brand-choice-button {
+    display: flex;
+    width: 260px;
+    height: 64px;
+    flex: 0 0 64px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    background: #fff;
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform .2s ease, background-color .2s ease;
 }
-.form-notice.is-visible { display: block; }
-.franchise-page .site-footer { position: relative; }
-
-@media (max-width: 1200px) {
-    .franchise-header .header-inner { width: calc(100% - 64px); }
-    .franchise-nav { gap: 28px; }
-    .franchise-nav a { font-size: 14px; }
-    .benefit-grid { gap: 42px 28px; }
-    .brand-choice-card { padding: 42px 34px; }
-    .brand-choice-card dl > div { grid-template-columns: 112px minmax(0,1fr); gap: 12px; }
-    .cost-tables { gap: 28px; }
-    .cost-table th, .cost-table td { padding: 12px 8px; font-size: 11px; }
-    .cost-table tbody td:nth-child(2) { font-size: 10px; }
+.brand-choice-button:hover {
+    transform: translateY(-2px);
+    background: #f5f5f5;
 }
-@media (max-width: 900px) {
-    .franchise-header { height: 72px; }
-    .franchise-header .header-inner { width: calc(100% - 40px); }
-    .franchise-menu-toggle {
-        display: flex;
-        width: 42px;
-        height: 42px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        border: 1px solid #e5e1dc;
-        border-radius: 50%;
-        background: #fff;
-        cursor: pointer;
+.brand-choice-button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 5px;
+}
+@media (max-width: 760px) {
+    .brand-choice { flex-direction: column; }
+    .brand-choice-panel {
+        flex: 0 0 50vh;
+        min-height: 50vh;
+        min-height: 50svh;
     }
-    .franchise-menu-toggle > span:not(.sr-only) {
-        display: block;
-        width: 18px;
-        height: 2px;
-        border-radius: 2px;
-        background: #222;
+    .brand-choice-content { gap: 18px; }
+    .brand-choice-content h1,
+    .brand-choice-content h2 { font-size: clamp(25px, 6vw, 36px); }
+    .brand-choice-content p { font-size: clamp(16px, 3.8vw, 21px); }
+    .brand-choice-button {
+        width: min(260px, 76vw);
+        height: 56px;
+        flex-basis: 56px;
+        font-size: 17px;
     }
-    .franchise-nav {
-        position: absolute;
-        top: 72px;
-        right: 0;
-        left: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 8px 20px 18px;
-        border-top: 1px solid #eee;
-        background: #fff;
-        box-shadow: 0 12px 20px rgba(0,0,0,.08);
-    }
-    .franchise-nav.is-open { display: flex; }
-    .franchise-nav a { padding: 14px 8px; font-size: 15px; }
-    .franchise-hero { height: 68vw; min-height: 420px; max-height: 720px; }
-    .franchise-benefits,
-    .brand-choice-section,
-    .franchise-cost-section,
-    .franchise-process-section,
-    .franchise-inquiry-section { padding: 84px 28px; }
-    .franchise-section-heading { margin-bottom: 48px; }
-    .franchise-section-heading h2 { font-size: 30px; }
-    .benefit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 36px 24px; }
-    .brand-choice-grid,
-    .cost-tables { grid-template-columns: 1fr; gap: 32px; }
-    .brand-choice-card { padding: 42px; }
-    .cost-table th, .cost-table td { padding: 14px 12px; font-size: 13px; }
-    .cost-table tbody td:nth-child(2) { font-size: 12px; }
-    .process-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 50px 18px; }
-    .franchise-inquiry-form { gap: 22px 24px; }
-}
-@media (max-width: 600px) {
-    .franchise-header { height: 64px; }
-    .franchise-header .header-inner { width: calc(100% - 32px); }
-    .franchise-header .header-logo,
-    .franchise-header .header-logo img { width: 117px; height: 30px; }
-    .franchise-nav { top: 64px; }
-    .franchise-hero { height: 76vh; min-height: 420px; max-height: 620px; }
-    .franchise-hero-image { object-position: 58% center; }
-    .franchise-benefits,
-    .brand-choice-section,
-    .franchise-cost-section,
-    .franchise-process-section,
-    .franchise-inquiry-section { padding: 68px 20px; }
-    .franchise-section-heading { margin-bottom: 38px; }
-    .franchise-section-heading .eyebrow { font-size: 11px; }
-    .franchise-section-heading h2 { font-size: 25px; }
-    .franchise-section-heading > p:not(.eyebrow) { font-size: 14px; }
-    .benefit-grid { grid-template-columns: 1fr; gap: 32px; }
-    .benefit-card img { aspect-ratio: 1.46 / 1; border-radius: 18px 18px 0 0; }
-    .benefit-card h3 { margin-top: 15px; font-size: 18px; }
-    .benefit-card p { font-size: 14px; }
-    .brand-choice-grid { gap: 18px; }
-    .brand-choice-card { padding: 30px 24px; border-radius: 18px; }
-    .brand-model { font-size: 15px; }
-    .brand-choice-card h3 { margin-bottom: 30px; font-size: 32px; }
-    .brand-choice-card dl > div { grid-template-columns: 92px minmax(0,1fr); gap: 10px; margin-top: 18px; }
-    .brand-choice-card dt,
-    .brand-choice-card dd { font-size: 12px; }
-    .cost-table-wrap { overflow: hidden; }
-    .cost-table-title h3 { font-size: 20px; }
-    .cost-table { table-layout: auto; }
-    .cost-table th, .cost-table td { padding: 10px 7px; font-size: 10px; }
-    .cost-table tbody th { white-space: normal; }
-    .cost-table tbody td:nth-child(2) { font-size: 9px; }
-    .cost-table tfoot th, .cost-table tfoot td { font-size: 12px; }
-    .cost-note { font-size: 10px; }
-    .process-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 38px 12px; }
-    .process-icon { width: 78px; height: 78px; font-size: 34px; }
-    .process-number { left: calc(50% + 18px); width: 22px; height: 22px; font-size: 10px; }
-    .process-grid h3 { font-size: 14px; }
-    .process-grid p { font-size: 11px; }
-    .franchise-inquiry-form { grid-template-columns: 1fr; gap: 20px; }
-    .form-field--message,
-    .privacy-consent,
-    .inquiry-submit,
-    .form-notice { grid-column: 1; }
-    .choice-field legend,
-    .form-field > span { font-size: 13px; }
-    .form-field input,
-    .form-field textarea { min-height: 48px; font-size: 13px; }
 }
