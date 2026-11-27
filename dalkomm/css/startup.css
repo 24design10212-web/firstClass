@@ -1,0 +1,519 @@
+/* Dal.Komm franchise landing page — Figma node 6:188 */
+.franchise-page {
+    --startup-orange: var(--color-orange-500, #FF671F);
+    --startup-black: var(--color-neutral-900, #222222);
+    --startup-cream: var(--color-neutral-100, #F7F5F2);
+    --startup-white: var(--color-neutral-0, #FFFFFF);
+    color: var(--startup-black);
+    background: var(--startup-white);
+    overflow: clip;
+}
+.franchise-page * { box-sizing: border-box; }
+.franchise-page a { color: inherit; }
+.franchise-page .franchise-header { height: 90px; }
+.franchise-page .header-inner {
+    width: calc(100% - 220px);
+    max-width: 1700px;
+}
+.franchise-page .header-logo { flex: 0 0 117px; }
+.franchise-page .franchise-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(32px, 5vw, 100px);
+}
+.franchise-page .franchise-nav a {
+    color: var(--startup-black);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .2s ease;
+}
+.franchise-page .franchise-nav a:hover,
+.franchise-page .franchise-nav a:focus-visible { color: var(--startup-orange); }
+.franchise-page .franchise-menu-toggle { display: none; }
+
+.franchise-hero {
+    position: relative;
+    min-height: 600px;
+    height: min(41vw, 786px);
+    background: #cecece;
+}
+.franchise-quick-nav {
+    position: absolute;
+    z-index: 5;
+    top: 42px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 4vw, 76px);
+    width: min(860px, calc(100% - 48px));
+    min-height: 64px;
+    padding: 12px 34px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.96);
+    transform: translateX(-50%);
+}
+.franchise-quick-nav a {
+    color: var(--startup-black);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.franchise-quick-nav a:hover,
+.franchise-quick-nav a:focus-visible { color: var(--startup-orange); }
+
+.franchise-page main section:not(.franchise-hero) {
+    padding: 112px 24px;
+}
+.franchise-section-heading {
+    margin: 0 auto 58px;
+    text-align: center;
+}
+.franchise-section-heading h2 {
+    margin: 0;
+    color: var(--startup-black);
+    font-size: clamp(28px, 2.2vw, 40px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.04em;
+}
+.franchise-section-heading p {
+    margin: 12px 0 0;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.franchise-section-heading .eyebrow {
+    margin: 0 0 12px;
+    color: var(--startup-orange);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+.brand-choice-section { background: var(--startup-white); }
+.brand-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    width: min(1480px, 100%);
+    margin: 0 auto;
+}
+.brand-choice-card {
+    min-width: 0;
+    min-height: 600px;
+    padding: 72px clamp(32px, 4.5vw, 88px);
+    border-radius: 44px;
+    color: var(--startup-white);
+}
+.brand-choice-card--n { background: var(--startup-orange); }
+.brand-choice-card--classic { background: var(--startup-black); }
+.brand-model {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.brand-choice-card h3 {
+    margin: 0 0 54px;
+    font-size: clamp(38px, 3vw, 54px);
+    line-height: 1;
+    font-weight: 700;
+}
+.brand-choice-card dl { margin: 0; }
+.brand-choice-card dl > div {
+    display: grid;
+    grid-template-columns: minmax(110px, 145px) minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+    margin-top: 24px;
+}
+.brand-choice-card dt {
+    font-size: 16px;
+    font-weight: 700;
+}
+.brand-choice-card dd {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.franchise-benefits { background: var(--startup-white); }
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 52px 38px;
+    width: min(1480px, 100%);
+    margin: 0 auto;
+}
+.benefit-card { min-width: 0; }
+.benefit-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.55 / 1;
+    border-radius: 32px 32px 0 0;
+    object-fit: cover;
+}
+.benefit-card h3 {
+    margin: 22px 0 8px;
+    color: var(--startup-black);
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.benefit-card p {
+    margin: 0;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.franchise-cost-section { background: var(--startup-cream); }
+.cost-tables {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    width: min(1480px, 100%);
+    margin: 0 auto;
+}
+.cost-table-wrap { min-width: 0; }
+.cost-table-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0 0 14px;
+}
+.cost-table-title h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+.cost-table-title p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+}
+.cost-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--startup-white);
+    table-layout: fixed;
+    font-size: 13px;
+}
+.cost-table th,
+.cost-table td {
+    padding: 14px 12px;
+    border: 0;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.45;
+}
+.cost-table thead th {
+    background: var(--startup-orange);
+    color: var(--startup-white);
+    font-weight: 700;
+}
+.cost-table th:first-child { width: 20%; }
+.cost-table th:nth-child(2) { width: 58%; }
+.cost-table th:last-child { width: 22%; text-align: right; }
+.cost-table tbody tr:nth-child(even) { background: #F0F0F0; }
+.cost-table tbody th { font-weight: 600; }
+.cost-table tbody td:last-child {
+    text-align: right;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.cost-table tfoot th,
+.cost-table tfoot td {
+    background: #080808;
+    color: var(--startup-white);
+    font-size: 15px;
+    font-weight: 700;
+}
+.cost-table tfoot th { text-align: right; }
+.cost-table tfoot td { text-align: right; white-space: nowrap; }
+.cost-note {
+    margin: 12px 0 0;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.franchise-process-section { background: var(--startup-white); }
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 70px 30px;
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.process-grid li {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    min-height: 205px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.process-number {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: var(--startup-orange);
+    color: var(--startup-white);
+    font-size: 13px;
+    font-weight: 700;
+}
+.process-icon {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border: 1px solid #E8E8E8;
+    border-radius: 50%;
+    background: #fff;
+}
+.process-icon img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.process-grid h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+.process-grid p {
+    max-width: 220px;
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+.process-grid li:not(:nth-child(5n))::after {
+    position: absolute;
+    top: 78px;
+    right: -31px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url("../img/z.png") center / contain no-repeat;
+}
+
+.franchise-inquiry-section { background: var(--startup-cream); }
+.franchise-inquiry-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 38px;
+    width: min(1480px, 100%);
+    margin: 0 auto;
+}
+.franchise-inquiry-form fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.choice-field legend,
+.form-field > span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--startup-black);
+    font-size: 14px;
+    font-weight: 600;
+}
+.choice-field label {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.choice-field input { position: absolute; opacity: 0; }
+.choice-field label span {
+    display: inline-flex;
+    min-width: 82px;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border: 1px solid #D9D5D0;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    transition: border-color .2s ease, background-color .2s ease, color .2s ease;
+}
+.choice-field input:checked + span {
+    border-color: var(--startup-orange);
+    background: var(--startup-orange);
+    color: #fff;
+}
+.choice-field input:focus-visible + span { outline: 2px solid var(--startup-black); outline-offset: 3px; }
+.form-field { display: block; min-width: 0; }
+.form-field input,
+.form-field textarea {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border: 1px solid #D9D5D0;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--startup-black);
+    font: inherit;
+    font-size: 14px;
+}
+.form-field textarea { min-height: 100px; resize: vertical; }
+.form-field input:focus,
+.form-field textarea:focus { border-color: var(--startup-orange); outline: 2px solid rgba(255,103,31,.16); }
+.form-field--message { grid-column: 1 / -1; }
+.privacy-consent {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 13px;
+}
+.privacy-consent input { width: 16px; height: 16px; accent-color: var(--startup-orange); }
+.inquiry-submit {
+    display: flex;
+    grid-column: 1 / -1;
+    min-height: 56px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 0;
+    border-radius: 999px;
+    background: #302820;
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease;
+}
+.inquiry-submit:hover { background: var(--startup-orange); transform: translateY(-2px); }
+.form-notice {
+    display: none;
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+.form-notice.is-visible { display: block; }
+
+@media (max-width: 1100px) {
+    .franchise-page .header-inner { width: calc(100% - 48px); }
+    .franchise-page .franchise-nav { gap: 24px; }
+    .franchise-page .franchise-nav a { font-size: 14px; }
+    .franchise-hero { min-height: 480px; height: 55vw; }
+    .franchise-page main section:not(.franchise-hero) { padding: 84px 24px; }
+    .brand-choice-grid { gap: 24px; }
+    .brand-choice-card { min-height: 0; padding: 48px 32px; border-radius: 32px; }
+    .brand-choice-card dl > div { grid-template-columns: 110px minmax(0,1fr); gap: 14px; }
+    .brand-choice-card dt, .brand-choice-card dd { font-size: 14px; }
+    .cost-tables { gap: 24px; }
+    .cost-table { font-size: 11px; }
+    .cost-table th, .cost-table td { padding: 10px 8px; }
+    .process-grid { gap: 52px 18px; }
+}
+@media (max-width: 760px) {
+    .franchise-page .franchise-header { height: 68px; }
+    .franchise-page .header-inner { width: calc(100% - 36px); }
+    .franchise-page .franchise-menu-toggle {
+        display: flex;
+        width: 42px;
+        height: 42px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border: 0;
+        background: transparent;
+    }
+    .franchise-page .franchise-menu-toggle > span:not(.sr-only) {
+        display: block;
+        width: 23px;
+        height: 2px;
+        background: var(--startup-black);
+    }
+    .franchise-page .franchise-nav {
+        position: absolute;
+        top: 68px;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 24px 20px;
+        background: #fff;
+        box-shadow: 0 12px 20px rgba(0,0,0,.08);
+    }
+    .franchise-page .franchise-nav.is-open { display: flex; }
+    .franchise-page .franchise-nav a { padding: 13px 0; font-size: 15px; }
+    .franchise-hero { min-height: 380px; height: 68vh; }
+    .franchise-quick-nav {
+        top: 24px;
+        width: calc(100% - 28px);
+        min-height: 52px;
+        gap: 0;
+        justify-content: space-around;
+        padding: 8px 12px;
+    }
+    .franchise-quick-nav a { font-size: 11px; }
+    .franchise-page main section:not(.franchise-hero) { padding: 64px 20px; }
+    .franchise-section-heading { margin-bottom: 34px; }
+    .franchise-section-heading p { font-size: 13px; }
+    .brand-choice-grid, .cost-tables { grid-template-columns: 1fr; gap: 28px; }
+    .brand-choice-card { padding: 36px 26px; border-radius: 26px; }
+    .brand-choice-card h3 { margin-bottom: 32px; font-size: 38px; }
+    .brand-choice-card dl > div { grid-template-columns: 100px minmax(0,1fr); margin-top: 17px; }
+    .brand-choice-card dt, .brand-choice-card dd { font-size: 13px; }
+    .benefit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 28px 16px; }
+    .benefit-card img { border-radius: 18px 18px 0 0; }
+    .benefit-card h3 { margin-top: 14px; font-size: 15px; }
+    .benefit-card p { font-size: 12px; }
+    .cost-table-title h3 { font-size: 18px; }
+    .cost-table { font-size: 11px; }
+    .cost-table th, .cost-table td { padding: 10px 7px; }
+    .cost-note { font-size: 10px; }
+    .process-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 36px 18px; }
+    .process-grid li { min-height: 190px; }
+    .process-grid li::after { display: none; }
+    .process-grid h3 { font-size: 14px; }
+    .process-grid p { font-size: 11px; }
+    .process-icon { width: 82px; height: 82px; }
+    .process-icon img { width: 42px; height: 42px; }
+    .franchise-inquiry-form { grid-template-columns: 1fr; gap: 20px; }
+    .form-field--message, .privacy-consent, .inquiry-submit, .form-notice { grid-column: 1; }
+}
+@media (max-width: 420px) {
+    .franchise-quick-nav a { font-size: 10px; }
+    .benefit-grid { grid-template-columns: 1fr; }
+    .brand-choice-card dl > div { grid-template-columns: 88px minmax(0,1fr); gap: 10px; }
+    .cost-table { font-size: 10px; }
+    .cost-table th, .cost-table td { padding: 8px 5px; }
+    .cost-table th:first-child { width: 22%; }
+    .cost-table th:nth-child(2) { width: 52%; }
+    .cost-table th:last-child { width: 26%; }
+}
