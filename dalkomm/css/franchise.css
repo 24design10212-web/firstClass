@@ -92,3 +92,49 @@ body.brand-choice-page {
         font-size: 17px;
     }
 }
+
+/* Figma hover states: 65:260 (Coffee) / 65:227 (Franchise) */
+.brand-choice-panel {
+    position: relative;
+    isolation: isolate;
+    transition: background-color .35s ease;
+}
+.brand-choice-panel::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    opacity: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity .45s ease;
+}
+.brand-choice-coffee::before {
+    background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)),
+        url("../img/Coffee%20Brand.png");
+}
+.brand-choice-franchise::before {
+    background-image: linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.28)),
+        url("../img/Choice.png");
+}
+.brand-choice-panel:hover::before,
+.brand-choice-panel:focus-within::before {
+    opacity: 1;
+}
+.brand-choice-content {
+    position: relative;
+    z-index: 1;
+}
+.brand-choice-button {
+    transition: transform .25s ease, background-color .25s ease,
+        box-shadow .25s ease;
+}
+.brand-choice-panel:hover .brand-choice-button,
+.brand-choice-panel:focus-within .brand-choice-button {
+    box-shadow: 0 8px 22px rgba(0,0,0,.16);
+}
+@media (hover: none) {
+    .brand-choice-panel::before { display: none; }
+    .brand-choice-panel:hover .brand-choice-button { box-shadow: none; }
+}
