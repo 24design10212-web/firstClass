@@ -671,9 +671,12 @@
     filter: brightness(0) invert(1);
 }
 .franchise-top-button:hover {
-    background: var(--startup-orange);
+    background: #fff;
     transform: translateY(-4px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, .2);
+}
+.franchise-top-button:hover img {
+    filter: brightness(0);
 }
 .franchise-top-button:focus-visible {
     outline: 3px solid var(--startup-orange);
