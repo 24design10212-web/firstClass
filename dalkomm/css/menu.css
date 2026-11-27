@@ -117,7 +117,8 @@
 .menu-card--strawberry-cube .menu-card-image-toggle,
 .menu-card--mango-cube .menu-card-image-toggle,
 .menu-card--hot-honey-grapefruit .menu-card-image-toggle,
-.menu-card--ice-honey-grapefruit .menu-card-image-toggle {
+.menu-card--ice-honey-grapefruit .menu-card-image-toggle,
+.menu-card--grapefruit-earl-grey-iced-tea .menu-card-image-toggle {
     position: relative;
     display: block;
     width: 100%;
@@ -133,7 +134,8 @@
 .menu-card--strawberry-cube .menu-card-image-toggle:focus-visible,
 .menu-card--mango-cube .menu-card-image-toggle:focus-visible,
 .menu-card--hot-honey-grapefruit .menu-card-image-toggle,
-.menu-card--ice-honey-grapefruit .menu-card-image-toggle:focus-visible {
+.menu-card--ice-honey-grapefruit .menu-card-image-toggle:focus-visible,
+.menu-card--grapefruit-earl-grey-iced-tea .menu-card-image-toggle:focus-visible {
     outline: 3px solid var(--color-orange-500, #d97835);
     outline-offset: -4px;
 }
