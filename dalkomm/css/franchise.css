@@ -1,10 +1,35 @@
+/* Dal.Komm color tokens
+   Synced from dalkomm/css/main.css (Figma Primitives / Semantic)
+*/
+:root {
+    --color-orange-500: #FF671F;
+    --color-orange-50: #FFF0E8;
+    --color-neutral-900: #222222;
+    --color-neutral-200: #E5E1DC;
+    --color-neutral-100: #F7F5F2;
+    --color-neutral-0: #FFFFFF;
+
+    --color-background-default: var(--color-neutral-0);
+    --color-background-subtle: var(--color-neutral-100);
+    --color-surface-default: var(--color-neutral-0);
+    --color-surface-subtle: var(--color-neutral-100);
+    --color-text-primary: var(--color-neutral-900);
+    --color-text-inverse: var(--color-neutral-0);
+    --color-border-default: var(--color-neutral-200);
+    --color-action-primary: var(--color-orange-500);
+    --color-action-primary-text: var(--color-neutral-900);
+    --color-action-secondary: var(--color-neutral-900);
+    --color-accent-subtle: var(--color-orange-50);
+    --color-accent-strong: var(--color-orange-500);
+}
+
 /* Figma 62:181 - 기본 브랜드선택화면 */
 * { box-sizing: border-box; }
 html, body { width: 100%; min-height: 100%; margin: 0; }
 body.brand-choice-page {
     min-width: 320px;
     font-family: "Pretendard Variable", Pretendard, sans-serif;
-    color: #fff;
+    color: var(--color-text-inverse);
 }
 .brand-choice {
     display: flex;
@@ -22,8 +47,8 @@ body.brand-choice-page {
     justify-content: center;
     overflow: hidden;
 }
-.brand-choice-coffee { background: #ff671f; }
-.brand-choice-franchise { background: #222; }
+.brand-choice-coffee { background: var(--color-action-primary); }
+.brand-choice-franchise { background: var(--color-action-secondary); }
 .brand-choice-content {
     display: flex;
     width: 100%;
@@ -58,8 +83,8 @@ body.brand-choice-page {
     align-items: center;
     justify-content: center;
     border-radius: 32px;
-    background: #fff;
-    color: #222;
+    background: var(--color-surface-default);
+    color: var(--color-text-primary);
     font-size: 20px;
     font-weight: 700;
     line-height: 1;
@@ -68,10 +93,10 @@ body.brand-choice-page {
 }
 .brand-choice-button:hover {
     transform: translateY(-2px);
-    background: #f5f5f5;
+    background: var(--color-background-subtle);
 }
 .brand-choice-button:focus-visible {
-    outline: 3px solid #fff;
+    outline: 3px solid var(--color-accent-strong);
     outline-offset: 5px;
 }
 @media (max-width: 760px) {
