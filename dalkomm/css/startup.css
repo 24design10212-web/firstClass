@@ -570,3 +570,50 @@
     .cost-table th:nth-child(2) { width: 52%; }
     .cost-table th:last-child { width: 26%; }
 }
+
+
+/* 창업 성공 전략 스크롤 등장 모션 */
+.franchise-benefits .franchise-section-heading,
+.franchise-benefits .benefit-card {
+    opacity: 0;
+    transform: translate3d(0, 34px, 0);
+    will-change: opacity, transform;
+}
+.franchise-benefits .franchise-section-heading.is-visible,
+.franchise-benefits .benefit-card.is-visible {
+    animation: benefits-rise-bounce .78s cubic-bezier(.22, 1, .36, 1) both;
+}
+.franchise-benefits .benefit-card:nth-child(3n + 2).is-visible {
+    animation-delay: .09s;
+}
+.franchise-benefits .benefit-card:nth-child(3n).is-visible {
+    animation-delay: .18s;
+}
+@keyframes benefits-rise-bounce {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 34px, 0);
+    }
+    72% {
+        opacity: 1;
+        transform: translate3d(0, -5px, 0);
+    }
+    86% {
+        transform: translate3d(0, 2px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .franchise-benefits .franchise-section-heading,
+    .franchise-benefits .benefit-card,
+    .franchise-benefits .franchise-section-heading.is-visible,
+    .franchise-benefits .benefit-card.is-visible {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        will-change: auto;
+    }
+}

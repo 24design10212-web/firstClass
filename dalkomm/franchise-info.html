@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/franchise.css?v=20261127">
-    <link rel="stylesheet" href="css/startup.css?v=20261127-2">
+    <link rel="stylesheet" href="css/startup.css?v=20261127-motion1">
 </head>
 <body>
 <div id="wrap" class="franchise-page">
@@ -244,6 +244,36 @@
         document.querySelector('#form-notice').classList.add('is-visible');
         document.querySelector('#form-notice').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
+
+    // 창업 성공 전략: 제목과 카드가 화면에 들어올 때 아래에서 위로 부드럽게 등장
+    (function () {
+        const revealItems = document.querySelectorAll(
+            '.franchise-benefits .franchise-section-heading, .franchise-benefits .benefit-card'
+        );
+
+        if (!('IntersectionObserver' in window)) {
+            revealItems.forEach(function (item) {
+                item.classList.add('is-visible');
+            });
+            return;
+        }
+
+        const revealObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.14,
+            rootMargin: '0px 0px -35px 0px'
+        });
+
+        revealItems.forEach(function (item) {
+            revealObserver.observe(item);
+        });
+    })();
 </script>
 </body>
 </html>
