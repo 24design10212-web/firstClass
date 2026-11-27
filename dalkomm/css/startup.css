@@ -727,3 +727,11 @@
         object-position: center;
     }
 }
+
+
+/* 창업 랜딩페이지에서는 GNB가 스크롤 중 히어로와 콘텐츠를 덮지 않도록 고정 해제 */
+.franchise-page .franchise-header {
+    position: relative;
+    top: auto;
+    z-index: 1;
+}
