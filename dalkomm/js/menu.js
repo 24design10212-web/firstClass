@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Menu card image <-> details toggle
-    document.querySelectorAll('.menu-card--cube-latte, .menu-card--honey-cube').forEach(function (card) {
+    document.querySelectorAll('.menu-card--cube-latte, .menu-card--honey-cube, .menu-card--strawberry-cube').forEach(function (card) {
         const imageButton = card.querySelector('.menu-card-image-toggle');
         const detailsPanel = card.querySelector('.cube-latte-details');
         if (!imageButton || !detailsPanel) return;

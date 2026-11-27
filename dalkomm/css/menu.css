@@ -113,7 +113,8 @@
 
 /* Cube Latte: switch the image area to product information on click */
 .menu-card--cube-latte .menu-card-image-toggle,
-.menu-card--honey-cube .menu-card-image-toggle {
+.menu-card--honey-cube .menu-card-image-toggle,
+.menu-card--strawberry-cube .menu-card-image-toggle {
     position: relative;
     display: block;
     width: 100%;
@@ -125,7 +126,8 @@
     background: transparent;
 }
 .menu-card--cube-latte .menu-card-image-toggle:focus-visible,
-.menu-card--honey-cube .menu-card-image-toggle:focus-visible {
+.menu-card--honey-cube .menu-card-image-toggle:focus-visible,
+.menu-card--strawberry-cube .menu-card-image-toggle:focus-visible {
     outline: 3px solid var(--color-orange-500, #d97835);
     outline-offset: -4px;
 }
