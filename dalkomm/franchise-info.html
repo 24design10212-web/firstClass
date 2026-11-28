@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/franchise.css?v=20261127">
-    <link rel="stylesheet" href="css/startup.css?v=20261128-mobile-cost-table">
+    <link rel="stylesheet" href="css/startup.css?v=20261128-top-arrow-feedback">
 </head>
 <body>
 <div id="wrap" class="franchise-page">
@@ -251,6 +251,16 @@
 
         topButton.addEventListener('click', function () {
             const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // 클릭 순간 화살표에 피드백을 주고 짧은 애니메이션 뒤 원래 상태로 복귀
+            topButton.classList.remove('is-clicked');
+            void topButton.offsetWidth;
+            topButton.classList.add('is-clicked');
+
+            window.setTimeout(function () {
+                topButton.classList.remove('is-clicked');
+            }, reduceMotion ? 0 : 450);
+
             window.scrollTo({
                 top: 0,
                 behavior: reduceMotion ? 'auto' : 'smooth'
