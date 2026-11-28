@@ -908,3 +908,360 @@
 .franchise-page :where(p, a, li, th, td, dt, dd, label, legend, input, textarea, button, small, span, strong, em) {
     font-size: max(14px, 1em) !important;
 }
+
+
+/* 선택된 Figma 섹션 5종 마크업·레이아웃 보정 */
+.franchise-page .brand-choice-section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    background: #fff;
+}
+.franchise-page .franchise-section-heading--brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 80px;
+}
+.franchise-page .brand-choice-lead {
+    margin: 0;
+    color: #222;
+    font-size: 30px !important;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: -.02em;
+}
+.franchise-page .franchise-section-heading--brand h2 {
+    margin: 0;
+    font-size: 48px;
+    line-height: 1.2;
+}
+.franchise-page .brand-choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 700px));
+    justify-content: center;
+    gap: 80px;
+    width: min(1480px, 100%);
+}
+.franchise-page .brand-choice-card {
+    width: 100%;
+    min-height: 600px;
+    padding: 59px 82px 60px 87px;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.25);
+}
+.franchise-page .brand-choice-card--n .brand-model,
+.franchise-page .brand-choice-card--classic .brand-model {
+    margin: 0 0 0;
+    font-size: 32px !important;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.franchise-page .brand-choice-card h3 {
+    margin: 0 0 60px;
+    font-size: 48px;
+    line-height: 1;
+}
+.franchise-page .brand-choice-card dl {
+    display: grid;
+    gap: 36px;
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.3;
+}
+.franchise-page .brand-choice-card dl > div {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 50px;
+    align-items: start;
+    margin: 0;
+}
+.franchise-page .brand-choice-card dt,
+.franchise-page .brand-choice-card dd {
+    font-size: 22px !important;
+    line-height: 1.3;
+}
+.franchise-page .brand-choice-card dt { font-weight: 600; }
+.franchise-page .brand-choice-card dd { font-weight: 500; }
+
+.franchise-page main .franchise-benefits {
+    padding: 100px 24px;
+    background: #fff;
+}
+.franchise-page .franchise-benefits .franchise-section-heading {
+    margin-bottom: 80px;
+}
+.franchise-page .franchise-benefits .franchise-section-heading > p:not(.eyebrow) {
+    margin-top: 16px;
+    font-size: 24px !important;
+    line-height: 1.4;
+}
+.franchise-page .benefit-grid {
+    grid-template-columns: repeat(3, minmax(0, 460px));
+    gap: 50px;
+    width: min(1480px, 100%);
+}
+.franchise-page .benefit-card img {
+    width: 100%;
+    aspect-ratio: 460 / 316;
+    border-radius: 50px 50px 0 0;
+    object-fit: cover;
+}
+.franchise-page .benefit-card h3 {
+    margin: 40px 0 20px;
+    font-size: 24px;
+    line-height: 1.35;
+}
+.franchise-page .benefit-card p {
+    margin: 0;
+    font-size: 18px !important;
+    line-height: 1.4;
+}
+
+.franchise-page main .franchise-cost-section {
+    padding: 110px 20px;
+    background: #f7f5f0;
+}
+.franchise-page .franchise-cost-section .franchise-section-heading {
+    margin-bottom: 80px;
+    font-size: 24px;
+}
+.franchise-page .franchise-cost-section .franchise-section-heading > p {
+    margin-top: 16px;
+    font-size: 24px !important;
+    line-height: 1.4;
+}
+.franchise-page .cost-tables {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+    width: min(1571px, 100%);
+}
+.franchise-page .cost-table-title {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.franchise-page .cost-table-title h3 {
+    font-size: 28px;
+    line-height: 1.3;
+}
+.franchise-page .cost-table {
+    border-radius: 20px;
+    font-size: 14px;
+}
+.franchise-page .cost-table thead th {
+    padding: 15px 20px;
+    background: #ff671f;
+    color: #242424;
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.franchise-page .cost-table th:first-child { width: 16%; }
+.franchise-page .cost-table th:nth-child(2) { width: 64%; }
+.franchise-page .cost-table th:last-child { width: 20%; }
+.franchise-page .cost-table tbody th,
+.franchise-page .cost-table tbody td {
+    padding: 15px 12px;
+    line-height: 1.4;
+}
+.franchise-page .cost-table tbody th {
+    font-size: 16px !important;
+    font-weight: 600;
+}
+.franchise-page .cost-table tbody td {
+    font-size: 14px !important;
+    color: #666;
+}
+.franchise-page .cost-table tbody td:last-child {
+    color: #242424;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+.franchise-page .cost-table tfoot th,
+.franchise-page .cost-table tfoot td {
+    padding: 15px 12px;
+    background: #080808;
+    color: #fff;
+}
+.franchise-page .cost-table tfoot th {
+    font-size: 16px !important;
+}
+.franchise-page .cost-table tfoot td {
+    font-size: 24px !important;
+}
+.franchise-page .cost-note {
+    margin-top: 12px;
+    font-size: 14px !important;
+    line-height: 1.4;
+}
+
+.franchise-page main .franchise-process-section {
+    padding: 110px 20px;
+    background: #fff;
+}
+.franchise-page .franchise-process-section .franchise-section-heading {
+    margin-bottom: 80px;
+}
+.franchise-page .process-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 74px 30px;
+    width: min(1330px, 100%);
+}
+.franchise-page .process-grid li {
+    min-height: 205px;
+    font-size: 16px;
+}
+.franchise-page .process-number {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    font-size: 14px !important;
+}
+.franchise-page .process-icon {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    margin: 15px 0 16px;
+    border: 0;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
+}
+.franchise-page .process-grid h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+.franchise-page .process-grid p {
+    max-width: 220px;
+    font-size: 16px !important;
+    line-height: 1.4;
+}
+.franchise-page .process-grid li:not(:nth-child(5n))::after {
+    top: 48px;
+    right: -35px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+}
+
+.franchise-page main .franchise-inquiry-section {
+    padding: 120px 20px;
+    background: #f7f5f0;
+}
+.franchise-page .franchise-inquiry-section .franchise-section-heading {
+    margin-bottom: 80px;
+}
+.franchise-page .franchise-inquiry-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 40px;
+    width: min(1880px, 100%);
+    padding: 20px 80px 64px;
+    background: #f7f5f0;
+    font-size: 15px;
+}
+.franchise-page .franchise-inquiry-form .choice-field:first-child { width: 224px; }
+.franchise-page .franchise-inquiry-form .choice-field:nth-child(2) { width: 100%; }
+.franchise-page .franchise-inquiry-form .choice-field legend {
+    margin-bottom: 10px;
+    font-size: 15px !important;
+}
+.franchise-page .franchise-inquiry-form .choice-field label {
+    margin-right: 6px;
+    font-size: 15px;
+}
+.franchise-page .franchise-inquiry-form .choice-field label span {
+    min-height: 42px;
+    font-size: 15px !important;
+}
+.franchise-page .franchise-inquiry-form .form-field > span {
+    margin-bottom: 10px;
+    font-size: 15px !important;
+}
+.franchise-page .franchise-inquiry-form .form-field input,
+.franchise-page .franchise-inquiry-form .form-field textarea {
+    min-height: 48px;
+    padding: 15px 18px;
+    font-size: 15px !important;
+}
+.franchise-page .franchise-inquiry-form .form-field textarea { min-height: 110px; }
+.franchise-page .franchise-inquiry-form .form-field--message { grid-column: auto; }
+.franchise-page .franchise-inquiry-form .privacy-consent {
+    font-size: 14px !important;
+}
+.franchise-page .franchise-inquiry-form .inquiry-submit {
+    min-height: 56px;
+    border-radius: 25px;
+    background: #30271f;
+    font-size: 16px !important;
+}
+
+@media (max-width: 1100px) {
+    .franchise-page .brand-choice-grid { gap: 24px; }
+    .franchise-page .brand-choice-card { padding: 48px 32px; border-radius: 32px; }
+    .franchise-page .brand-choice-card dl { gap: 22px; }
+    .franchise-page .brand-choice-card dl > div { grid-template-columns: 100px minmax(0,1fr); gap: 16px; }
+    .franchise-page .brand-choice-card dt,
+    .franchise-page .brand-choice-card dd { font-size: 16px !important; }
+    .franchise-page .cost-tables { gap: 24px; }
+    .franchise-page .process-grid { gap: 60px 18px; }
+    .franchise-page .process-grid h3 { font-size: 18px; }
+    .franchise-page .process-grid li:not(:nth-child(5n))::after { right: -28px; width: 32px; height: 32px; }
+    .franchise-page .franchise-inquiry-form { padding-right: 40px; padding-left: 40px; }
+}
+@media (max-width: 760px) {
+    .franchise-page .brand-choice-section { padding-top: 64px; padding-bottom: 64px; }
+    .franchise-page .franchise-section-heading--brand { gap: 12px; margin-bottom: 40px; }
+    .franchise-page .brand-choice-lead { font-size: 17px !important; }
+    .franchise-page .franchise-section-heading--brand h2 { font-size: 32px; }
+    .franchise-page .brand-choice-grid { grid-template-columns: 1fr; gap: 24px; }
+    .franchise-page .brand-choice-card { min-height: 0; padding: 36px 26px; border-radius: 26px; }
+    .franchise-page .brand-choice-card .brand-model { font-size: 20px !important; }
+    .franchise-page .brand-choice-card h3 { margin-bottom: 32px; font-size: 38px; }
+    .franchise-page .brand-choice-card dl { gap: 17px; font-size: 14px; }
+    .franchise-page .brand-choice-card dl > div { grid-template-columns: 92px minmax(0,1fr); gap: 12px; }
+    .franchise-page .brand-choice-card dt,
+    .franchise-page .brand-choice-card dd { font-size: 14px !important; }
+    .franchise-page main .franchise-benefits { padding: 64px 20px; }
+    .franchise-page .franchise-benefits .franchise-section-heading { margin-bottom: 40px; }
+    .franchise-page .franchise-benefits .franchise-section-heading > p:not(.eyebrow) { font-size: 16px !important; }
+    .franchise-page .benefit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 38px 20px; }
+    .franchise-page .benefit-card img { border-radius: 20px 20px 0 0; }
+    .franchise-page .benefit-card h3 { margin: 22px 0 10px; font-size: 18px; }
+    .franchise-page .benefit-card p { font-size: 14px !important; }
+    .franchise-page main .franchise-cost-section { padding: 64px 20px; }
+    .franchise-page .franchise-cost-section .franchise-section-heading { margin-bottom: 40px; font-size: 16px; }
+    .franchise-page .franchise-cost-section .franchise-section-heading > p { font-size: 16px !important; }
+    .franchise-page .cost-tables { grid-template-columns: 1fr; gap: 32px; }
+    .franchise-page .cost-table-title h3 { font-size: 20px; }
+    .franchise-page .cost-table thead th { padding: 12px 8px; font-size: 14px !important; }
+    .franchise-page .cost-table tbody th { font-size: 14px !important; }
+    .franchise-page .cost-table tbody td { font-size: 14px !important; }
+    .franchise-page .cost-table tbody td:last-child { font-size: 14px !important; }
+    .franchise-page .cost-table tfoot th { font-size: 14px !important; }
+    .franchise-page .cost-table tfoot td { font-size: 18px !important; }
+    .franchise-page .cost-note { font-size: 14px !important; }
+    .franchise-page main .franchise-process-section { padding: 64px 20px; }
+    .franchise-page .franchise-process-section .franchise-section-heading { margin-bottom: 40px; }
+    .franchise-page .process-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 36px 18px; }
+    .franchise-page .process-grid li { min-height: 190px; }
+    .franchise-page .process-grid li::after { display: none; }
+    .franchise-page .process-icon { width: 82px; height: 82px; flex-basis: 82px; }
+    .franchise-page .process-icon img { width: 42px; height: 42px; }
+    .franchise-page .process-grid h3 { font-size: 16px; }
+    .franchise-page .process-grid p { font-size: 14px !important; }
+    .franchise-page main .franchise-inquiry-section { padding: 64px 20px; }
+    .franchise-page .franchise-inquiry-section .franchise-section-heading { margin-bottom: 40px; }
+    .franchise-page .franchise-inquiry-form { grid-template-columns: 1fr; gap: 20px; width: 100%; padding: 0; }
+    .franchise-page .franchise-inquiry-form .choice-field:first-child,
+    .franchise-page .franchise-inquiry-form .choice-field:nth-child(2) { width: 100%; }
+    .franchise-page .franchise-inquiry-form .form-field--message { grid-column: 1; }
+    .franchise-page .franchise-inquiry-form .privacy-consent,
+    .franchise-page .franchise-inquiry-form .inquiry-submit,
+    .franchise-page .franchise-inquiry-form .form-notice { grid-column: 1; }
+}
+@media (max-width: 420px) {
+    .franchise-page .benefit-grid { grid-template-columns: 1fr; }
+    .franchise-page .brand-choice-card dl > div { grid-template-columns: 88px minmax(0,1fr); gap: 10px; }
+}
