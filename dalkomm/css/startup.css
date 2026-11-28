@@ -307,8 +307,8 @@
 }
 .process-icon {
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     align-items: center;
     justify-content: center;
     margin-bottom: 18px;
@@ -676,8 +676,8 @@
 }
 .franchise-top-button img {
     display: block;
-    width: 25px;
-    height: 43px;
+    width: 23px;
+    height: 39px;
     object-fit: contain;
     transform: rotate(90deg);
     filter: brightness(0) invert(1);
@@ -698,13 +698,13 @@
     .franchise-top-button {
         right: 16px;
         bottom: 20px;
-        width: 64px;
-        height: 64px;
+        width: 58px;
+        height: 58px;
         border-radius: 18px;
     }
     .franchise-top-button img {
-        width: 17px;
-        height: 29px;
+        width: 16px;
+        height: 27px;
     }
 }
 @media (prefers-reduced-motion: reduce) {
