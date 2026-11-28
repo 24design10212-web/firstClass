@@ -770,3 +770,15 @@
         min-height: 0;
     }
 }
+
+
+/* 가맹점 개설 비용 표 사이 간격과 베이지 배경 여백 조정 */
+.franchise-cost-section .cost-tables {
+    width: min(1320px, 100%);
+    gap: 24px;
+}
+@media (max-width: 760px) {
+    .franchise-cost-section .cost-tables {
+        gap: 28px;
+    }
+}
