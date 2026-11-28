@@ -738,3 +738,35 @@
     top: auto;
     z-index: 1;
 }
+
+
+/* 가맹점 개설 비용: 두 브랜드 표의 너비·높이와 제목/간격 통일 */
+.franchise-cost-section .cost-tables {
+    align-items: stretch;
+}
+.franchise-cost-section .cost-table-wrap {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+}
+.franchise-cost-section .cost-table-title {
+    min-height: 40px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.franchise-cost-section .cost-table {
+    flex: 1 1 0;
+    height: 100%;
+}
+.franchise-cost-section .cost-note {
+    min-height: 34px;
+}
+@media (max-width: 760px) {
+    .franchise-cost-section .cost-table {
+        flex: initial;
+        height: auto;
+    }
+    .franchise-cost-section .cost-note {
+        min-height: 0;
+    }
+}
