@@ -1286,3 +1286,40 @@
 .franchise-page .franchise-cost-section .cost-table tfoot tr > td {
     text-align: center !important;
 }
+
+
+/* 투자비 합계 문구와 금액을 하나의 그룹으로 표 전체 중앙에 배치 */
+.franchise-page .franchise-cost-section .cost-table tfoot tr > td {
+    text-align: center !important;
+}
+.franchise-page .franchise-cost-section .cost-total-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+}
+.franchise-page .franchise-cost-section .cost-total-label {
+    color: #fff;
+    font-size: 16px !important;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.franchise-page .franchise-cost-section .cost-total-amount {
+    color: #fff;
+    font-size: 24px !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+@media (max-width: 760px) {
+    .franchise-page .franchise-cost-section .cost-total-group {
+        gap: 10px;
+    }
+    .franchise-page .franchise-cost-section .cost-total-label {
+        font-size: 14px !important;
+    }
+    .franchise-page .franchise-cost-section .cost-total-amount {
+        font-size: 18px !important;
+    }
+}
