@@ -547,6 +547,10 @@
     .franchise-page main .franchise-benefits { padding: 64px 20px; }
     .franchise-benefits .franchise-section-heading { margin-bottom: 40px; }
     .franchise-benefits .franchise-section-heading h2 { font-size: 32px; }
+    .brand-choice-section .franchise-section-heading h2,
+    .franchise-cost-section .franchise-section-heading h2,
+    .franchise-process-section .franchise-section-heading h2,
+    .franchise-inquiry-section .franchise-section-heading h2 { font-size: 32px; }
     .franchise-benefits .franchise-section-heading > p:not(.eyebrow) { font-size: 14px; }
     .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px 20px; }
     .benefit-card img { border-radius: 18px; }
