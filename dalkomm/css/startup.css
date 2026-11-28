@@ -1280,3 +1280,9 @@
 .franchise-page .cost-table tfoot td {
     text-align: center;
 }
+
+
+/* 투자비 합계 금액을 셀 기준으로 강제 가운데 정렬 */
+.franchise-page .franchise-cost-section .cost-table tfoot tr > td {
+    text-align: center !important;
+}
