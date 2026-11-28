@@ -1272,3 +1272,11 @@
 .franchise-page .cost-table tfoot td {
     text-align: center;
 }
+
+
+/* 개설 비용 표의 금액 열 전체 가운데 정렬 */
+.franchise-page .cost-table thead th:last-child,
+.franchise-page .cost-table tbody td:last-child,
+.franchise-page .cost-table tfoot td {
+    text-align: center;
+}
