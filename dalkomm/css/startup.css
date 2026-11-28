@@ -1703,3 +1703,26 @@
         animation: none;
     }
 }
+
+
+/* TOP 버튼 크기 소폭 축소 */
+.franchise-page .franchise-top-button {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+}
+.franchise-page .franchise-top-button img {
+    width: 19px;
+    height: 32px;
+}
+@media (max-width: 760px) {
+    .franchise-page .franchise-top-button {
+        width: 48px;
+        height: 48px;
+        border-radius: 15px;
+    }
+    .franchise-page .franchise-top-button img {
+        width: 14px;
+        height: 23px;
+    }
+}
