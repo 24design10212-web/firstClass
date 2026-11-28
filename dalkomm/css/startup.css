@@ -1265,3 +1265,10 @@
     .franchise-page .benefit-grid { grid-template-columns: 1fr; }
     .franchise-page .brand-choice-card dl > div { grid-template-columns: 88px minmax(0,1fr); gap: 10px; }
 }
+
+
+/* 개설 비용 표의 합계 행 가운데 정렬 */
+.franchise-page .cost-table tfoot th,
+.franchise-page .cost-table tfoot td {
+    text-align: center;
+}
