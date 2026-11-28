@@ -750,3 +750,155 @@
     top: auto;
     z-index: 1;
 }
+
+
+/* 창업 안내 페이지 전체 타이포그래피 위계 통일 */
+.franchise-page {
+    font-family: inherit;
+}
+.franchise-page .franchise-section-heading h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.04em;
+}
+.franchise-page .franchise-section-heading > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.franchise-page .brand-model {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.franchise-page .brand-choice-card h3 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.franchise-page .brand-choice-card dt {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.franchise-page .brand-choice-card dd {
+    font-size: 15px;
+    line-height: 1.5;
+}
+.franchise-page .benefit-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.franchise-page .benefit-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.franchise-page .cost-table-title h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.franchise-page .cost-table-title p,
+.franchise-page .cost-note {
+    font-size: 12px;
+    line-height: 1.5;
+}
+.franchise-page .cost-table {
+    font-size: 13px;
+    line-height: 1.5;
+}
+.franchise-page .cost-table tfoot th,
+.franchise-page .cost-table tfoot td {
+    font-size: 14px;
+}
+.franchise-page .process-grid h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.franchise-page .process-grid p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+.franchise-page .choice-field legend,
+.franchise-page .form-field > span {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.franchise-page .choice-field label span,
+.franchise-page .form-field input,
+.franchise-page .form-field textarea {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.franchise-page .privacy-consent,
+.franchise-page .form-notice {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+    .franchise-page .franchise-section-heading h2 {
+        font-size: 32px;
+    }
+    .franchise-page .franchise-section-heading > p {
+        font-size: 14px;
+    }
+    .franchise-page .brand-model {
+        font-size: 16px;
+    }
+    .franchise-page .brand-choice-card h3 {
+        font-size: 38px;
+    }
+    .franchise-page .brand-choice-card dt,
+    .franchise-page .brand-choice-card dd {
+        font-size: 13px;
+    }
+    .franchise-page .benefit-card h3 {
+        font-size: 18px;
+    }
+    .franchise-page .benefit-card p {
+        font-size: 13px;
+    }
+    .franchise-page .cost-table-title h3 {
+        font-size: 18px;
+    }
+    .franchise-page .cost-table-title p,
+    .franchise-page .cost-note {
+        font-size: 11px;
+    }
+    .franchise-page .cost-table {
+        font-size: 11px;
+    }
+    .franchise-page .cost-table tfoot th,
+    .franchise-page .cost-table tfoot td {
+        font-size: 12px;
+    }
+    .franchise-page .process-grid h3 {
+        font-size: 14px;
+    }
+    .franchise-page .process-grid p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 420px) {
+    .franchise-page .franchise-section-heading h2 {
+        font-size: 28px;
+    }
+    .franchise-page .brand-choice-card dt,
+    .franchise-page .brand-choice-card dd {
+        font-size: 12px;
+    }
+    .franchise-page .benefit-card h3 {
+        font-size: 17px;
+    }
+    .franchise-page .benefit-card p {
+        font-size: 12px;
+    }
+    .franchise-page .cost-table {
+        font-size: 10px;
+    }
+}
