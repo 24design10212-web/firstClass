@@ -782,3 +782,10 @@
         gap: 28px;
     }
 }
+
+/* 가맹점 개설 비용 표 내부 셀 여백 통일 및 축소 */
+.franchise-cost-section .cost-table th,
+.franchise-cost-section .cost-table td {
+    padding: 8px;
+    line-height: 1.35;
+}
