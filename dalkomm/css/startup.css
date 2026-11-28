@@ -731,7 +731,7 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(180deg, rgba(0, 0, 0, .28), rgba(0, 0, 0, .24) 55%, rgba(0, 0, 0, .32));
+    background: linear-gradient(180deg, rgba(0, 0, 0, .46), rgba(0, 0, 0, .42) 55%, rgba(0, 0, 0, .50));
     pointer-events: none;
 }
 .franchise-hero .franchise-quick-nav {
@@ -1554,7 +1554,7 @@
 }
 .franchise-page .franchise-hero-description {
     margin: 0 0 22px;
-    color: rgba(255,255,255,.92);
+    color: var(--color-neutral-0);
     font-size: clamp(16px, 1.5vw, 22px);
     font-weight: 500;
     line-height: 1.5;
@@ -1563,7 +1563,7 @@
 }
 .franchise-page .franchise-hero-title {
     margin: 0;
-    color: #fff;
+    color: var(--color-neutral-0);
     font-size: clamp(36px, 4.5vw, 68px);
     font-weight: 700;
     line-height: 1.2;
@@ -1571,7 +1571,7 @@
     text-shadow: 0 2px 14px rgba(0,0,0,.24);
 }
 .franchise-page .franchise-hero-title span {
-    color: #ff8a4c;
+    color: var(--color-orange-500);
 }
 @media (max-width: 760px) {
     .franchise-page .franchise-hero-copy {
