@@ -153,6 +153,14 @@
     line-height: 1.25;
     letter-spacing: -.04em;
 }
+
+/* 창업 안내 주요 섹션 제목 크기 통일 */
+.brand-choice-section .franchise-section-heading h2,
+.franchise-cost-section .franchise-section-heading h2,
+.franchise-process-section .franchise-section-heading h2,
+.franchise-inquiry-section .franchise-section-heading h2 {
+    font-size: 48px;
+}
 .franchise-benefits .franchise-section-heading > p:not(.eyebrow) {
     margin-top: 16px;
     font-size: 18px;
