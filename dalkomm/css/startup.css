@@ -1683,3 +1683,23 @@
         font-size: 13px !important;
     }
 }
+
+
+
+/* TOP 버튼 클릭 시 화살표가 잠깐 반응한 뒤 원래 모양으로 복귀 */
+@keyframes franchise-top-arrow-feedback {
+    0%, 100% {
+        transform: rotate(90deg) translateY(0) scale(1);
+    }
+    45% {
+        transform: rotate(90deg) translateY(-5px) scale(1.16);
+    }
+}
+.franchise-page .franchise-top-button.is-clicked img {
+    animation: franchise-top-arrow-feedback .45s ease both;
+}
+@media (prefers-reduced-motion: reduce) {
+    .franchise-page .franchise-top-button.is-clicked img {
+        animation: none;
+    }
+}
