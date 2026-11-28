@@ -731,7 +731,7 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(180deg, rgba(0, 0, 0, .12), rgba(0, 0, 0, .06) 55%, rgba(0, 0, 0, .18));
+    background: linear-gradient(180deg, rgba(0, 0, 0, .28), rgba(0, 0, 0, .24) 55%, rgba(0, 0, 0, .32));
     pointer-events: none;
 }
 .franchise-hero .franchise-quick-nav {
